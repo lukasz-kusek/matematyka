@@ -1,0 +1,939 @@
+\chapter{Przestrzeñ liniowa (wektorowa)}
+
+\medskip
+
+Literatura do tego dzia³u: \cite{rut}~-~2.1.1, 3.1.1, 3.1.4, \cite{przybylo}~-~3, \cite{kostrykin2}~-~1.1, 1.2, \cite{ptak}~-~9.1, 9.2 \newline
+Zadania do tego dzia³u: \cite{rut}~-~2.1.1, 3.1.1, 3.1.4, \cite{przybylo}~-~3.1, 3.2, \cite{ptak}~-~9
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Przestrzeni± wektorow±}}\label{def:przestrzen_wektorowa} (\textbf{\emph{przestrzeni± liniow±}}\label{def:przestrzen_liniowa}) nad cia³em (Def. \ref{def:cialo}, str. \pageref{def:cialo}) $(F, +, \cdot)$ nazywamy strukturê algebraiczn± (Def. \ref{def:struktura_algebraiczna}, str. \pageref{def:struktura_algebraiczna}) 
+
+\[
+(V, F, \oplus, \odot)
+\]
+
+\noindent z³o¿on± z:
+
+\begin{itemize}
+\item zbioru $V$ - zwanego \emph{zbiorem wektorów},
+\item zbioru $F$ - zwanego \emph{zbiorem skalarów},
+\item dzia³ania $\oplus \colon V \times V \to V$ wewnêtrznego (Def. \ref{def:dzialanie_wewnetrzne}, str. \pageref{def:dzialanie_wewnetrzne}) w~zbiorze $V$
+\item i~dzia³ania zewnêtrznego (Def. \ref{def:dzialanie_zewnetrzne}, str. \pageref{def:dzialanie_zewnetrzne}) $\odot \colon F \times V \to V$,
+\end{itemize}
+
+\bigskip
+
+\noindent która spe³nia nastêpuj±ce warunki:
+
+\begin{enumerate}
+\item $(V, \oplus)$ jest grup± abelow±
+\item $\forall \alpha \in F \quad \forall x,y \in V \colon \qquad \alpha \odot (x \oplus y) = (\alpha \odot x) \oplus (\alpha \odot y)$
+\item $\forall \alpha, \beta \in F \quad \forall x \in V \colon \qquad (\alpha + \beta) \odot x = (\alpha \odot x) \oplus (\beta \odot x)$
+\item $\forall \alpha, \beta \in F \quad \forall x \in V \colon \qquad \alpha \odot (\beta \odot x) = (\alpha \cdot \beta) \odot x$
+\item $\forall x \in V \colon \qquad \qquad \qquad \quad \mathbf{1} \odot x = x$
+\end{enumerate}
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Kombinacja liniowa wektorów}
+
+\medskip
+
+Niech $T = {1, \ldots, n}$ oznacza zbiór wska¼ników.
+
+\begin{definicja}
+Element $x \in V$ przestrzeni $(V, F, \oplus, \odot)$ nazywamy \textbf{\emph{kombinacj± liniow± wektorów}}\label{def:kombinacja_liniowa_wektorow} $(x_t)_{t \in T}$, je¶li istnieje uk³ad skalarów $(\alpha_t)_{t \in T}$ z~cia³a $F$, taki, ¿e
+
+\[
+x = \sum_{t \in T} \alpha_t x_t
+\]
+
+\medskip
+
+Skalary $\alpha_t$ nazywamy \textbf{\emph{wspó³czynnikami}} tej kombinacji liniowej.
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Uk³ad $(x_t)_{t \in T}$ wektorów przestrzeni $(V, F, \oplus, \odot)$ nazywamy \textbf{\emph{uk³adem wektorów liniowo niezale¿nych}}\label{def:liniowa_niezaleznosc_wektorow}, je¶li dla dowolnego uk³adu $(\alpha_t)_{t \in T}$ skalarów jest spe³niony warunek
+
+\[
+\sum_{t \in T} \alpha_t x_t = 0 \qquad \Rightarrow \qquad \forall t \in T \colon \quad \alpha_t = 0
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+\begin{definicja}
+Uk³ad, który nie jest uk³adem wektorów liniowo niezale¿nych nazywamy \textbf{\emph{uk³adem wektorów liniowo zale¿nych}}\label{def:liniowa_zaleznosc_wektorow}.
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Baza przestrzeni liniowej}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Baz± przestrzeni}}\label{def:baza_przestrzeni} $(V, F, \oplus, \odot)$ nazywamy uk³ad wektorów liniowo niezale¿nych $(e_1, \ldots, e_n)$, które generuj± ca³± przestrzeñ, tzn.
+
+\[
+\forall x \in V \quad \exists \alpha_i \in F \colon \qquad x = \sum_i^n \alpha_i e_i
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wymiar przestrzeni liniowej}
+
+\medskip
+
+\begin{definicja}
+Moc (liczbê wektorów) bazy nazywamy \textbf{\emph{wymiarem przestrzeni}}\label{def:wymiar_przestrzeni} $(V,F, \oplus, \odot)$ i~oznaczamy 
+
+\[
+\dim V
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 3]{przybylo}
+\end{definicja}
+
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Odwzorowania w przestrzeni linowej}
+
+\medskip
+
+Niech $X$, $Y$, $V_1, \ldots V_n$ oraz $Z$ bêd± przestrzeniami wektorowymi (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad cia³em (Def. \ref{def:cialo}, str. \pageref{def:cialo}) $K$.
+
+\medskip
+
+\noindent Niech $W$ oraz $V$ bêd± przestrzeniami wektorowymi (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad cia³em liczb zespolonych (Def. \ref{def:liczby_zespolone}, str. \pageref{def:liczby_zespolone}) $\mathbb{C}$.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Odwzorowanie linowe}
+
+\begin{definicja}
+Odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) 
+
+\[
+f \colon X \rightarrow Y
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{liniowym}}\label{def:odwzorowanie_liniowe}, je¿eli:
+\[
+\begin{array}{rcl}
+\forall x, y \in X & \colon & f(x+y) = f(x) + f(y) \vspace{0.3cm}\\
+\forall \alpha \in K \quad \forall x \in X & \colon & f(\alpha \: x) = \alpha \: f(x)
+\end{array}
+\]
+
+\smallskip
+
+\cite[Definicja 3.4.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Endomorfizm}
+
+\begin{definicja}
+Je¿eli
+
+\[
+X = Y
+\]
+
+\medskip
+
+\noindent to odwzorowanie liniowe (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe}) nazywamy \textbf{\emph{endomorfizmem}}\label{def:endomorfizm}.
+
+\smallskip
+
+\cite[Definicja 3.4.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Odwzorowanie antylinowe}
+
+\begin{definicja}
+Odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) 
+
+\[
+f \colon W \rightarrow V
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{antyliniowym}}\label{def:odwzorowanie_antyliniowe} (\textbf{\emph{pó³liniowym}})\label{def:odwzorowanie_polliniowe}, je¿eli:
+\[
+\begin{array}{rcl}
+\forall x, y \in W & \colon & f(x+y) = f(x) + f(y) \vspace{0.3cm}\\
+\forall \alpha \in \mathbb{C} \quad \forall x \in W & \colon & f(\alpha \: x) = \overline{\alpha} \: f(x)
+\end{array}
+\]
+
+\medskip
+
+\noindent Liczba $\overline{\alpha}$ oznacza liczbê sprzê¿on± (Def. \ref{def:liczba_zespolona_sprzezona}, str. \pageref{def:liczba_zespolona_sprzezona}) z~$\alpha$.
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Odwzorowanie pó³toraliniowe}
+
+\begin{definicja}
+Odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) 
+
+\[
+f \colon X \times Y \rightarrow W
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{pó³toraliniowym}}\label{def:odwzorowanie_poltoraliniowe}, je¿eli jest
+
+\begin{itemize}
+\item \textbf{odwzorowaniem liniowym} (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe}) ze wzglêdu na pierwszy argument
+\item i~\textbf{odwzorowaniem pó³liniowym} (Def. \ref{def:odwzorowanie_polliniowe}, str. \pageref{def:odwzorowanie_polliniowe}) ze wzglêdu na drugi argument
+\end{itemize} 
+ 
+czyli
+\[
+\begin{array}{rcl}
+\forall x, x' \in X \quad y \in Y & \colon & f(x+x',y) = f(x,y) + f(x',y) \vspace{0.3cm}\\
+\forall \alpha \in \mathbb{C} \quad \forall x \in X \quad \forall y \in Y & \colon & f(\alpha \: x,y) = \alpha \: f(x,y) \vspace{0.3cm}\\
+\forall x \in X \quad y, y' \in Y & \colon & f(x,y+y') = f(x,y) + f(x,y') \vspace{0.3cm}\\
+\forall \alpha \in \mathbb{C} \quad \forall x \in X \quad \forall y \in Y & \colon & f(x,\alpha \: y) = \overline{\alpha} \: f(x,y)
+\end{array}
+\]
+
+\medskip
+
+Liczba $\overline{\alpha}$ oznacza liczbê sprzê¿on± (Def. \ref{def:liczba_zespolona_sprzezona}, str. \pageref{def:liczba_zespolona_sprzezona}) z~$\alpha$.
+
+\smallskip
+
+\cite[Rozdzia³ 3.2.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Odwzorowanie dwuliniowe}
+
+\begin{definicja}
+Odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) 
+
+\[
+f \colon X \times Y \rightarrow Z
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{dwuliniowym}}\label{def:odwzorowanie_dwuliniowe}, je¿eli jest \textbf{odwzorowaniem liniowym} (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe}) ze wzglêdu na \textbf{ka¿d± zmienn±}, czyli
+\[
+\begin{array}{rcl}
+\forall x, x' \in X \quad y \in Y & \colon & f(x+x',y) = f(x,y) + f(x',y) \vspace{0.3cm}\\
+\forall \alpha \in K \quad \forall x \in X \quad \forall y \in Y & \colon & f(\alpha \: x,y) = \alpha \: f(x,y) \vspace{0.3cm}\\
+\forall x \in X \quad y, y' \in Y & \colon & f(x,y+y') = f(x,y) + f(x,y') \vspace{0.3cm}\\
+\forall \alpha \in K \quad \forall x \in X \quad \forall y \in Y & \colon & f(x,\alpha \: y) = \alpha \: f(x,y)
+\end{array}
+\]
+
+\smallskip
+
+\cite[Definicja 3.9.1]{furdzik} \cite[Rozdzia³ 0.2]{trajdos}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Odwzorowanie wieloliniowe}
+
+\begin{definicja}
+Odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) 
+
+\[
+f \colon V_1 \times V_2 \times \ldots V_n \rightarrow Z
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{wieloliniowym}}\label{def:odwzorowanie_wieloliniowe} (\textbf{\emph{$n$-liniowym}})\label{def:odwzorowanie_n-liniowe}, je¿eli jest \textbf{odwzorowaniem liniowym} (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe}) ze wzglêdu na \textbf{ka¿d± zmienn±}.
+
+\smallskip
+
+\cite[Paragraf 1.4.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Formy w przestrzeni linowej}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma pó³toraliniowa}
+
+\begin{definicja}
+\textbf{\emph{Form± pó³toraliniow±}}\label{def:forma_poltoraliniowa} na iloczynie kartezjañskim (Def. \ref{def:iloczyn_kartezjanski}, str. \pageref{def:iloczyn_kartezjanski}) $X \times Y$ nazywamy \textbf{odwzorowanie pó³toraliniowe} (Def. \ref{def:odwzorowanie_poltoraliniowe}, str. \pageref{def:odwzorowanie_poltoraliniowe})
+
+\[
+f \colon \; X \times Y \to \mathbb{C}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 3.2.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma dwuliniowa}
+
+\begin{definicja}
+\textbf{\emph{Form± dwuliniow±}}\label{def:forma_dwuliniowa} na iloczynie kartezjañskim (Def. \ref{def:iloczyn_kartezjanski}, str. \pageref{def:iloczyn_kartezjanski}) $X \times Y$ nazywamy \textbf{odwzorowanie dwuliniowe} (Def. \ref{def:odwzorowanie_dwuliniowe}, str. \pageref{def:odwzorowanie_dwuliniowe})
+
+\[
+f \colon \; X \times Y \to K
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 0.2]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Postaæ analityczna forma dwuliniowej}
+
+Je¿eli $dimX = m$ i~$dimY = n$ (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}), to formê mo¿emy zapisaæ w~postaci analitycznej
+
+\[
+\begin{array}{ccl}
+f(x,y) = a_{ij} \: x^i \: y^j & \qquad & a_{ij} \in K, \; x \in X, \; y \in Y, \vspace{0.3cm}\\
+& & i \in \{1, \ldots, m\}, \; j \in \{1, \ldots, n\}
+\end{array}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 0.2]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Postaæ macierzowa forma dwuliniowej}
+
+Je¿eli $dimX = m$ i $dimY = n$ (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}), to formê mo¿emy zapisaæ w~postaci macierzowej (Def. \ref{def:macierz}, str. \pageref{def:macierz})
+
+\medskip
+
+\[
+f(x,y) = \left[x^1, \dots, x^m\right]
+\left[
+\begin{array}{ccc}
+a_{11} & \ldots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \ldots & a_{mn}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+y^1  \\
+\vdots \\
+y^n
+\end{array}
+\right]
+\]
+
+\medskip
+
+\noindent lub przy oznaczeniach kolumnowych
+
+\begin{itemize}
+\item $x = \left[x^1, \dots, x^m\right]$,
+\item $x^T$ (Def. \ref{def:macierz_transponowana}, str. \pageref{def:macierz_transponowana}),
+\item $y = \left[y^1, \dots, y^n\right]$
+\item oraz $A = \left[a_{ij} \right]_{m \times n}$
+\end{itemize}
+
+\medskip
+
+\[
+f(x,y) = x^T \; A \; y
+\]
+
+\medskip
+
+\noindent Macierz $A$ nazywamy \textbf{macierz± formy dwulinowej $f$}.
+
+\smallskip
+
+\cite[Rozdzia³ 0.2]{trajdos}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma hermitowska}
+
+\begin{definicja}
+Formê pó³toraliniow± (Def. \ref{def:forma_poltoraliniowa}, str. \pageref{def:forma_poltoraliniowa})
+
+\[
+f \colon \; X \times X \to \mathbb{C}
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{hermitowsk±}}\label{def:forma_hermitowska}, je¶li
+
+\[
+f(x,y) \; = \; \overline{f(y,x)}
+\]
+
+\smallskip
+
+\cite[Paragraf 1.4.4]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma dwuliniowa symetryczna}
+
+\begin{definicja}
+Formê dwuliniow± (Def. \ref{def:forma_dwuliniowa}, str. \pageref{def:forma_dwuliniowa})
+
+\[
+f \colon \; X \times X \to K
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{symetryczn±}}\label{def:forma_dwuliniowa_symetryczna}, je¶li
+
+\[
+f(x,y) \; = \; f(y,x)
+\]
+
+\smallskip
+
+\cite[Paragraf 1.4.4]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma dwuliniowa antysymetryczna}
+
+\begin{definicja}
+Formê dwuliniow± (Def. \ref{def:forma_dwuliniowa}, str. \pageref{def:forma_dwuliniowa})
+
+\[
+f \colon \; X \times X \to K
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{antysymetryczn±}}\label{def:forma_dwuliniowa_antysymetryczna}, je¶li
+
+\[
+f(x,y) \; = \; -f(y,x)
+\]
+
+\smallskip
+
+\cite[Paragraf 1.4.4]{kostrykin2}
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma kwadratowa}
+
+\begin{definicja}
+Odwzorowanie $g \colon X \to K$ nazywamy \textbf{\emph{form± kwadratow±}}\label{def:forma_kwadratowa} generowan± przez formê dwuliniow± $f$ je¿eli:
+
+\[
+\forall x \in X \colon \quad g(x) = f(x,x)
+\]
+
+\cite[Definicja 4.1.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma dwuliniowa biegunowa}
+
+\begin{definicja}
+Jedyn± formê dwuliniow± (Def. \ref{def:forma_dwulinowa}, str. \pageref{def:forma_dwulinowa}), symetryczn± (Def. \ref{def:forma_dwulinowa_symetryczna}, str. \pageref{def:forma_dwulinowa_symetryczna}) generuj±c± formê kwadratow± (Def. \ref{def:forma_kwadratowa}, str. \pageref{def:forma_kwadratowa}) $g$ nazywamy \textbf{\emph{form± biegunow± dla $g$}}\label{def:forma_dwuliniowa_biegunowa}.
+
+\smallskip
+
+\cite[Definicja 4.1.2]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma wieloliniowa}
+
+\begin{definicja}
+\textbf{\emph{Form± wieloliniow±}}\label{def:forma_wieloliniowa} (\textbf{\emph{$n$-liniow±}})\label{def:forma_n-liniowa} na iloczynie kartezjañskim (Def. \ref{def:iloczyn_kartezjanski}, str. \pageref{def:iloczyn_kartezjanski}) $V_1 \times V_2 \times \ldots \times V_n$ nazywamy \textbf{odwzorowanie wieloliniowe} (\textbf{$n$-liniowe}) (Def. \ref{def:odwzorowanie_wieloliniowe}, str. \pageref{def:odwzorowanie_wieloliniowe})
+
+\[
+f \colon \; V_1 \times V_2 \times \ldots V_n \to K
+\]
+
+\smallskip
+
+\cite[Paragraf 1.4.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma wieloliniowa symetryczna}
+
+\begin{definicja}
+Formê wieloliniow± ($n$-liniow±) (Def. \ref{def:forma_wieloliniowa}, str. \pageref{def:forma_wieloliniowa})
+
+\[
+f \colon \; X^n \to K
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{symetryczn±}}\label{def:forma_wieloliniowa_symetryczna}, je¶li
+
+\[
+f(x_{{i_1}1},x_{{i_2}2}, \ldots, x_{{i_n}n}) \; = \; f(x_1,x_2, \ldots, x_n)
+\]
+
+\smallskip
+
+\cite[Paragraf 1.4.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forma wieloliniowa antysymetryczna}
+
+\begin{definicja}
+Formê wieloliniow± ($n$-liniow±) (Def. \ref{def:forma_wieloliniowa}, str. \pageref{def:forma_wieloliniowa})
+
+\[
+f \colon \; X^n \to K
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{antysymetryczn±}}\label{def:forma_wieloliniowa_antysymetryczna}, je¶li
+
+\[
+f(x_{{i_1}1},x_{{i_2}2}, \ldots, x_{{i_n}n}) \; = \; \textsl{sgn}(i_1,i_2, \ldots, i_n) \; f(x_1,x_2, \ldots, x_n)
+\]
+
+\medskip
+
+\noindent gdzie sumowanie rozci±ga siê na wszystkie permutacje (Def. \ref{def:permutacja}, str. \pageref{def:permutacja}) $(i_1, i_2, \ldots, i_n)$ zbioru $\{1, 2, \ldots , n\}$.
+
+\smallskip
+
+\cite[Paragraf 1.4.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Przestrzeñ unitarna. Iloczyn skalarny}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczyn skalarny}
+
+\medskip
+
+\begin{definicja}
+Niech
+\begin{itemize}
+\item $V$ bêdzie \textbf{przestrzeni± wektorow±} (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad \textbf{cia³em liczb zespolonych} (Def. \ref{def:liczby_zespolone}, str. \pageref{def:liczby_zespolone}) $\mathbb{C}$
+\item $g \colon V \rightarrow \mathbb{C}$ pewn± \textbf{form± kwadratow±} (Def. \ref{def:forma_kwadratowa}, str. \pageref{def:forma_kwadratowa}) \textbf{okre¶lon± dodatnio}
+\end{itemize}
+
+\medskip
+
+\noindent \textbf{Formê hermitowsk±} (Def. \ref{def:forma_hermitowska}, str. \pageref{def:forma_hermitowska})~$f$ generuj±c± formê kwadratow±~$g$ nazywamy \textbf{\emph{iloczynem skalarnym}}\label{def:iloczyn_skalarny_przestrzen_unitarna} okre¶lonym w~$V$.
+
+\medskip
+\noindent Warto¶æ formy $f(x,y)$ oznaczamy $(x|y)$ lub $x \circ y$.
+
+\smallskip
+
+\cite[Paragraf 3.2.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{W³asno¶ci iloczynu skalarnego}
+
+\label{wl:iloczyn_skalarny_przestrzen_unitarna}
+
+\[
+\begin{array}{lrcl}
+1. & \forall x, y \in V & \colon & (x|y)= \overline{(y|x)} \vspace{0.3cm}\\
+2. & \forall \alpha \in \mathbb{C} \quad \forall x,y \in V & \colon & (\alpha x|y) = \alpha(x|y) \vspace{0.3cm}\\
+3. & \forall x_1, x_2, y \in V & \colon & (x_1 + x_2|y) = (x_1|y) + (x_2|y) \vspace{0.3cm}\\
+4. & \forall x \in V & \colon & re(x|x) \geq 0 \qquad \textsl{ oraz } \qquad (x|x) = 0 \Leftrightarrow x = 0
+\end{array}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 6]{przybylo} \cite[Paragraf 3.2.1]{kostrykin2}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Przestrzeñ unitarna}
+
+\begin{definicja}
+Przestrzeñ $V$ nad cia³em $\mathbb{C}$, w której okre¶lono iloczyn skalarny nazywamy \textbf{\emph{przestrzeni± unitarn±}}\label{def:przestrzen_unitarna}.
+
+\smallskip
+
+\cite[Rozdzia³ 6]{przybylo} \cite[Paragraf 3.2.1, Definicja 2]{kostrykin2}
+\end{definicja}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Norma wektora}
+
+\begin{definicja}
+\textbf{\emph{D³ugo¶ci±}}\label{def:dlugosc_wektora_unitarna} lub \textbf{\emph{norm±}}\label{def:norma_wektora_unitarna} wektora $v \in V$ nazywamy liczbê rzeczywist± nieujemn±
+
+\[
+\|v\| \; = \; \sqrt{(v|v)}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 3.2.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Przestrzeñ euklidesowa. Iloczyn skalarny}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczynu skalarny}
+
+\medskip
+
+\begin{definicja}
+Niech
+\begin{itemize}
+\item $V$ bêdzie \textbf{przestrzeni± wektorow±} (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad \textbf{cia³em liczb rzeczywistych} $\mathbb{R}$ (TODO cia³o liczb rzeczywistych?)
+\item $g \colon V \rightarrow \mathbb{R}$ pewn± \textbf{form± kwadratow±} (Def. \ref{def:forma_kwadratowa}, str. \pageref{def:forma_kwadratowa}) \textbf{okre¶lon± dodatnio}
+\end{itemize}
+
+\medskip
+
+\noindent \textbf{Formê dwuliniow± $f$ biegunow±} (Def. \ref{def:forma_dwuliniowa_biegunowa}, str. \pageref{def:forma_dwuliniowa_biegunowa}) dla~$g$ nazywamy \textbf{\emph{iloczynem skalarnym}}\label{def:iloczyn_skalarny_przestrzen_euklidesowa} okre¶lonym w~$V$.
+
+\medskip
+\noindent Warto¶æ formy $f(x,y)$ oznaczamy $(x|y)$ lub $x \circ y$.
+
+\smallskip
+
+\cite[Definicja 4.1.6]{furdzik} \cite[Paragraf 3.2.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{W³asno¶ci iloczynu skalarnego}
+
+\label{wl:iloczyn_skalarny_przestrzen_euklidesowa}
+
+\[
+\begin{array}{lrcl}
+1. & \forall x, y \in V & \colon & (x|y)= (y|x) \vspace{0.3cm}\\
+2. & \forall \alpha \in \mathbb{R} \quad \forall x,y \in V & \colon & (\alpha x|y) = \alpha(x|y) \vspace{0.3cm}\\
+3. & \forall x_1, x_2, y \in V & \colon & (x_1 + x_2|y) = (x_1|y) + (x_2|y) \vspace{0.3cm}\\
+4. & \forall x \in V & \colon & (x|x) \geq 0 \qquad \textsl{ oraz } \qquad (x|x) = 0 \Leftrightarrow x = 0
+\end{array}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 6]{przybylo} \cite[Paragraf 3.2.1]{kostrykin2}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Przestrzeñ euklidesowa}
+
+TODO która definicja bardziej prawdziwa?
+
+\begin{definicja}
+Przestrzeñ $V$ nad cia³em $\mathbb{R}$, w której okre¶lono iloczyn skalarny, nazywamy \textbf{\emph{przestrzeni± euklidesow±}}\label{def:przestrzen_euklidesowa}.
+
+\smallskip
+
+\cite[Rozdzia³ 6]{przybylo}
+\end{definicja}
+
+\begin{definicja}
+Przestrzeñ $\mathbb{R}^n$ z
+
+\begin{itemize}
+\item iloczynem skalarnym (Def. \ref{def:iloczyn_skalarny_przestrzen_euklidesowa}, str. \pageref{def:iloczyn_skalarny_przestrzen_euklidesowa})
+
+\[
+(x|y) \; = \; \sum_{i=1}^n x_i \: y_i
+\]
+
+\item i~norm± wektora (Def. \ref{def:norma_wektora_euklidesowa}, str. \pageref{def:norma_wektora_euklidesowa})
+
+\[
+\|v\|=\sqrt{(v|v)}
+\]
+
+\end{itemize}
+
+\noindent nazywamy \textbf{\emph{przestrzeni± euklidesow±}} i~oznaczamy $\overrightarrow{E_n}$
+
+\smallskip
+
+\cite[Definicja 4.1.7]{furdzik}
+\end{definicja}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Baza ortogonalna, baza ortonormalna przestrzeni euklidesowej}
+
+\begin{definicja}
+Bazê (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni}) 
+
+\[
+(e_1, \ldots, e_n)
+\]
+
+\noindent przestrzeni euklidesowej $V$ nazywamy \textbf{\emph{ortogonaln±}}\label{def:baza_ortogonalna}, je¶li 
+
+\[
+(e_i|e_j) = 0
+\]
+
+\noindent dla dowolnych $i \neq j \quad (i,j = 1, \ldots, n)$.
+
+\smallskip
+
+\cite[Definicja 4, rozdzia³ 3.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Bazê \textbf{ortogonaln±} (Def. \ref{def:baza_ortogonalna}, str. \pageref{def:baza_ortogonalna})
+
+\[
+(e_1, \ldots, e_n)
+\]
+
+\noindent przestrzeni euklidesowej $V$ nazywamy \textbf{\emph{ortonormaln±}}\label{def:baza_ortonormalna}, je¶li
+
+\[
+(e_i|e_i) = 1
+\]
+
+\noindent dla ka¿dego $i$.
+
+\smallskip
+
+\cite[Definicja 4, rozdzia³ 3.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Norma wektora}
+
+\begin{definicja}
+\textbf{\emph{D³ugo¶ci±}}\label{def:dlugosc_wektora_euklidesowa} lub \textbf{\emph{norm±}}\label{def:norma_wektora_euklidesowa} wektora $v \in V$ nazywamy liczbê rzeczywist± nieujemn±
+
+\[
+\|v\| \; = \; \sqrt{(v|v)}
+\]
+
+\smallskip
+
+\cite[Definicja 2, rozdzia³ 3.1]{kostrykin2}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Przestrzeñ afiniczna}
+
+TODO sprawdzic czy $\chi$ czy $X$ jest przestrzeni± afiniczna (jesli $X$ to zmienic w geometrii analitycznej)
+
+\begin{definicja}
+Uporz±dkowan± trójkê
+
+\[
+\chi \; = \; (X, V, +)
+\]
+
+\medskip
+
+\noindent nazywaæ bêdziemy \textbf{\emph{przestrzeni± afiniczn±}}\label{def:przestrzen_afiniczna} je¿eli
+
+\begin{itemize}
+\item $X$ bêdzie pewnym zbiorem
+\item $V$ - przestrzeni± wektorow± (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa})
+\item $+$ - dzia³aniem zewnêtrznym (Def. \ref{def:dzialanie_zewnetrzne}, str. \pageref{def:dzialanie_zewnetrzne}) w~$X$
+
+\[
+X \: \times \: Y \; \ni \; (x,v) \quad \rightarrow \quad x + v \; \in \; X
+\]
+
+spe³niaj±cym warunki:
+
+\begin{tabular}{m{0,2cm}m{3,8cm}m{0,1cm}m{4,6cm}m{0,1cm}}
+ 
+1. &
+$\forall x \in X$ &
+$:$ &
+$x + \mathbf{0} \; = \; x \qquad (\mathbf{0} \in V)$ &
+ \\[10pt]
+ 
+2. &
+$\forall x,y \in X \quad \exists v \in V $ &
+$:$ &
+$x + v \; = \; y$ &
+ \\[10pt]
+ 
+3. &
+$\forall x \in X \quad \forall v_1, v_2 \in V$ &
+$:$ &
+$x + v_1 = x + v_2 \; \Rightarrow \; v_1 = v_2$ TODO sprawdzic &
+ \\[10pt]
+ 
+4. &
+$\forall x \in X \quad \forall u,v \in V$ &
+$:$ &
+$x + (u + v) \; = \; (x + u) + v$ &
+ \\[10pt]
+
+\end{tabular}
+
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 3.5.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Przestrzeñ wektorów swobodnych}
+
+\begin{definicja}
+Przestrzeñ wektorow± $V$ przestrzeni afinicznej $\chi$ nazywamy \textbf{przestrzeni± wektorów swobodnych przestrzeni afinicznej}\label{def:przestrzen_wektorow_swobodnych} $X$ i~oznaczaæ bêdziemy
+
+\[
+\vec{X}
+\]
+
+\smallskip
+
+TODO sprawdziæ 'przestrzeni afinicznej $X$'
+
+\cite[Definicja 3.5.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ró¿nica punktów}
+
+\begin{definicja}
+\textbf{\emph{Ró¿nic± punktów}}\label{def:roznica_punktow} $x$ i $y$ ($x,y \in X$) lub \textbf{\emph{wektorem ³±cz±cym punkty}} $x$ i $y$ nazywamy \textbf{jedyny wektor} spe³niaj±cy aksjomat~2 definicji przestrzeni afinicznej (Def. \ref{def:przestrzen_afiniczna}, str. \pageref{def:przestrzen_afiniczna}).
+
+\medskip
+
+Oznaczmy
+
+\[
+y - x \qquad \textsl{lub} \qquad \overrightarrow{xy}
+\]
+
+\smallskip
+
+\cite[Definicja 3.5.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Uk³ad wspó³rzêdnych}
+
+\begin{definicja}
+\textbf{\emph{Uk³adem wspó³rzêdnych}}\label{def:uklad_wspolrzednych} w~$n$-wymiarowej (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) przestrzeni afinicznej $\chi$ (Def. \ref{def:przestrzen_afiniczna}, str. \pageref{def:przestrzen_afiniczna}) nazywamy parê
+
+\[
+(o; \; e_1, \ldots, e_n)
+\]
+
+\noindent z³o¿on± z
+
+\begin{itemize}
+\item punktu $o \in X$
+\item i~bazy (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni}) $(e_1, \ldots, e_n)$ w $V$
+\end{itemize}
+
+\smallskip
+
+\cite[Paragraf 4.1.3, Definicja 3]{kostrykin2}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Wspó³rzêdnymi}} 
+
+\[
+x_1, \ldots, x_n
+\]
+
+\noindent \textbf{\emph{punktu}}\label{def:wspolrzedne_punktu} $p$ w~uk³adzie $(o; \; e_1, \ldots, e_n)$ nazywamy wspó³rzêdne wektora $\overrightarrow{op}$ w~bazie $(e_1, \ldots, e_n)$
+
+\[
+\overrightarrow{op} \; = \; x_1 e_1 + \ldots + x_n e_n
+\]
+
+\smallskip
+
+\cite[Paragraf 4.1.3, Definicja 3]{kostrykin2}
+\end{definicja}
+
+
+

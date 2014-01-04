@@ -1,0 +1,255 @@
+\chapter{Badanie przebiegu zmienno¶ci funkcji}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ekstrema funkcji}
+
+\cite{zakowski1}[Rozdzia³ 2.13]
+
+\medskip
+
+\begin{definicja}
+Mówimy, ¿e funkcja $f\colon \: (a,b) \to \mathbb{R}$ ma w punkcie $x_0 \in (a,b)$
+
+\begin{itemize}
+\item \textbf{\emph{maksimum lokalne}}\label{def:maksimum_lokalne}, je¶li istnieje otoczenie punktu $x_0$ (Def. \ref{def:otoczenie_punktu}, str. \pageref{def:otoczenie_punktu}) takie, ¿e dla ka¿dego $x$ z tego otoczenia mamy
+
+\[
+f(x_0) \geq f(x)
+\]
+
+\item \textbf{\emph{mocne maksimum lokalne}}\label{def:mocne_maksimum_lokalne}, je¶li istnieje otoczenie punktu $x_0$ (Def. \ref{def:otoczenie_punktu}, str. \pageref{def:otoczenie_punktu}) takie, ¿e dla ka¿dego $x$ z tego otoczenia oraz $x \neq x_0$ mamy
+
+\[
+f(x_0) > f(x)
+\]
+
+\item \textbf{\emph{minimum lokalne}}\label{def:minimum_lokalne}, je¶li istnieje otoczenie punktu $x_0$ (Def. \ref{def:otoczenie_punktu}, str. \pageref{def:otoczenie_punktu}) takie, ¿e dla ka¿dego $x$ z tego otoczenia mamy
+
+\[
+f(x_0) \leq f(x)
+\]
+
+\item \textbf{\emph{mocne minimum lokalne}}\label{def:mocne_minimum_lokalne}, je¶li istnieje otoczenie punktu $x_0$ (Def. \ref{def:otoczenie_punktu}, str. \pageref{def:otoczenie_punktu}) takie, ¿e dla ka¿dego $x$ z tego otoczenia oraz $x \neq x_0$ mamy
+
+\[
+f(x_0) < f(x)
+\]
+\end{itemize}
+
+\vspace{5cm}
+TODO rysunek 2.29, 2.30
+
+\medskip
+
+\cite{ptak}[Definicja 6.45]
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Warunek konieczny istnienia ekstremum}
+
+Niech $f\colon \: (a,b) \to \mathbb{R}$ bêdzie ró¿niczkowalna (Def. \ref{def:funkcja_rozniczkowalna}, str. \pageref{def:funkcja_rozniczkowlana}) w $x_0 \in (a,b)$.
+
+\medskip
+
+\begin{twierdzenie}[warunek konieczny istnienia ekstremum]
+Je¶li funkcja $f$ ma \textbf{maksimum} lokalne (\textbf{minimum} lokalne) w punkcie $x_0$, to 
+
+\[
+f'(x_0) = 0
+\]
+
+(Def. \ref{def:pochodna_funkcji}, str. \pageref{def:pochodna_funkcji}).
+
+\medskip
+
+\begin{proof}
+Za³ó¿my, ¿e $f$ osi±ga \textbf{maksimum} lokalne w punkcie $x_0$.
+
+\smallskip
+
+Wtedy dla $x$ z otoczenia punktu $x_0$ (Def. \ref{def:otoczenie_punktu}, str. \pageref{def:otoczenie_punktu}) zachodzi nierówno¶æ:
+
+\[
+f(x) - f(x_0) \neq 0
+\]
+
+\medskip
+
+Zatem dla $x_0 - \delta < x < x_0$ zachodzi nierówno¶æ
+
+\[
+\dfrac{f(x) - f(x_0)}{x - x_0} \geq 0
+\]
+
+\medskip
+
+Poniewa¿ funkcja jest ró¿niczkowalna (Def. \ref{def:funkcja_rozniczkowalna}, str. \pageref{def:funkcja_rozniczkowlana}) w punkcie $x_0$, wiêc z twierdzenia o zachowaniu nierówno¶ci w granicy (Tw. \ref{tw:o_zachowaniu_nierownosci_w_granicy}, str. \pageref{tw:o_zachowaniu_nierownosci_w_granicy}) otrzymujemy:
+
+\[
+f'(x_0) = \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} \geq 0
+\]
+
+\medskip
+
+Analogicznie, dla $x_0 < x < x_0 + \delta$ mamy
+
+\[
+\dfrac{f(x) - f(x_0)}{x - x_0} \leq 0
+\]
+
+\medskip
+
+Rozumuj±c podobnie jak wy¿ej, otrzymujemy
+
+\[
+f'(x_0) \leq 0
+\]
+
+\medskip
+
+czyli
+
+\[
+f'(x_0) = 0
+\]
+
+\bigskip
+
+Dowód w przypadku \textbf{minimum} przebiega w taki sam sposób.
+\end{proof}
+
+\medskip
+
+\cite{ptak}[Twierdzenie 6.47]
+\end{twierdzenie}
+
+\vspace{5cm}
+TODO rys. 2.32 str 132
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Warunek wystarczaj±cy istnienia ekstremum I}
+
+Niech $f\colon \: (a,b) \to \mathbb{R}$ bêdzie funkcj± klasy $C^{(2)}$ oraz $x_0 \in (a, b)$
+
+\medskip
+
+\begin{twierdzenie}[warunek wystarczaj±cy istnienia ekstremum lokalnego I]
+Je¶li $f'(x_0) = 0$ oraz
+
+\begin{itemize}
+\item $f''(x_0) < 0$, to $f$ ma mocne \textbf{maksimum} lokalne (Def. \ref{def:mocne_maksimum_lokalne}, str. \pageref{def:mocne_maksimum_lokalne}) w~punkcie $x_0$,
+\item $f''(x_0) > 0$, to $f$ ma mocne \textbf{minimum} lokalne (Def. \ref{def:mocne_minimum_lokalne}, str. \pageref{def:mocne_minimum_lokalne}) w~punkcie $x_0$,
+\end{itemize}
+
+\begin{proof}
+TODO sprawdzic, czy byl dowod na wykladzie
+\end{proof}
+
+\cite{ptak}[Twierdzenie 6.49]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Warunek wystarczaj±cy istnienia ekstremum II}
+
+Niech $f\colon \: (a,b) \to \mathbb{R}$ bêdzie funkcj± klasy $C^{(1)}$ oraz $x_0 \in (a,b)$.
+
+\medskip
+
+\begin{twierdzenie}[warunek wystarczaj±cy istnienia ekstremum lokalnego II]
+Je¶li istnieje $\delta > 0$ takie, ¿e:
+
+\begin{itemize}
+\item 
+\[
+\begin{array}{lclrcll}
+f'(x) > 0 & \textsl{dla} & x \in (& x_0 - \delta &,& x_0 &) \\
+f'(x) < 0 & \textsl{dla} & x \in (& x_0 &,& x_0 + \delta &)
+\end{array}
+\]
+(w skrócie mówimy, ¿e \textbf{pochodna} funkcji \textbf{zmienia znak} z \textbf{dodatniego} na \textbf{ujemny}), to $f$ ma mocne \textbf{maksimum} lokalne (Def. \ref{def:mocne_maksimum_lokalne}, str. \pageref{def:mocne_maksimum_lokalne}) w~punckie $x_0$.
+
+\item 
+\[
+\begin{array}{lclrcll}
+f'(x) < 0 & \textsl{dla} & x \in (& x_0 - \delta &,& x_0 &) \\
+f'(x) > 0 & \textsl{dla} & x \in (& x_0 &,& x_0 + \delta &)
+\end{array}
+\]
+(w skrócie mówimy, ¿e \textbf{pochodna} funkcji \textbf{zmienia znak} z \textbf{ujemnego} na \textbf{dodatni}), to $f$ ma mocne \textbf{minimum} lokalne (Def. \ref{def:mocne_minimum_lokalne}, str. \pageref{def:mocne_minimum_lokalne}) w~punckie $x_0$.
+
+\end{itemize}
+
+\medskip
+
+\begin{proof}
+TODO sprawdzic czy byl dowod na wykladzie
+\end{proof}
+
+\vspace{5cm}
+TODO rys. 2.33 str 134
+
+\medskip
+
+\cite{ptak}[Twierdzenie 6.50]
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Rolle'a}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Weierstrassa}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Lagrange'a}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Taylora}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Maclaurina}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wklês³o¶æ i wypuk³o¶æ wykresu funkcji}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Punkt przegiêcia}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Warunek konieczny istnienia punktu przegiêcia}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Warunek wystarczaj±cy istnienia punktu przegiêcia}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%
+\section{Asymptoty}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Pionowa}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Pozioma}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%
+\subsection{Uko¶na}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Schemat badania przebiegu zmienno¶ci funkcji}

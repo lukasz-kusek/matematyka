@@ -1,0 +1,544 @@
+\chapter{Relacje}
+
+\begin{definicja}
+Przez \textbf{\emph{parê uporz±dkowan±}}\label{def:para_uporzadkowana}\index{para!uporz±dkowana} $(a, b)$ rozumieæ bêdziemy zbiór pewnych podzbiorów zbioru $\{a,b\}$, a~mianowicie:
+\[
+(a,b) \quad = \quad \{\{a\}, \{a,b\}\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.1.1]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Iloczynem kartezjañskim}}\label{def:iloczyn_kartezjanski}\index{iloczyn!kartezjañski} zbiorów $A$ i~$B$ nazywamy \textbf{zbiór wszystkich par uporz±dkowanych} $(a,b)$, takich, ¿e
+
+\begin{itemize}
+\item $a \in A$,
+\item $b \in B$
+\end{itemize}
+
+\noindent i~oznaczmy symbolem
+
+\[
+A \times B \quad = \quad \left\{ (a,b) \colon a \in A \wedge b \in B \right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.1.3]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%
+\section{Relacja}
+
+\begin{definicja}
+\textbf{\emph{Relacj±}}\label{def:relacja}\index{relacja} $\mathcal{R}$ okre¶lon± w zbiorach $A$ i~$B$ (zachodz±c± miêdzy elementami zbiorów $A$ i~$B$) nazywamy \textbf{trójkê uporz±dkowan±} (Def. \ref{def:para_uporzadkowana}, str. \pageref{def:para_uporzadkowana})
+
+\[
+\left( A, gr\mathcal{R}, B \right)
+\]
+
+\noindent gdzie
+
+\begin{itemize}
+\item $gr\mathcal{R}$ jest \textbf{podzbiorem iloczynu kartezjañskiego} $A \times B$.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 1.2.1]{furdzik}
+\end{definicja}
+
+\bigskip
+\begin{definicja}Niech
+
+\begin{itemize}
+\item $a \in A$,
+\item $b \in B$.
+\end{itemize}
+
+Mówimy, ¿e element $a$ \textbf{\emph{pozsotaje w relacji}} $\mathcal{R}$ z elementem $b$ ($a \mathcal{R} b$), wtedy i~tylko wtedy, gdy
+
+\[
+a \mathcal{R} b \quad \Leftrightarrow \quad (a, b) \; \in \; gr \mathcal{R}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.2]{furdzik}
+\end{definicja}
+
+\bigskip
+\begin{definicja}
+\textbf{\emph{Dziedzin± relacji}}\label{def:dziedzina_relacji}\index{relacja!dziedzina}\index{dziedzina!relacji} ($\domain \mathcal{R}$)
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{podzbiór zbioru} $A$, okre¶lony nastêpuj±co:
+
+\[
+\domain\mathcal{R} \; = \; \left\{ a \in A \colon \; \exists_{b \in B} \quad a \mathcal{R} b \right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.3]{furdzik} 
+\end{definicja}
+
+\bigskip
+\begin{definicja}
+\textbf{\emph{Przeciwdziedzin± relacji}}\label{def:przeciwdziedzina_relacji}\index{relacja!przeciwdziedzina}\index{przeciwdziedzina!relacji} ($\codomain \mathcal{R}$)
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{podzbiór zbioru} $B$, okre¶lony nastêpuj±co:
+
+\[
+\codomain \mathcal{R} \; = \; \left\{ b \in B \colon \; \exists_{a \in A} \quad a \mathcal{R} b \right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.4]{furdzik}
+\end{definicja}
+
+\bigskip
+\begin{definicja}
+Dana jest relacja 
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\textbf{\emph{Relacj±}} do niej \textbf{\emph{odwrotn±}}\label{def:relacja_odwrotna}\index{relacja!odwrotna} nazywamy relacjê 
+
+\[
+\mathcal{R}^{-1} \; = \; \left(B, \: gr\mathcal{R}^{-1}, \: A\right)
+\]
+
+\noindent gdzie
+
+\[
+gr \mathcal{R}^{-1} \; = \; \left\{(b,a) \: \in \: B \times A \colon \quad (a,b) \: \in \; gr\mathcal{R} \: \subset \: A \times B\right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.5]{furdzik}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Relacjê}}
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{\emph{wszêdzie okre¶lon±}}\label{def:relacja_wszedzie_okreslona}\index{relacja!wszêdzie okre¶lona}, je¿eli
+
+\[
+\domain \mathcal{R} \; = \; A
+\]
+
+\noindent czyli
+
+\[
+\forall \: a \in A \quad \exists b \: \in B \colon \qquad (a,b) \: \in \: gr\mathcal{R}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.16]{furdzik}
+\end{definicja}
+
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Relacjê}} 
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{\emph{surjektywn±}}\label{def:relacja_surjektywna}\index{relacja!surjektywna}, je¿eli
+
+\[
+\codomain \mathcal{R} \; = \; B
+\]
+
+\noindent czyli
+
+\[
+\forall \: b \in B \quad \exists \: a \in A \colon \qquad (a,b) \: \in \: gr\mathcal{R}
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.17]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Relacjê}}
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{\emph{injektywn±}}\label{def:relacja_injektywna}\index{relacja!injektywna} (ró¿nowarto¶ciow±)\index{relacja!ró¿nowarto¶ciowa}, je¿eli
+
+\begin{tabular*}{\textwidth}%
+{@{\extracolsep{\stretch{1}}}lc}
+& \\
+$\forall \: a_1, a_2 \in A \quad \forall \: b \in B \colon$
+& \vspace{0.3cm} \\
+\multicolumn{2}{c}{
+$\left(a_1, b\right) \in gr\mathcal{R} \; 
+\wedge \;
+\left(a_2, b\right) \in gr\mathcal{R}
+\quad
+\Rightarrow
+\quad
+a_1 = a_2$
+\vspace{0.3cm}
+}
+\end{tabular*}
+
+\smallskip
+
+\cite[Definicja 1.2.18]{furdzik}
+\end{definicja}
+
+\bigskip
+\begin{definicja}
+\textbf{\emph{Relacjê}} $\mathcal{R}$ nazywamy \textbf{\emph{bijektywn±}}\label{def:relacja_bijektywna}, je¿eli jest
+
+\begin{itemize}
+\item \textbf{suriektywna}
+\item i~\textbf{injektywna}.
+\end{itemize}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%
+\section{Funkcja}
+
+\begin{definicja}
+Relacjê 
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent nazywamy \textbf{\emph{funkcj±}}\label{def:funkcja}\index{funkcja}, je¿eli
+
+\begin{tabular*}{\textwidth}%
+{@{\extracolsep{\stretch{1}}}lc}
+& \\
+$\forall \: a \in A \quad \forall \: b_1, b_2 \in B \colon$
+& \vspace{0.3cm} \\
+\multicolumn{2}{c}{
+$\left(a,b_1\right) \in gr\mathcal{R} \; \wedge \; \left(a, b_2\right) \in gr\mathcal{R} \quad \Rightarrow \quad b_1 = b_2$
+\vspace{0.3cm}
+}
+\end{tabular*}
+
+\smallskip
+
+\cite[Definicja 1.2.20]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{twierdzenie}
+Relacja \textbf{odwrotna} (Def. \ref{def:relacja_odwrotna}, str. \pageref{def:relacja_odwrotna}) do relacji \textbf{injektywnej} (Def. \ref{def:relacja_injektywna}, str. \pageref{def:relacja_injektywna}) jest \textbf{funkcj±}.
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Odwzorowanie}
+
+\begin{definicja}
+\textbf{Funkcjê}
+
+\[
+\mathcal{R} \; = \; \left(A, \: gr\mathcal{R}, \: B\right)
+\]
+
+\noindent \textbf{wszêdzie okre¶lon±} (Def. \ref{def:relacja_wszedzie_okreslona}, str. \pageref{def:relacja_wszedzie_okreslona}) nazywamy \textbf{\emph{odwzorowaniem}}\label{def:odwzorowanie}\index{odwzorowanie} i~oznaczmy
+
+\[
+\mathcal{R} \colon \: A \rightarrow B
+\]
+
+\smallskip
+
+\cite[Definicja 1.2.21]{furdzik} \cite[Rozdzia³ V]{onyszkiewicz}
+\end{definicja}
+
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Funkcje. Odwzorowania}
+
+\label{podstawowe_definicje_dla_funkcji}
+Niech bêd± dane
+
+\begin{itemize}
+\item zbiór $X$
+\item zbiór $Y$
+\item relacja (Def. \ref{def:relacja}, str. \pageref{def:relacja})
+\[
+f \; = \; \left(X, \: gr\: f, \: Y\right)
+\]
+\end{itemize}
+
+\bigskip
+
+W przypadku gdy \textbf{\emph{relacja}} $f$ jest \textbf{\emph{funkcj±}} (Def. \ref{def:funkcja}, str. \pageref{def:funkcja}) lub \textbf{\emph{odwzorowaniem}} (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}), zamiast mówiæ
+\begin{center}
+$x$ pozostaje w relacji $f$ z $y$
+\end{center}
+mówimy:
+\begin{itemize}
+\item $x$-owi odpowiada $y$,
+\item $x$ przechodzi w $y$,
+\item $x$ odwzorowuje siê w $y$,
+\item $y$ jest warto¶ci± $f$ w $x$, co zapisujemy
+\[
+y = f(x)
+\]
+lub
+\[
+x \rightarrow y = f(x)
+\]
+\end{itemize}
+
+\bigskip
+
+Zapis $f \; = \; \left(X, \: gr\: f, \: Y\right)$, je¶li jest
+
+\medskip
+
+\begin{itemize}
+\item \textbf{odwzorowaniem} zapisujemy przez
+\[
+f \colon \; X \ni \: x \: \rightarrow \: y \quad = \quad  f(x) \: \in Y
+\]
+lub krótko
+\[
+f \colon \; X \: \rightarrow \: Y
+\]
+\medskip
+i~czytamy \emph{$f$ odworowuje zbiór $X$ w~zbiór~$Y$}
+
+\medskip
+
+\item \textbf{funkcj±} to piszemy
+\[
+f \colon \; X \supset \domain f \ni \: x \: \rightarrow \: y \quad = \quad \: f(x) \: \in Y
+\]
+lub krótko
+\[
+f \colon \; X \supset \: \domain f \: \rightarrow \: Y
+\]
+\medskip
+i~czytamy \emph{$f$ odwzorowuje swoj± dziedzinê zawart± w~zbiorze~$X$ w~zbiór~ $Y$}
+\end{itemize}
+
+\bigskip
+
+Je¿eli $x \rightarrow y = f(x)$ to
+
+\medskip
+
+\begin{itemize}
+\item element $y$ nazywamy
+\begin{itemize}
+\item \textbf{\emph{obrazem}}\index{funkcja!obraz elementu} elementu $x$ poprzez funkcjê (odwzorowanie) $f$
+\item \textbf{\emph{warto¶ci±}}\index{funkcja!warto¶æ} funkcji (odwzorowania) $f$ w punkcie $x$
+\end{itemize}
+\item element $x$ nazywamy
+\begin{itemize}
+\item \textbf{\emph{przeciwobrazem}}\index{funkcja!przeciwobraz elementu} elementu $y$ poprzez funkcjê (odwzorowanie) $f$
+\item \textbf{\emph{argumentem}}\index{funkcja!argument} funkcji (odwzorowania) $f$
+\end{itemize}
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dziedzina. Przeciwdziedzina}
+
+Zgodnie z definicj± \textbf{\emph{dziedziny relacji}} (Def. \ref{def:dziedzina_relacji}, str. \pageref{def:dziedzina_relacji}) otrzymujemy \label{def:dziedzina_funkcji}\index{dziedzina!funkcji}\index{funkcja!dziedzina}
+
+\[
+\domain f \; = \; \left\{x \in X \colon \quad \exists_{y \in Y} \quad y \: = \: f(x)\right\}
+\]
+
+\medskip
+
+\noindent jak równie¿ zgodnie z~definicj± \textbf{\emph{przeciwdziedziny relacji}} (Def. \ref{def:przeciwdziedzina_relacji}, str. \pageref{def:przeciwdziedzina_relacji}) otrzymujemy \label{def:przeciwdziedzina_funkcji}\index{przeciwdziedzina!funkcji}\index{funkcja!przeciwdziedzina}
+
+\[
+\codomain f \; = \; \left\{y \in Y \colon \quad \exists_{x \in X} \quad y \: = \: f(x)\right\}
+\]
+
+W~przypadku
+\begin{itemize}
+\item \textbf{\emph{odwzorowania}}
+
+\[
+\domain f \: = \: X
+\]
+
+\noindent wówczas zbiór $X$ nazywamy \textbf{\emph{zbiorem argumentów}}\index{odwzorowanie!zbiór argumentów}\index{zbiór!argumentów}
+
+\item \textbf{\emph{funkcji}} na ogó³ (gdy nie jest odwzorowaniem)
+
+\[
+\domain f \: \neq \: X, \qquad \domain f \: \subset \: X
+\]
+
+\noindent wówczas zbiór $X$ nazywamy \textbf{\emph{naddziedzin± funkcji}}\index{funkcja!naddziedzina}.
+\end{itemize}
+
+\medskip
+Zbiór $Y$ nazywamy \textbf{\emph{zapasem}} funkcji (odwzorowania)\index{funkcja!zapas}\index{odwzorowanie!zapas}.
+
+\medskip
+
+\cite[Definicja 1.3.1]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%
+\subsection{Wykres}
+
+\begin{definicja}
+\textbf{\emph{Wykresem}}\label{def:wykres_funkcji} funkcji (odwzorowania) $f$ jest zbiór
+
+\[
+gr \: f \; = \; \left\{(x,y) \; \in \; X \times Y \colon \quad x \: \rightarrow \: y \; = \; f(x)\right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.3.2]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Surjekcja. Injekcja. Bijekcja}
+
+\begin{definicja}
+\textbf{Funkcjê} (\textbf{odwzorowanie}) nazywamy \textbf{\emph{surjekcj±}}\label{def:surjekcja}
+
+\begin{center}
+zbioru $\domain f \subset X$ na $Y$,
+\end{center}
+
+\noindent je¿eli
+
+\begin{center}
+$f$ jest relacj± surjektywn± (Def. \ref{def:relacja_surjektywna}, str. \pageref{def:relacja_surjektywna}).
+\end{center}
+
+\smallskip
+
+\cite[Definicja 1.3.2]{furdzik}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+\textbf{Funkcjê} (\textbf{odwzorowanie}) nazywamy \textbf{\emph{injekcj±}}\label{def:injekcja}
+
+\begin{center}
+zbioru $\domain f \subset X$ w $Y$,
+\end{center}
+
+\noindent je¿eli
+
+\begin{center}
+$f$ jest relacj± injektywn± (Def. \ref{def:relacja_injektywna}, str. \pageref{def:relacja_injektywna}).
+\end{center}
+
+\smallskip
+
+\cite[Definicja 1.3.2]{furdzik}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+\textbf{Odwzorowanie} jest \textbf{\emph{bijekcj±}}\label{def:bijekcja}
+
+\begin{center}
+zbioru $X$ na $Y$,
+\end{center}
+
+\noindent je¿eli jest \textbf{równocze¶nie}
+\begin{itemize}
+\item surjekcj±
+\item i injekcj±.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 1.3.2]{furdzik}
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Obraz zbioru. Przeciwobraz zbioru}
+
+\begin{definicja}
+\textbf{\emph{Obrazem zbioru}}\index{obraz!zbioru}\index{zbiór!obraz} $A$ poprzez funkcjê (odwzorowanie) 
+
+\[
+f \colon \; X \supset \; \domain f \: \rightarrow \: Y
+\]
+
+\noindent nazywamy zbiór
+
+\[
+f[A] \; = \; \left\{y \in Y \colon \quad \exists_{x \in A} \quad x \: \rightarrow \: y \; = \; f(x)\right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.3.3]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Przeciwobrazem zbioru}}\index{przeciwobraz!zbioru}\index{zbiór!przeciwobraz} $B$ poprzez funkcjê (odwzorowanie)
+
+\[
+f \colon \; X \supset \; \domain f \: \rightarrow \: Y
+\]
+
+\noindent nazywamy zbiór 
+
+\[
+f^{-1}[B] \; = \; \left\{x \in X \colon \quad \exists_{y \in B} \quad x \: \rightarrow \: y \; = \; f(x)\right\}
+\]
+
+\smallskip
+
+\cite[Definicja 1.3.3]{furdzik}
+\end{definicja}

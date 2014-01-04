@@ -1,0 +1,327 @@
+\chapter{Uk³ady równañ}
+
+\section{Równania liniowe}
+
+Niech
+
+\begin{itemize}
+\item $f$ bêdzie przekszta³ceniem liniowym (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe}) przestrzeni (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) $X$ w~$Y$
+\item $b \in Y$
+\end{itemize}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Równaniem liniowym}}\label{def:rownanie_liniowe} nazywamy równanie postaci
+
+\[
+f(x) \quad = \quad b
+\]
+
+\medskip
+
+\noindent gdzie $x$ jest \textbf{szukanym wektorem}.
+
+\smallskip
+
+\cite[Definicja 3.13.1]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Równanie liniowe
+
+\[
+f(x) = b
+\]
+
+\medskip
+
+\noindent gdzie 
+
+\[
+b \neq 0
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem liniowym niejednorodnym}}\label{def:rownanie_niejednorodne}.
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Równanie liniowe
+
+\[
+f(x) \quad = \quad 0
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem jednorodnym stowarzyszonym}}\label{def:rownanie_jednorodne} z~równaniem
+
+\[
+f(x) \quad = \quad b
+\]
+
+\end{definicja}
+
+\bigskip
+
+\subsection{Uk³ady równañ}
+
+\begin{definicja}
+Je¿eli
+
+\begin{itemize}
+\item $\dim \: X \; = \; m$
+\item $\dim \: Y \; = \; n$
+\end{itemize}
+
+\medskip
+
+\noindent to otrzymujemy \textbf{\emph{uk³ad równañ}}\label{def:uklad_rownan}
+
+\[
+\begin{array}{ccccccccl}
+a_{11}x_1 & + & a_{12}x_2 & + & \cdots & + & a_{1m}x_m & = & b_1 \\
+a_{21}x_1 & + & a_{22}x_2 & + & \cdots & + & a_{2m}x_m & = & b_2 \\
+\vdots &  & \vdots &  &  &  & \ddots &  &  \\
+a_{n1}x_1 & + & a_{n2}x_2 & + & \cdots & + & a_{nm}x_m & = & b_n \\
+\end{array}
+\]
+
+\medskip
+
+\noindent lub równowa¿n± postaæ macierzow± (Def. \ref{def:macierz}, str. \pageref{def:macierz})
+
+\begin{displaymath}
+\left[
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1m} \\
+a_{21} & a_{22} & \cdots & a_{2m} \\
+\vdots & \vdots & \ddots &  \\
+a_{n1} & a_{n2} & \cdots & a_{nm}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1 \\
+x_2 \\
+\vdots \\
+x_m
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n
+\end{array}
+\right]
+\end{displaymath}
+
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Kolumn± wyrazów wolnych}} uk³adu równañ nazywamy ci±g, którego kolejnymi wyrazami s± 
+
+\[
+b_1, b_2, \ldots, b_n
+\]
+
+\smallskip
+
+\cite[Rozdia³ 2.5]{trajdos}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Uk³adem równañ niejednorodnym}} nazywamy uk³ad z³o¿ony z~równañ niejednorodnych (Def. \ref{def:rownanie_niejednorodne}, str. \pageref{def:rownanie_niejednorodne}).
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Uk³adem równañ jednorodnym}} nazywamy uk³ad z³o¿ony z~równañ jednorodnych (Def. \ref{def:rownanie_jednorodne}, str. \pageref{def:rownanie_jednorodne}).
+\end{definicja}
+
+\bigskip
+
+\begin{twierdzenie}
+Uk³ad równañ jednorodnych przy
+
+\[
+m \; = \; n
+\]
+
+\medskip
+
+\noindent posiada \textbf{\emph{tylko jedno rozwi±zanie zerowe}} wtedy i~tylko wtedy, gdy
+
+\[
+\det\left[a_{ij}\right] \neq 0
+\]
+
+\smallskip
+
+\cite[Wniosek 3.13.5]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}
+Uk³ad równañ jednorodnych przy
+
+\[
+m \; = \; n
+\]
+
+\medskip
+
+\noindent ma \textbf{\emph{rozwi±zania niezerowe}} wtedy i tylko wtedy, gdy
+
+\[
+\det\left[a_{ij}\right] = 0
+\]
+
+\smallskip
+
+\cite[Wniosek 3.13.5]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+
+\section{Uk³ad Cramera}
+
+\begin{definicja}
+Je¿eli
+
+\begin{itemize}
+\item $f \: \colon \: X \rightarrow X$ jest endomorfizmem (Def. \ref{def:endomorfizm}, str. \pageref{def:endomorfizm})
+\item macierz $\left[a_{ij}\right]_{n \times n}$ jest macierz± $f$
+\item
+\[
+\det
+\left[ \begin{array}{ccc}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \\
+a_{n1} & \cdots & a_{nn}
+\end{array}
+\right]
+\; \neq \; 0
+\]
+\end{itemize}
+
+\medskip
+
+\noindent to uk³ad nazywamy \textbf{\emph{uk³adem Cramera}}\label{def:uklad_cramera}.
+
+\smallskip
+
+\cite[Twierdzenie 3.13.6]{furdzik} \cite[Rozdzia³ 2.5]{trajdos}
+\end{definicja}
+
+\bigskip
+
+\subsection{Rozwi±zywanie uk³adów równañ metod± Cramera}
+
+Niech
+\begin{itemize}
+\item $A \; = \; \left[a_{ij}\right]_{n \times n}$
+\item $D_k$ bêdzie macierz± powsta³± przez \textbf{zast±pienie} $k$-tej \textbf{kolumny} macierzy $A$ \textbf{kolumn± wyrazów wolnych} uk³adu.
+\[
+D_k = 
+\left[
+\begin{array}{ccccccc}
+a_{11} & \cdots & a_{1k-1} & b_1 & a_{1k+1} & \cdots & a_{1n} \\
+\vdots & \ddots & & \vdots &\vdots & \ddots & \\
+a_{n1} & \cdots & a_{nk-1} & b_n & a_{nk+1} & \cdots & a_{nn} \\
+\end{array}
+\right]_{n \times n}
+\]
+\end{itemize}
+
+\bigskip
+
+\begin{twierdzenie}[Cramera]
+Uk³ad Cramera ma dok³adnie jedno rozwi±zanie, dane wzorami Cramera
+
+\[
+x_1 = \dfrac{\det \: D_1}{\det \: A}, \quad
+x_2 = \dfrac{\det \: D_2}{\det \: A}, \quad
+\ldots, \quad
+x_n = \dfrac{\det \: D_n}{\det \: A}
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 2.5]{trajdos}
+\end{twierdzenie}
+
+\bigskip
+
+\section{Twierdzenie Kroneckera-Capellego}
+
+\begin{twierdzenie}[Kroneckera-Capellego]
+Uk³ad równañ \textbf{ma rozwi±zanie} wtedy i~tylko wtedy, gdy \textbf{rz±d macierzy wspó³czynników}
+
+\[
+A \; = \;
+\left[
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1m} \\
+a_{21} & a_{22} & \cdots & a_{2m} \\
+\vdots & \vdots & \ddots &  \\
+a_{n1} & a_{n2} & \cdots & a_{nm}
+\end{array}
+\right]
+\]
+
+\medskip
+
+\noindent \textbf{równa siê rzêdowi} tzw. \emph{macierzy uzupe³nionej}
+
+\[
+U \; = \;
+\left[
+\begin{array}{ccccc}
+a_{11} & a_{12} & \cdots & a_{1m} & b_1 \\
+a_{21} & a_{22} & \cdots & a_{2m} & b_2 \\
+\vdots & \vdots & \ddots &  & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nm} & b_n
+\end{array}
+\right]
+\]
+
+\medskip
+
+\noindent Co oznaczamy
+
+\[
+rz \: A \quad = \quad rz \: U
+\]
+
+\smallskip
+
+\cite[Twierdzenie 3.13.3]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+\begin{twierdzenie}[o liczbie rozwi±zañ]
+Je¶li
+
+\begin{itemize}
+\item $rz \: A = rz \: U \quad = \quad m$ (ilo¶ci kolumn macierzy $A$), to uk³ad ma \textbf{\emph{dok³adnie jedno}} rozwi±zanie
+\item $rz \: A = rz \: U \quad = \quad r < m$, to uk³ad ma \textbf{\emph{nieskoñczenie wiele}} rozwi±zañ zale¿nych od $n - r$ parametrów
+\end{itemize}
+
+\end{twierdzenie}
+

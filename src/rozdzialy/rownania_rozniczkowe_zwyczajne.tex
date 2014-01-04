@@ -1,0 +1,1062 @@
+\chapter{Równania ró¿niczkowe zwyczajne}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równanie ró¿niczkowe zwyczajne}
+
+\begin{definicja}
+\textbf{\emph{Równaniem ró¿niczkowym zwyczajnym}}\label{def:rownanie_rozniczkowe_zupelne} nazywamy równanie zawieraj±ce
+
+\begin{itemize}
+\item zmienn± niezale¿n± $x$,
+\item nieznan± funkcjê $y$ (Def. \ref{def:funkcja}, str. \pageref{def:funkcja}),
+\item oraz jej pochodne $y', y'', \ldots, y^{(n)}$ (Def. \ref{def:pochodna_funkcji}, str. \pageref{def:pochodna_funkcji}).
+\end{itemize}
+
+\[
+F\left(x, \: y', \: y'', \: \ldots, \: y^{(n)}\right) \; = \; 0
+\]
+
+\smallskip
+
+\cite[Definicja 1.1]{niedoba}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Rz±d równania ró¿niczkowego}
+
+\begin{definicja}
+\textbf{\emph{Rzêdem równania ró¿niczkowego}} zwyczajnego nazywamy liczbê równ± \textbf{rzêdowi najwy¿szej pochodnej} (Def. \ref{def:pochodna_n-tego_rzedu}, str. \pageref{def:pochodna_n-tego_rzedu}) wystêpuj±cej w~równaniu.
+
+\smallskip
+
+\cite[Definicja 1.2]{niedoba}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Problem pocz±tkowy Cauchy'ego}
+
+\begin{definicja}
+\textbf{\emph{Problemem pocz±tkowym Cauchy'ego}} dla równania ró¿niczkowego zwyczajnego nazywamy zagadnienie:
+
+\medskip
+
+Znale¼æ rozwi±zanie równania ró¿niczkowego zwyczajnego
+
+\[
+F\left(x, \: y', \: y'', \: \ldots, \: y^{(n)}\right) \; = \; 0
+\]
+
+\medskip
+
+\noindent spe³niaj±ce warunek pocz±tkowy
+
+\[
+\left\{
+\begin{array}{rcl}
+y(x_0) & = & y_0\\
+y'(x_0) & = & y_1\\
+\vdots & & \\
+y^{(n-1)}(x_0) & = & y_{n-1}
+\end{array}
+\right.
+\]
+
+\medskip
+
+\noindent gdzie
+
+\begin{itemize}
+\item $x_0 \in (a,b)$
+\item $y_0, y_1, \ldots, y_{n_1}$ s± zadanymi liczbami.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 1.4]{niedoba}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³ka szczególna (rozwi±zanie szczególne)}
+
+\begin{definicja}
+\textbf{\emph{Ca³k± szczególn±}}\label{def:calka_szczegolna} (\textbf{\emph{rozwi±zaniem szczególnym}}) równania ró¿niczkowego zwyczajnego nazywamy równanie spe³niaj±ce warunek pocz±tkowy problemu pocz±tkowego Cauchy'ego.
+
+\smallskip
+
+\cite[Rozdzia³ 1.1]{zakowski4}
+\end{definicja}
+
+\subsection{Ca³ka ogólna (rozwi±zanie ogólne)}
+
+\begin{definicja}
+\textbf{\emph{Ca³k± ogóln±}}\label{def:calka_ogolna} (\textbf{\emph{rozwi±zaniem ogólnym}}) równania ró¿niczkowego zwyczajnego nazywamy zbiór wszystkich ca³ek szczególnych równania.
+
+\smallskip
+
+\cite[Definicja 1.7]{niedoba}
+\end{definicja}
+
+\section{Równania ró¿niczkowe zwyczajne rzêdu I-go}
+
+\subsection{Równania o zmiennych rozdzielonych}
+
+\begin{definicja}
+Równanie postaci
+
+\[
+X(x) \: \textnormal{d}x \; + \; Y(y) \: \textnormal{d}y \; = \; 0
+\]
+
+\medskip 
+
+\noindent nazywamy \textbf{\emph{równaniem o~zmiennych rozdzielonych}}.
+
+\smallskip
+
+\cite[Rozdzia³ 1.3.1]{niedoba}
+\end{definicja}
+
+\medskip
+
+Ca³k± ogóln± (Def. \ref{def:calka_ogolna}, str. \pageref{def:calka_ogolna}) tego równania jest 
+
+\[
+\int X(x) \: \textnormal{d}x \; + \; \int Y(y) \: \textnormal{d}y \; = \; 0
+\]
+
+\noindent lub
+
+\[
+\int\limits_{x_0}^x X(x) \: \textnormal{d}x \; + \; \int\limits_{y_0}^y Y(y) \: \textnormal{d}y \; = \; C
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Równania sprowadzalne do równania o~zmiennych rozdzielonych}
+
+Niech $f \colon \mathbb{R} \to \mathbb{R}$ bêdzie ci±g³a (Def. \ref{def:funkcja_ciagla}, str. \pageref{def:funkcja_ciagla}).
+
+\medskip
+
+\begin{itemize}
+\item W równaniu postaci
+
+\[
+\frac{\textnormal{d}y}{\textnormal{d}x} \; = \; f\left(\frac{y}{x}\right)
+\]
+
+\medskip
+
+\noindent wprowadzamy now± zmienn± zale¿n±
+
+\[
+u \; = \; \frac{y}{x}
+\]
+
+\medskip
+
+\noindent sk±d
+
+\[
+y' \; = \; u + x u'
+\]
+
+\medskip
+
+Po wstawieniu do równania i~rozdzieleniu zmiennych mamy
+
+\[
+\frac{\textnormal{d}u}{f(u) - u} \; = \; \frac{\textnormal{d}x}{x} \quad \vee \quad f(u) \; = \; u \quad \vee \quad x \; = \; 0
+\]
+
+\item W równaniu
+
+\[
+\frac{\textnormal{d}y}{\textnormal{d}x} \; = \; f(ax + by + c)
+\]
+
+\medskip
+
+\noindent wprowadzamy now± zmienn± zale¿n±
+
+\[
+u \; = \; ax + by + c
+\]
+
+\medskip
+
+\noindent i~dalej postêpujemy jak w pierwszym przypadku.
+
+\item W równaniu
+
+\[
+\frac{\textnormal{d}y}{\textnormal{d}x} \; = \; f\left(\frac{a_1x + b_1y + c_1}{a_2x + b_2y + c_2}\right)
+\]
+
+\medskip
+
+\noindent przy za³o¿eniu, ¿e
+
+\[
+\det \left[
+\begin{array}{cc}
+a_1 & b_1\\
+a_2 & b_2
+\end{array}
+\right]
+\; \neq \; 0
+\]
+
+\medskip
+
+(Def. \ref{def:wyznacznik}, str. \pageref{def:wyznacznik})
+
+\medskip
+
+\noindent wprowadzamy nowe zmienne:
+\begin{itemize}
+\item niezale¿na $\xi$
+\item zale¿n± $\eta$
+\end{itemize}
+
+\[
+\left\{
+\begin{array}{rcl}
+x & = & \xi + \alpha\\
+y & = & \eta + \beta
+\end{array}
+\right.
+\]
+
+\medskip
+
+\noindent gdzie $\alpha$ i~$\beta$ spe³niaj± uk³ad równañ (Def. \ref{def:uklad_rownan}, str. \pageref{def:uklad_rownan})
+
+\[
+\left\{
+\begin{array}{rcl}
+a_1\alpha + b_1\beta + c_1 & = & 0\\
+a_2\alpha + b_2\beta + c_2 & = & 0
+\end{array}
+\right.
+\]
+
+Równanie przyjmuje postaæ
+
+\[
+\frac{\textnormal{d}\eta}{\textnormal{d}\xi} \; = \; f\left(\frac{a_1\xi + b_1\eta}{a_2\xi + b_2\eta}\right)
+\]
+
+\end{itemize}
+
+\smallskip
+
+\cite[Rozdzia³ 1.3.2]{niedoba}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równania liniowe}
+
+\label{def:rownanie_rozniczkowe_liniowe}
+
+\begin{definicja}
+Równanie postaci
+
+\[
+y' \; + \; p(x) \: y \; = \; q(x)
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem liniowym niejednorodnym}}\label{def:rownanie_rozniczkowe_liniowe_niejednorodne} (Def. \ref{def:rownanie_niejednorodne}, str. \pageref{def:rownanie_niejednorodne}).
+
+\smallskip
+
+\cite[Rozdzia³ 1.3.3]{niedoba}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+Równanie postaci
+
+\[
+y' \; + \; p(x) \: y \; = \; 0
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem liniowym jednorodnym}} (Def. \ref{def:rownanie_jednorodne}, str. \pageref{def:rownanie_jednorodne}).
+
+\smallskip
+
+\cite[Rozdzia³ 1.3.3]{niedoba}
+\end{definicja}
+
+\medskip
+
+\textbf{Ca³kê ogóln±} (Def. \ref{def:calka_ogolna}, str. \pageref{def:calka_ogolna}) równania liniowego \textbf{jednorodnego} obliczamy, korzystaj±c z~równania o~zmiennych rozdzielonych i~otrzymujemy
+
+\[
+y_1 \; = \; C\: e^{-P(x)}
+\]
+
+\medskip
+
+\noindent gdzie $P(x)$ jest funkcj± pierwotn± (Def. \ref{def:funkcja_pierwotna}, str. \pageref{def:funkcja_pierwotna}) do $p(x)$.
+
+\medskip
+
+\textbf{Ca³kê szczególn±} (Def. \ref{def:calka_szczegolna}, str. \pageref{def:calka_szczegolna}) równania liniowego \textbf{niejednorodnego} obliczamy, korzystaj±c z~\textbf{metody uzmienniania sta³ej}.
+
+\medskip
+
+Przewidujemy, ¿e funkcja
+
+\[
+y_1 \; = \; C(x)\: e^{-P(x)} \qquad C \in C^1 \langle a,b\rangle
+\]
+
+\medskip
+
+\noindent jest rozwi±zaniem równania liniowego jednorodnego.
+
+\medskip
+
+Obliczamy $y_1'$
+
+\[
+y_1' \; = \; C'(x) \: e^{-P(x)} - C(x) \: e^{-P(x)} \: p(x)
+\]
+
+\medskip
+
+Wstawiamy $y_1$ oraz $y_1'$ do równania liniowego niejednorodnego i~otrzymujemy
+
+\[
+C'(x) \: e^{-P(x)} \; = \; q(x)
+\]
+
+\medskip
+
+Sk±d
+
+\[
+C(x) \; = \; \int q(x) \: e^{P(x)} \textnormal{d}x
+\]
+
+\medskip
+
+\textbf{Ca³ka ogólna} równania liniowego \textbf{niejednorodnego} jest \textbf{sum±}
+
+\begin{itemize}
+\item ca³ki \textbf{ogólnej} (Def. \ref{def:calka_ogolna}, str. \pageref{def:calka_ogolna}) równania liniowego \textbf{jednorodnego}
+\item i ca³ki \textbf{szczególnej} (Def. \ref{def:calka_szczegolna}, str. \pageref{def:calka_szczegolna}) równania liniowego \textbf{niejednorodnego}
+\end{itemize}
+
+\medskip
+St±d
+
+\[
+y_0 \; = \; e^{-P(x)} \: \left[C + \int q(x) \: e^{P(x)} \textnormal{d}x\right]
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równanie Bernoulliego}
+
+Niech
+
+\begin{itemize}
+\item $p, q \in C\langle a,b\rangle$
+\item $r \in \mathbb{R}$
+\end{itemize}
+
+\begin{definicja}
+Równanie postaci
+
+\[
+y' \; + \; p(x) \: y \; = \; q(x) \: y^r
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem Bernoulliego}}.
+
+\smallskip
+
+\cite[Rozdzia³ 1.3.4]{niedoba}
+\end{definicja}
+
+\medskip
+
+Dla $r \in \{0,1\}$ powy¿sze równanie jest \textbf{równaniem liniowym} (Def. \ref{def:rownanie_rozniczkowe_liniowe}, str. \pageref{def:rownanie_rozniczkowe_liniowe}).
+
+\medskip
+
+Równanie Bernoulliego rozwi±zujemy dziel±c obie strony równania przez~$y^r$, a~nastêpnie wprowadzamy now± zmienn± zale¿n± $z = y^{1-r}$. Obliczamy~$z'$
+
+\[
+z' \; = \; (1-r) \: y^{-r} \: y'
+\]
+
+\medskip
+
+St±d
+
+\[
+y' \; = \; \frac{y^r \: z'}{1-r}
+\]
+
+\medskip
+
+Po wstawieniu otrzymujemy nastêpuj±ce równanie
+
+\[
+\frac{1}{1-r} \: z' \; + \; p(x) \: z \; = \; q(x)
+\]
+
+\medskip
+
+Jest to \textbf{równanie liniowe niejednorodne} (Def. \ref{def:rownanie_rozniczkowe_liniowe_niejednorodne}, str. \pageref{def:rownanie_rozniczkowe_liniowe_niejednorodne}).
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równanie zupe³ne}
+
+\cite[Paragraf 11.5, Paragraf 11.6]{krysicki2}
+
+\medskip
+
+Niech wyra¿enie
+
+\[
+P(x,y) \: \textnormal{d}x + Q(x,y) \: \textnormal{d}y
+\]
+
+\medskip
+
+\noindent jest \textbf{ró¿niczk± zupe³n±} (Def. \ref{def:rozniczka_zupelna}, str. \pageref{def:rozniczka_zupelna}) pewnej funkcji dwóch zmiennych $F(x,y)$ (Def. \ref{def:funkcja_wielu_zmiennych}, str. \pageref{def:funkcja_wielu_zmiennych}) okre¶lonej w~obszarze $D$.
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Równaniem ró¿niczkowym zupe³nym}} nazywamy równanie ró¿niczkowe rzêdu I-go postaci
+
+\[
+P(x,y) \; + \; Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} \; = \; 0
+\]
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Rozwi±zania równania zupe³nego}
+
+Niech
+
+\begin{itemize}
+\item $C$ jest sta³± dowoln± ca³kowania
+\item punkty $(x,y)$ nale¿± do obszaru $D$
+\item wyra¿enie 
+
+\[
+P(x,y) \: \textnormal{d}x + Q(x,y) \: \textnormal{d}y
+\]
+
+\medskip
+
+\noindent jest przy podanych za³o¿eniach \textbf{ró¿niczk± zupe³n±} (Def. \ref{def:rozniczka_zupelna}, str. \pageref{def:rozniczka_zupelna}) funkcji $F(x,y)$
+\end{itemize}
+
+\begin{twierdzenie}
+Je¿eli spe³nione s± za³o¿enia, to równanie
+
+\[
+F(x,y) \; = \; C
+\]
+
+\medskip
+
+\noindent okre¶la \textbf{wszystkie rozwi±zania równania zupe³nego}
+
+\[
+P(x,y) \; + \; Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} \; = \; 0
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równanie ró¿niczkowe sprowadzalne do zupe³nego}
+
+\subsubsection{Równanie ró¿niczkowe nie spe³niaj±ce za³o¿enia zupe³nego}
+
+Wróæmy do równania 
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent i przyjmijmy, ¿e
+
+\begin{itemize}
+\item funkcje $P(x,y)$ i~$Q(x,y)$ s± klasy $C^1$ w~obszarze jednospójnym (Def. \ref{def:obszar_jednospojny}, str. \pageref{def:obszar_jednospojny}) $D$
+\item oraz, ¿e \textbf{niespe³niony} jest \textbf{warunek}
+
+\[
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}
+\]
+
+\medskip
+
+\noindent w~ka¿dym punkcie obszaru $D$, czyli \textbf{niespe³nione} jest \textbf{za³o¿enie} dotycz±ce ró¿niczki zupe³nej, wiêc
+
+\[
+P(x,y) \: \textnormal{d}x + Q(x,y) \: \textnormal{d}y
+\]
+
+\medskip
+
+\noindent \textbf{nie jest ró¿niczk± zupe³n±} funkcji $F(x,y)$.
+
+\end{itemize}
+
+\bigskip
+
+W tym przypadku równanie postaci
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent \textbf{nie jest} równaniem ró¿niczkowym \textbf{zupe³nym}.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Czynnik ca³kuj±cy}
+
+Mo¿na wykazaæ, ¿e dla ka¿dego równania ró¿niczkowego postaci
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent \textbf{istnieje nieskoñczenie wiele funkcji}
+
+\[
+\mu(x,y) \not\equiv 0
+\]
+
+\medskip
+
+\noindent w~rozpatrywanym obszarze, ¿e je¿eli \textbf{pomno¿ymy} przez t± \textbf{funkcjê obie strony równania} 
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent to otrzymane w ten sposób równanie
+
+\[
+\mu(x,y) \: P(x,y) + \mu(x,y) \: Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent \textbf{jest} równaniem \textbf{zupe³nym}, tzn. spe³niony jest warunek
+
+\[
+\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}
+\]
+
+\medskip
+
+\noindent dla otrzymanego równania, tzn.
+
+\[
+\frac{\partial \left(\mu \: P\right)}{\partial y} = \frac{\partial \left(\mu \: Q\right)}{\partial x} 
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Znajdowanie czynnika ca³kuj±cego}
+
+Znalezienie czynników ca³kuj±cych w ogólnym przypadku prowadzi do rozwi±zania równania ró¿niczkowego 
+
+\[
+\frac{\partial \left(\mu \: P\right)}{\partial y} = \frac{\partial \left(\mu \: Q\right)}{\partial x} 
+\]
+
+\medskip
+
+\noindent rzêdu I-go o~pochodnych cz±stkowych, z~funkcj± niewiadom± $\mu(x,y)$, które jest na ogó³ trudniejsze do rozwi±zania ni¿ równanie
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\bigskip
+
+W pewnych specjalnych przypadkach jednak ³atwo jest znale¼æ czynnik ca³kuj±cy.
+
+\medskip
+
+Poni¿ej przedstawione jest kilka najprostszych.
+
+\begin{itemize}
+\item \textbf{Znajdowanie czynnika ca³kuj±cego} - przypadek \textbf{I}
+
+Niech
+\begin{itemize}
+\item funkcje $P(x,y)$ i~$Q(x,y)$ s± klasy $C^1$ w~obszarze jednospójnym $D$
+\item $Q(x,y) \neq 0$
+\item wyra¿enie
+
+\[
+\frac{1}{Q(x,y)} \left(\frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \right)
+\]
+
+\medskip
+
+jest \textbf{funkcj± tylko jednej zmiennej} $x$
+\end{itemize}
+
+\medskip
+
+Je¿eli spe³nione s± za³o¿enia, to istnieje \textbf{czynnik ca³kuj±cy $\mu(x)$} równania 
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent który jest \textbf{funkcj± tylko zmiennej $x$}, okre¶lony równo¶ci±
+
+\[
+\mu(x) = \exp \left\{\int \frac{1}{Q} \left(\frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \right) \textnormal{d}x \right\}
+\]
+
+\bigskip
+
+\item \textbf{Znajdowanie czynnika ca³kuj±cego} - przypadek \textbf{II}
+
+Niech
+
+\begin{itemize}
+\item funkcje $P(x,y)$ i~$Q(x,y)$ s± klasy $C^1$ w~obszarze jednospójnym $D$
+\item $P(x,y) \neq 0$
+\item wyra¿enie
+
+\medskip
+
+\[
+\frac{1}{P(x,y)} \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)
+\]
+
+jest \textbf{funkcj± tylko jednej zmiennej} $y$
+\end{itemize}
+
+\medskip
+
+Je¿eli spe³nione s± za³o¿enia, to istnieje \textbf{czynnik ca³kuj±cy $\mu(y)$} równania
+
+\[
+P(x,y) + Q(x,y) \: \frac{\textnormal{d}y}{\textnormal{d}x} = 0
+\]
+
+\medskip
+
+\noindent który jest \textbf{funkcj± tylko zmiennej $y$}, okre¶lony równo¶ci±
+
+\[
+\mu(y) = \exp \left\{\int \frac{1}{P} \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \textnormal{d}y \right\}
+\]
+
+\bigskip
+
+\item \textbf{Znajdowanie czynnika ca³kuj±cego} - przypadek \textbf{III}
+
+Niech
+
+\begin{itemize}
+\item funkcje $P(x,y)$ i~$Q(x,y)$ s± klasy $C^1$ w~obszarze jednospójnym $D$
+\item istniej± takie dwie funkcje $f(x)$ i~$g(y)$ spe³niaj±ce to¿samo¶ciowo równo¶æ
+
+\[
+\frac{\partial P}{\partial y} - \frac{\partial Q}{\partial x} \quad \equiv \quad Q(x,y) \: f(x) - P(x,y) \: g(y)
+\]
+\end{itemize}
+
+\medskip
+
+Je¿eli spe³nione s± za³o¿enia, to istnieje \textbf{czynnik ca³kuj±cy $\mu(x,y)$} bêd±cy \textbf{iloczynem dwóch funkcji $\varphi(x)$ i~$\psi(x)$} okre¶lonych równo¶ciami
+
+\begin{eqnarray*}
+\varphi(x) & = & \exp\left(\int f(x) \: \textnormal{d}x \right) \\
+\psi(y) & = & \exp\left(\int g(y) \: \textnormal{d}y \right)
+\end{eqnarray*}
+
+\end{itemize}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Równania ró¿niczkowe zwyczajne rzêdu II-go}
+
+\subsection{Równania rzêdu II-go sprowadzalne do rzêdu I-go}
+
+\cite[Rozdzia³ 1.7]{zakowski4}
+
+\medskip
+
+Rozwi±zywanie niektórych równañ ró¿niczkowych II-go rzêdu mo¿na sprowadziæ za pomoc± podstawieñ do rozwi±zywania równañ I-go rzêdu.
+
+\begin{itemize}
+\item Równanie typu $F(x, \: y', \: y'') \; = \; 0$.
+
+Wprowadzamy now± zmienn± zale¿n±
+
+\[
+u \; = \; y'
+\]
+
+St±d
+
+\[
+u' \; = \; y''
+\]
+
+Po podstawieniu otrzymujemy równanie ró¿niczkowe I-go rzêdu
+
+\[
+F(x, \: u, \: u') \; = \; 0
+\]
+\item Równanie typu $F(y, \: y', \: y'') \; = \; 0$.
+
+Wprowadzamy now± zmienn± zale¿n±
+
+\[
+u(y) \; = \; y'
+\]
+
+St±d
+
+\[
+u'y' \; = \; y''
+\]
+
+\[
+u'u \; = \; y''
+\]
+
+Po podstawieniu otrzymujemy równanie ró¿niczkowe I-go rzêdu
+
+\[
+F(y, \: u, \: u'u) \; = \; 0
+\]
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równania liniowe}
+
+\cite[Rozdzia³ 1.8]{zakowski4} \cite[Rozdzia³ 3.1]{niedoba} - równania liniowe rzêdu $n$
+
+\medskip
+
+\label{def:rownanie_rozniczkowe_liniowe_II-go_rzedu}
+
+\begin{definicja}
+Równanie postaci
+
+\[
+y'' \; + \; p(x) \: y' \; + \; q(x) \: y \; = \; f(x)
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem liniowym niejednorodnym II-go rzêdu}}\label{def:rownanie_rozniczkowe_liniowe_niejednorodne_II-go_rzedu} (Def. \ref{def:rownanie_niejednorodne}, str. \pageref{def:rownanie_niejednorodne}).
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+Równanie postaci
+
+\[
+y'' \; + \; p(x) \: y' \; + \; q(x) \: y \; = \; 0
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{równaniem liniowym jednorodnym II-go rzêdu}} (Def. \ref{def:rownanie_jednorodne}, str. \pageref{def:rownanie_jednorodne}).
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Równania liniowe o~sta³ych wspó³czynnikach}
+
+Rozwa¿my problem pocz±tkowy
+
+\[
+y'' \; + \; a_1 \: y' \; + \; a_2 \: y \; = \; f(x)
+\]
+
+\[
+\left\{\begin{array}{rcl}
+y(x_0) & = & y_0\\
+y'(x_0) & = & y_1
+\end{array}
+\right.
+\]
+
+\medskip
+
+\noindent gdzie 
+\begin{itemize}
+\item $x_0 \in (a,b)$
+\item $a_k \in \mathbb{R}$
+\end{itemize}
+
+\medskip
+
+Zaczniemy od wyznaczenia ca³ki ogólnej (Def. \ref{def:calka_ogolna}, str. \pageref{def:calka_ogolna}) równania liniowego jednorodnego (Def. \ref{def:rownanie_jednorodne}, str. \pageref{def:rownanie_jednorodne}) stowarzyszonego z~równaniem niejednorodnym
+
+\[
+y'' \; + \; a_1 \: y' \; + \; a_2 \: y \; = \; 0
+\]
+
+\medskip
+
+Wprowadzamy nowe zmienne 
+
+\[
+\left\{\begin{array}{rcl}
+t_1(x) & = & y(x)\\
+t_2(x) & = & y'(x)
+\end{array}
+\right.
+\]
+
+\medskip
+
+Problem pocz±tkowy przyjmuje postaæ
+
+\[
+\left\{\begin{array}{rcl}
+t'_1(x) & = & y'(x)\\
+		& = & t_2(x)\\[1.2em]
+t'_2(x) & = & y''(x)\\
+		& = & - \; a_1 \: y' \; - \; a_2 \: y\\
+		& = & - \; a_1 \: t_2(x) \; - \; a_2 \: t_1(x)
+\end{array}
+\right.
+\]
+
+\[
+\left\{\begin{array}{rcl}
+t_1(x_0) & = & y_0\\
+t_2(x_0) & = & y_1
+\end{array}
+\right.
+\]
+
+\medskip
+
+Zapisujemy uk³ad równañ (Def. \ref{def:uklad_rownan}, str. \pageref{def:uklad_rownan}) w~postaci macierzowej (Def. \ref{def:macierz}, str. \pageref{def:macierz})
+
+\[
+\left[
+\begin{array}{cc}
+0 & 1\\
+-a_2 & -a_1
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+t_1 \\
+t_2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+t'_1 \\
+t'_2
+\end{array}
+\right]
+\]
+
+\medskip
+
+Wyznaczamy równanie charakterystyczne (Def. \ref{def:rownanie_charakterystyczne}, str. \pageref{def:rownanie_charakterystyczne}) macierzy wspó³czynników tego uk³adu równañ
+
+\begin{eqnarray*}
+\det\left(A - \lambda I\right) & = & \det\left(
+\left[
+\begin{array}{cc}
+0 & 1\\
+-a_2 & -a_1
+\end{array}
+\right]
+- \lambda
+\left[
+\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}
+\right]
+\right)\\[0.5em]
+& = & \det
+\left[
+\begin{array}{cc}
+-\lambda & 1\\
+-a_2 & -a_1 - \lambda
+\end{array}
+\right]\\[0.5em]
+& = & \lambda^2 \; + \; a_1 \: \lambda \; + \; a_2
+\end{eqnarray*}
+
+\medskip
+
+Pierwiastki tego równania nazywamy równie¿ pierwiastkami charakterystycznymi równania niejednorodnego
+
+\medskip
+
+Je¿eli $\Delta \; = \; a_1^2 \; - \; 4 \: a_2$ równania charakterystycznego jest
+
+\begin{itemize}
+\item $>0$, to rozwi±zaniem równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\lambda_1$ (Def. \ref{def:wartosc_wlasna}, str. \pageref{def:wartosc_wlasna}) jest funkcja
+
+\[
+y_1 \; = \; e^{\lambda_1 \: x} \: C_1 
+\]
+
+\medskip
+
+\noindent a rozwi±zaniem równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\lambda_2$ (Def. \ref{def:wartosc_wlasna}, str. \pageref{def:wartosc_wlasna}) jest funkcja
+
+\[
+y_2 \; = \; e^{\lambda_2 \: x} \: C_2
+\]
+
+\medskip
+
+\textbf{Ca³k± ogóln± równania jednorodnego} jest funkcja
+
+\[
+y \; = \; C_1 \: e^{\lambda_1 \: x} \; + \; C_2 \: e^{\lambda_2 \: x} 
+\]
+
+\item $= 0$, to rozwi±zaniem równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\lambda_0$jest funkcja
+
+\[
+y_0 \; = \; e^{\lambda_0 \: x} \: \left(C_1 \: + \: C_2 \: x\right)
+\]
+
+\medskip
+
+Poniewa¿ wystêpuje jeden pierwiastek charakterystyczny, to \textbf{ca³ka ogólna równania liniowego jednorodnego} jest równa rozwi±zaniu równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\lambda_0$, czyli
+
+\[
+y \; = \; \left(C_1 \: + \: C_2 \: x\right) \: e^{\lambda_0 \: x}
+\]
+\item $< 0$, to rozwi±zaniem równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\lambda \; = \; \alpha \: + \: i \: \beta$ (Def. \ref{def:liczba_zespolona}, str. \pageref{def:liczba_zespolona}) jest funkcja
+
+\[
+y_1 \; = \; e^{(\alpha \: + \: i \: \beta)}
+\]
+
+\medskip
+
+\noindent a rozwi±zaniem równania jednorodnego odpowiadaj±cym warto¶ci w³asnej $\overline{\lambda} \; = \; \alpha \: - \: i \: \beta$ sprzê¿onej z $\lambda$ (Def. \ref{def:liczba_zespolona_sprzezona}, str. \pageref{def:liczba_zespolona_sprzezona}) jest funkcja
+
+\[
+y_2 \; = \; e^{(\alpha \: - \: i \: \beta)}
+\]
+
+\medskip
+
+Korzystaj±c ze wzoru Eulera (Def. \ref{def:wzor_eulera}, str. \pageref{def:wzor_eulera}) otrzymujemy
+
+\[
+y_1 \; = \; e^{\alpha \: x} \: \cos{\beta \: x} \: + \: i \: e^{\alpha \: x} \: \sin{\beta \: x}
+\]
+
+\medskip
+
+Na mocy twierdzenia
+
+\begin{twierdzenie}
+Je¿eli funkcja zespolona (Def. \ref{def:funkcja_zespolona}, str. \pageref{def:funkcja_zespolona}) zmiennej rzeczywistej $x$
+
+\[
+w(x) \; = \; u(x) \: + \: i \: v(x)
+\]
+
+\medskip
+
+\noindent jest \textbf{ca³k± równania}
+
+\[
+y'' \; + \; p(x) \: y' \; + \; q(x) \: y \; = \; 0
+\]
+
+\medskip
+
+\noindent z rzeczywistymi wspó³czynnikami $p(x)$ i~$q(x)$ w~przedziale $(a,b)$, to jej
+
+\begin{itemize}
+\item czê¶æ rzeczywista $u(x)$
+\item i~czê¶æ urojona $v(x)$ 
+\end{itemize}
+
+\medskip
+
+\noindent \textbf{s±} tak¿e \textbf{ca³kami} tego \textbf{równania} w~przedziale $(a,b)$
+
+\smallskip
+
+\cite[Rozdzia³ 1.8, Tw. 3]{zakowski4}
+\end{twierdzenie}
+
+\medskip
+
+\noindent funkcje 
+
+\[
+y_{11} \; = \; e^{\alpha \: x} \: \cos{\beta \: x}
+\]
+
+\[
+y_{12} \; = \; e^{\alpha \: x} \: \sin{\beta \: x}
+\]
+
+\medskip
+
+\noindent s± tak¿e ca³kami równania jednorodnego.
+
+\medskip
+
+\textbf{Ca³ka ogólna równania jednorodnego} wyra¿a siê wzorem
+
+\[
+y \; = \; e^{\alpha \: x} \: (C_1 \: \sin{\beta \: x} \: + \:  C_2 \: \cos{\beta \: x})
+\]
+\end{itemize}
+
+\medskip
+
+\subsection{Równanie Eulera}

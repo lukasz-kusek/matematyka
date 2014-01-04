@@ -1,0 +1,280 @@
+\chapter{Macierze}
+
+\begin{definicja}
+Niech $K$ bêdzie pewnym zbiorem. \textbf{\emph{Macierz±}}\label{def:macierz} nazywamy odwzorowanie postaci:
+\begin{displaymath}
+\{1, 2, \ldots, m\} \times \{1, 2, \ldots, n\} \ni (i, j) \rightarrow a_{ij} \in K
+\end{displaymath}
+\end{definicja}
+
+Element $a_{ij}$ nazywaæ bêdziemy wyrazem macierzy.
+\smallskip
+Macierz bêdziemy zapisywaæ w postaci $A = [a_{ij}]_{m \times n}$ lub:
+\begin{displaymath}
+\left[
+\begin{array}{ccccc}
+a_{11} & a_{12} & a_{13} & \cdots & a_{1n} \\
+a_{21} & a_{22} & a_{23} & \cdots & a_{2n} \\
+\vdots & \vdots &  & \ddots & \\
+a_{m1} & a_{m2} & a_{m3} & \cdots & a_{mn}
+\end{array}
+\right]
+\end{displaymath}
+\cite[Definicja 3.8.1]{furdzik}
+
+\smallskip
+Ci±g $a_{i1}, a_{i2}, \ldots, a_{in}$ nazywamy $i$-tym \textbf{\emph{wierszem}}, ci±g $a_{1j}, a_{2j}, \ldots, a_{jm}$ nazywamy $j$-t± \textbf{\emph{kolumn±}} macierzy.
+
+\medskip
+Gdy $m \neq n$ macierz $A$ nazywamy macierz± \textbf{\emph{prostok±tn±}}.
+
+Gdy $m = n$ macierz $A$ nazywamy macierz± \textbf{\emph{kwadratow±}}\label{def:macierz_kwadratowa}.
+
+\medskip
+\begin{definicja}
+Wiersz (kolumnê) macierzy, której wszystkie elementy s± zerami nazywamy \textbf{\emph{wierszem (kolumn±) zerowym}}\label{def:wiersz_zerowy}\label{def:kolumna_zerowa}.
+\cite[Rozdzia³ 2.3]{trajdos}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dzia³ania na macierzach}
+
+\smallskip
+Niech $K$ bêdzie pewnym cia³em (Def. \ref{def:cialo}, str. \pageref{def:cialo}). Niech $A$ i $B$ bêd± macierzami o $m$ wierszach i $n$ kolumnach i $\alpha \in K$.
+\cite[Definicja 3.8.2]{furdzik}
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Suma macierzy}
+
+\begin{definicja}
+\textbf{\emph{Sum± macierzy}} $A$ i $B$ nazywamy macierz
+\begin{displaymath}
+A + B \quad := \quad \left[ a_{ij} + b_{ij} \right]_{m \times n}
+\end{displaymath}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczyn skalara i macierzy}
+
+\begin{definicja}
+\textbf{\emph{Iloczynem skalara $\alpha$ i macierzy $A$}} nazwiemy macierz
+\begin{displaymath}
+\alpha A \quad := \quad \left[\alpha a_{ij} \right]_{m \times n}
+\end{displaymath}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczyn macierzy}
+
+\smallskip
+Niech teraz macierz $A$ bêdzie macierz± o $m$ wierszach i \textbf{\emph{$n$ kolumnach}}, a macierz $B$ macierz± o \textbf{\emph{$n$ wierszach}} i $p$ kolumnach.
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Iloczynem macierzy}} $A$ i $B$ nazywamy macierz
+\begin{displaymath}
+AB \quad := \quad \left[ a_{i1}b_{1j} + a_{i2}b_{2j} + \ldots + a_{in}b_{nj}\right]_{m \times p}
+\end{displaymath}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Szczególne rodzaje macierzy}
+
+\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz jednostkowa}
+
+\begin{definicja}
+Macierz kwadratow± (Def. \ref{def:macierz_kwadratowa}, str. \pageref{def:macierz_kwadratowa}) nazywamy macierz± \textbf{\emph{jednostkow±}} gdy
+\begin{displaymath}
+\delta_{ij} = \left\{ \begin{array}{ll} 1 & i = j \\ 0 & i \neq j \end{array} \right.
+\end{displaymath}
+\end{definicja}
+
+\smallskip
+Macierz jednostkow± bêdziemy oznaczaæ $I$.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz nieosobliwa}
+
+\begin{definicja}
+Macierz kwadratow± $A$ nazywamy \textbf{\emph{nieosobliw±}} (odwracaln±), je¿eli istnieje macierz kwadratowa $B$ taka, ¿e
+\begin{displaymath}
+AB \quad = \quad BA \quad = \quad I
+\end{displaymath}
+\cite[Definicja 3.8.4]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz diagonalna}
+
+\begin{definicja}
+Macierz kwadratow± $\left[a_{ij}\right]$ (Def. \ref{def:macierz_kwadratowa}, str. \pageref{def:macierz_kwadratowa}) nazywamy macierz± \textbf{\emph{diagonaln±}} gdy
+\begin{displaymath}
+a_{ij} = \left\{ \begin{array}{ll} a_{ij} \neq 0 & i = j \\ 0 & i \neq j \end{array} \right.
+\end{displaymath}
+
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz transponowana}
+
+\begin{definicja}
+\textbf{\emph{Macierz± transponowan±}}\label{def:macierz_transponowana} do macierzy $A = \left[a_{ij}\right]_{m \times n}$ nazywamy tak± macierz $B = \left[b_{ij}\right]_{n \times m}$, ¿e dla ka¿dego $(i,j)$ zachodzi $a_{ij}=b_{ji}$. 
+\cite[Definicja 3.11.3]{furdzik}
+\end{definicja}
+
+\smallskip
+Macierz transponowan± do macierzy $A$ oznaczamy przez $A^T$.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz symetryczna}
+
+\begin{definicja}
+Je¿eli $A = A^T$, to macierz $A$ nazywamy \textbf{\emph{macierz± symetryczn±}}.
+\cite[Rozdzia³ 4]{przybylo}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macierz antysymetryczna}
+
+\begin{definicja}
+Macierz kwadratow± $\left[a_{ij}\right]$ nazywamy \textbf{\emph{macierz± antysymetryczn±}} je¿eli
+\begin{displaymath}
+a_{ij} \quad = \quad -a_{ij} \qquad i \neq j
+\end{displaymath}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rz±d macierzy}
+
+\begin{definicja}
+\textbf{\emph{Rzêdem $r(W)$ macierzy $W$}} nazywamy najwiêkszy stopieñ wyjêtego z niej ró¿nego od zera minora (Def. \ref{def:minor}, str. \pageref{def:minor}), przy czym je¿eli wszystkie elementy macierzy s± równe zero, to przyjmujemy, ¿e rz±d jej jest równy zero.
+\cite[Rozdzia³ 9.6]{krysicki1}
+\end{definicja}
+
+\smallskip
+\emph{Wniosek}. Macierz $A = [a_{ij}]_{m \times n} \qquad rzA \leq min(m,n)$ %\leqslant
+
+\medskip
+\emph{Wniosek}. $rzA$ nazywamy maksymaln± ilo¶æ liniowo niezale¿nych wierszy (kolumn).
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{W³asno¶ci}
+
+\begin{enumerate}
+\item Wiersz lub kolumna zerowa (Def. \ref{def:wiersz_zerowy}, str. \pageref{def:wiersz_zerowy}) nie zwiêksza rzêdu macierzy.
+\item Je¶li 2 wiersze lub 2 kolumny s± proporcjonalne to skre¶lenie jednego/jednej z nich nie zmienia rzêdu macierzy.
+\item Je¿eli wiersz (kolumna) jest kombinacj± liniow± innych wierszy (kolumn), to taki wiersz (kolumna) nie zwiêksza rzêdu macierzy.
+\end{enumerate}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%
+\section{Warto¶ci i wektory w³asne}
+
+Niech $V$ bêdzie przestrzeni± wektorow± (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad cia³em (Def. \ref{def:cialo}, str. \pageref{def:cialo}) $K$ i $f$ endomorfizmem (Def. \ref{def:endomorfizm}, str. \pageref{def:endomorfizm}) w $V$.
+
+\begin{definicja}
+Skalar $\lambda \in K$ nazywamy \textbf{\emph{warto¶ci± w³asn±}}\label{def:wartosc_wlasna} endomorfizmu $f$, je¿eli
+\[
+\exists \: v \in V, \; v \neq 0 \colon \qquad f(v) = \lambda v
+\]
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+Je¿eli $\lambda$ jest w³asno¶ci± w³asn± endomorfizmu $f$, to ka¿dy niezerowy wektor $v$ spe³niaj±cy 
+\[
+f(v) = \lambda v
+\]
+nazywamy \textbf{\emph{wektorem w³asnym}}\label{def:wektor_wlasny} endomorfizmu $f$ odpowiadaj±cym $\lambda$.
+\end{definicja}
+
+\medskip
+\begin{definicja}
+\textbf{\emph{Warto¶ci± w³asn±}}\label{def:watosc_wlasna_macierzy} macierzy $A$ o elementach $K$ nazywamy taki skalar $\lambda$, ¿e
+\[
+det\left(A - \lambda I\right) = 0
+\]
+\cite[Definicja 3.14.7]{furdzik}
+\end{definicja}
+
+\medskip
+\begin{definicja}
+\textbf{\emph{Wektorem w³asnym}}\label{def:wektor_wlasny_macierzy} macierzy $A$ odpowiadaj±cym warto¶ci w³asnej $\lambda$ nazywamy niezerowy wektor $v \in K^n$ spe³niaj±cy równanie
+\[
+\left(A - \lambda I \right) v = \bar{0}
+\]
+\cite[Definicja 3.14.7]{furdzik}
+\end{definicja}
+
+\medskip
+\begin{definicja}
+\[
+\Delta \left(\lambda\right) = det \left(\lambda I - A \right)
+\]
+nazywamy \textbf{\emph{wielomianem charakterystycznym}}\label{def:wielomian_charakterystyczny} macierzy $A$.
+\cite[Definicja 3.14.7]{furdzik}
+\end{definicja}
+
+\medskip
+\begin{definicja}
+Równanie
+\[
+\Delta \left(\lambda\right) = 0
+\]
+nazywamy \textbf{\emph{równaniem charakterystycznym}}\label{def:rownanie_charakterystyczne} macierzy $A$.
+\cite[Definicja 3.14.7]{furdzik}
+\end{definicja}
+
+\medskip
+\begin{twierdzenie}
+Je¶li macierz $A$ jest symetryczna, to wszystkie warto¶ci w³asne s± rzeczywiste.
+\end{twierdzenie}
+
+\medskip
+\begin{twierdzenie}
+Je¶li macierz $A$ jest symetryczna, to wektory w³asne odpowiadaj±ce ró¿nym warto¶ciom w³asnym s± ortogonalne (Def. \ref{def:baza_ortogonalna}, str. \pageref{def:baza_ortogonalna}).
+\end{twierdzenie}
+
+\medskip
+\begin{twierdzenie}
+Je¶li dla warto¶ci w³asnej $\lambda$ istniej± dwa wektory w³asne $v, u \in K^n$ to ich kombinacja liniowa (Def. \ref{def:kombinacja_liniowa_wektorow}, str. \pageref{def:kombinacja_liniowa_wektorow}) jest te¿ wektorem w³asnym.
+\begin{proof}
+Niech $f\left(v\right) = \lambda v$ oraz $f\left(u\right) = \lambda u$. Zbadamy czy
+\[
+f\left(\alpha u + \beta v\right) \stackrel{?}{=} \lambda \left( \alpha u + \beta v \right)
+\]
+Z definicji odwzorowania liniowego (Def. \ref{def:odwzorowanie_liniowe}, str. \pageref{def:odwzorowanie_liniowe})
+\[
+f\left(\alpha u + \beta v\right) = f\left(\alpha u\right) + f\left(\beta v\right) = \alpha f\left(u\right) + \beta f\left(v\right)
+\]
+Z za³o¿enia
+\[
+\alpha f\left(u\right) + \beta f\left(v\right) = \alpha \lambda u + \beta \lambda v = \lambda \left(\alpha u + \beta v \right)
+\]
+\end{proof}
+\end{twierdzenie}
+
+\medskip
+\begin{twierdzenie}
+Je¿eli $\lambda$ jest warto¶ci± w³asn± endomorfizmu $f$, to zbiór $V_{\lambda}$ (wektorów w³asnych odpowiadaj±cych $\lambda$) jest podprzestrzeni± wektorow± przestrzeni $V$.
+\cite[Twierdzenie 3.14.1]{furdzik}
+\end{twierdzenie}
+

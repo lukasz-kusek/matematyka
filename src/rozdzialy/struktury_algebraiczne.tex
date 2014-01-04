@@ -1,0 +1,346 @@
+\chapter{Struktury algebraiczne}
+
+\medskip
+
+Literatura do tego dzia³u: \cite{rut} - 1.1.1, 1.1.2, 1.2.1 \newline
+Zadania do tego dzia³u: \cite{rut} - 1.1.1, 1.1.2, 1.2.1
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Dzia³aniem wewnêtrznym}}\label{def:dzialanie_wewnetrzne}\index{dzia³anie}\index{dzia³anie!wewnêtrzne} (lub krótko \textbf{\emph{dzia³aniem}}\label{def:dzialanie}) w~zbiorze $A$ nazywamy dowolne odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) produktu kartezjañskiego (Def. \ref{def:iloczyn_kartezjanski}, str. \pageref{def:iloczyn_kartezjanski})
+
+\begin{center}
+$A \times A$ w~zbiór~$A$.
+\end{center}
+
+\smallskip
+
+\cite[Definicja 3, rozdzia³ 1.1.1]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Mówimy, ¿e dzia³anie $\circ$ w zbiorze $A$ jest \textbf{\emph{przemienne}}\label{def:dzialanie_przemienne}\index{dzia³anie!przemienne}, je¶li 
+
+\[
+\forall \: a,b \in A \colon \qquad a\circ b \; = \; b \circ a
+\]
+
+\smallskip
+
+\cite[Definicja 5, rozdzia³ 1.1.2]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Mówimy, ¿e dzia³anie $\circ$ w zbiorze $A$ jest \textbf{\emph{³±czne}}\label{def:dzialanie_laczne}\index{dzia³anie!³±czne}, je¶li 
+
+\[
+\forall a, b, c \in A \colon \qquad (a \circ b) \circ c \; = \; a \circ (b \circ c)
+\]
+
+\smallskip
+
+\cite[Definicja 6, rozdzia³ 1.1.2]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Mówimy, ¿e element $e \in A$ jest \textbf{\emph{elementem neutralnym}}\label{def:element_neutralny}\index{element!neutralny}\index{dzia³anie!element neutralny} dzia³ania $\circ$ okre¶lonego w $A$, je¶li
+
+\[
+\forall a \in A \colon \qquad a \circ e \; = \; e \circ a \; = \; a
+\]
+
+\smallskip
+
+Element neutralny w~notacji
+
+\begin{itemize}
+\item multiplikatywnej nazywa siê elementem jednostkowym\index{element!jednostkowy} lub \textbf{\emph{jedynk±}}\label{def:jedynka_dzialania}\index{dzia³anie!jedynka}\index{jedynka!dzia³ania} i~oznacza siê go czêsto symbolem $\mathbf{1}$.
+
+\item addytywnej nazywamy \textbf{\emph{zerem}}\label{def:zero_dzialania}\index{dzia³anie!zero}\index{zero!dzia³ania} i~oznaczamy go symbolem $\mathbf{0}$.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 7, rozdzia³ 1.1.2]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Niech 
+
+\begin{itemize}
+\item dzia³anie $\circ$ w zbiorze $A$ \textbf{ma element neutralny} $e$
+
+\item $a \in A$.
+\end{itemize}
+
+\medskip
+
+Ka¿dy element $b \in A$ spe³niaj±cy równo¶æ 
+
+\[
+a \circ b \; = \; b \circ a \; = \; e
+\]
+
+\noindent nazywamy \textbf{\emph{elementem odwrotnym do $a$}}\label{def:element_odwrotny}\index{element!odwrotny}.
+
+\bigskip
+
+Je¶li istnieje \textbf{dok³adnie jeden} element odwrotny do $a$, to oznaczamy go symbolem $a^{-1}$.
+
+\medskip
+
+W~notacji addytywnej element odwrotny do $a$ nazywamy \textbf{elementem przeciwnym}\label{def:element_przeciwny}\index{element!odwrotny} do $a$ i~zamiast $a^{-1}$ piszemy~$-a$.
+
+\smallskip
+
+\cite[Definicja 8, rozdzia³ 1.1.2]{rut}
+\end{definicja} 
+
+\bigskip
+
+\begin{definicja}
+Niech w zbiorze $A$ okre¶lone bêd± dzia³ania $\odot$ oraz $\oplus$.
+
+\medskip
+
+Mówimy, ¿e dzia³anie $\odot$ jest \textbf{\emph{rozdzielne}}\label{def:dzialanie_rozdzielne}\index{dzia³anie!rozdzielne} wzglêdem dzia³ania $\oplus$, je¶li
+
+\[
+\forall \: a, b, c \in A \colon \qquad a \odot (b \oplus c) \; = \; (a \odot b) \oplus (a \odot c)
+\]
+
+\noindent oraz
+
+\[
+\forall \: a, b, c \in A \colon \qquad (a \oplus b) \odot c \; = \; (a \odot c) \oplus (b \odot c)
+\]
+
+\smallskip
+
+\cite[Definicja 9, rozdzia³ 1.1.2]{rut}
+
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Niech $A$ i $F$ bêd± dowolnymi zbiorami niepustymi.
+
+\medskip
+
+\textbf{\emph{Dzia³aniem zewnêtrznym}}\label{def:dzialanie_zewnetrzne}\index{dzia³anie!zewnêtrzne} w~zbiorze $A$ nazywamy dowolne odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie}) produktu kartezjañskiego (Def. \ref{def:iloczyn_kartezjanski}, str. \pageref{def:iloczyn_kartezjanski})
+
+\begin{center}
+$F \times A$ w~zbiór $A$.
+\end{center}
+
+\medskip
+
+Zbiór $F$ nazywamy \emph{zbiorem operatorów}\index{zbiór!operatorów}.
+
+\smallskip
+
+\cite[Definicja 10, rozdzia³ 1.1.3]{rut}.
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Struktur± algebraiczn±}}\label{def:struktura_algebraiczna}\index{struktura algebraiczna} okre¶lon± na zbiorze $A$ nazywamy zespó³
+
+\[
+(A; \quad F_1, \ldots, F_m; \quad \circ_1, \ldots, \circ_n; \quad \bullet_1, \ldots, \bullet_m),
+\]
+
+\noindent gdzie
+
+\begin{tabular}{m{3cm}m{8cm}m{0,1cm}}
+ 
+$F1, \ldots, F_m \qquad$ &
+s± zbiorami, &
+ \\[10pt]
+ 
+$\circ_1, \ldots, \circ_n \qquad$ &
+s± dzia³aniami wewnêtrznymi (Def. \ref{def:dzialanie_wewnetrzne}, str. \pageref{def:dzialanie_wewnetrzne}) w~zbiorze $A$ &
+ \\[20pt]
+ 
+$\bullet_1, \ldots, \bullet_m \qquad$ &
+s± takimi dzia³aniami zewnêtrznymi (Def. \ref{def:dzialanie_zewnetrzne}, str. \pageref{def:dzialanie_zewnetrzne}) w~$A$, ¿e &
+ \\[20pt]
+ 
+&
+$\bullet_1 \colon \qquad F_1 \times A \to A, \quad \ldots, \quad F_m \times A \to A$. &
+ \\[10pt]
+ 
+\end{tabular}
+
+\smallskip
+
+\cite[Definicja 11, rozdzia³ 1.2.1]{rut}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%
+\section{Grupa}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Grup±}}\index{grupa} nazywamy parê (Def. \ref{def:para_uporzadkowana}, str. \pageref{def:para_uporzadkowana})
+
+\[
+(G, \: \cdot), 
+\]
+
+\noindent sk³adaj±c± siê
+
+\begin{itemize}
+\item ze zbioru $G$
+\item oraz z takiego dzia³ania $\cdot$ (Def. \ref{def:dzialanie}, str. \pageref{def:dzialanie}) okre¶lonego w~zbiorze $G$ 
+
+\[
+\forall \: a, b \in G \colon \qquad G \times G \in \: (a, b) \: \to \: a + b \: \in G
+\]
+
+\noindent które spe³nia warunki:
+\begin{enumerate}
+\item Dzia³anie $\cdot$ jest \textbf{\emph{³±czne}} (Def. \ref{def:dzialanie_laczne}, str. \pageref{def:dzialanie_laczne})
+\item Dzia³anie $\cdot$ ma \textbf{\emph{element neutralny}} (Def. \ref{def:element_neutralny}, str. \pageref{def:element_neutralny})
+\item Dla ka¿dego elementu zbioru $G$ istnieje \textbf{\emph{element odwrotny}} (Def. \ref{def:element_odwrotny}, str. \pageref{def:element_odwrotny})
+\end{enumerate}
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 19, rozdzia³ 2.1.1]{rut}
+
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Grupê $(G, \cdot)$ nazywamy \textbf{\emph{grup± abelow±}}\label{def:grupa_abelowa}\index{grupa!abelowa} (\textbf{\emph{przemienn±}}), je¶li dzia³anie $\cdot$ jest \textbf{\emph{przemienne}} (Def. \ref{def:dzialanie_przemienne}, str. \pageref{def:dzialanie_przemienne}). 
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Elementem neutralnym grupy}}\index{element!neutralny!grupy}\index{grupa!element neutralny} $G$  nazywamy \textbf{\emph{element neutralny dzia³ania}} (Def. \ref{def:element_neutralny}, str. \pageref{def:element_neutralny}), wzglêdem którego $G$ jest grup±.
+
+\medskip
+
+Element neutralny grupy nazywamy w notacji
+
+\begin{itemize}
+\item multiplikatywnej - jedynk± grupy $G$\index{grupa!jedynka}\index{jedynka!dzia³ania},
+\item addytywnej - zerem grupy $G$\index{grupa!zero}\index{zero!grupy}.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 21, rozdzia³ 2.1.1]{rut}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pier¶cieñ}
+
+\medskip
+
+\begin{definicja}
+Trójkê uporz±dkowan± (Def. \ref{def:para_uporzadkowana}, str. \pageref{def:para_uporzadkowana})
+
+\[
+(A, \: +, \: \cdot)
+\]
+
+\noindent sk³adaj±cy siê z
+
+\begin{itemize}
+\item niepustego zbioru $A$,
+\item dzia³ania $+$ okre¶lonego w~$A$ (Def. \ref{def:dzialanie}, str. \pageref{def:dzialanie})
+\item oraz dzia³ania $\cdot$ okre¶lonego w~$A$ (Def. \ref{def:dzialanie}, str. \pageref{def:dzialanie})
+\end{itemize}
+
+\noindent nazywamy \textbf{\emph{pier¶cieniem}}\label{def:pierscien}\index{pier¶cieñ}, je¶li spe³nione s± warunki:
+
+\begin{enumerate}
+\item $(A, +)$ jest \textbf{\emph{grup± abelow±}} (Def. \ref{def:grupa_abelowa}, str. \pageref{def:grupa_abelowa})
+\item dzia³anie $\cdot$ jest \textbf{\emph{³±czne}} (Def. \ref{def:dzialanie_laczne}, str. \pageref{def:dzialanie_laczne})
+\item dzia³anie $\cdot$ jest \textbf{\emph{rozdzielne}} (Def. \ref{def:dzialanie_rozdzielne}, str. \pageref{def:dzialanie_rozdzielne}) wzglêdem $+$
+\end{enumerate}
+\cite[Definicja 78, rozdzia³ 3.1.1]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Je¶li dzia³anie $\cdot$ jest \textbf{\emph{przemienne}} (Def. \ref{def:dzialanie_przemienne}, str. \pageref{def:dzialanie_przemienne}), to pier¶cieñ nazywamy \textbf{\emph{pier¶cieniem przemiennym}}\label{def:pierscien_przemienny}\index{pier¶cieñ!przemienny}.
+
+\smallskip
+
+\cite[Definicja 79, rozdzia³ 3.1.1]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Element neutralny dodowania}} (Def. \ref{def:zero_dzialania}, str. \pageref{def:zero_dzialania}) w~pier¶cieniu $A$ nazywamy \textbf{\emph{zerem pier¶cienia}}\label{def:zero_pierscienia}\index{pier¶cieñ!zero}\index{zero!pier¶cienia} $A$.
+
+\smallskip
+
+\cite[Definicja 80, rozdzia³ 3.1.1]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Je¶li mno¿enie $\cdot$ w pier¶cieniu~A ma jedynkê (Def. \ref{def:jedynka_dzialania}, str. \pageref{def:jedynka_dzialania}), to jedynkê tê nazywamy \textbf{\emph{jedynk± pier¶cienia}}\label{def:jedynka_pierscienia}\index{pier¶cieñ!jedynka}\index{jedynka!pier¶cienia} $A$ i~mówimy wtedy, ¿e $A$ jest \textbf{\emph{pier¶cieniem z~jedynk±}}\label{def:pierscien_z_jedynka}\index{pier¶cieñ!z jedynk±}.
+
+\smallskip
+
+\cite[Definicja 81, rozdzia³ 3.1.1]{rut}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+O~pier¶cieniu $A$ mówimy, ¿e jest \textbf{\emph{pier¶cieniem zerowym}}\label{def:pierscien_zerowy}\index{pier¶cieñ!zerowy}, je¶li zbiór $A$ jest \textbf{jednoelementowy}.
+
+W~przeciwnym przypadku o~pier¶cieniu $A$ mówimy, ¿e jest \textbf{\emph{pier¶cieniem niezerowym}}\label{def:pierscien_niezerowy}\index{pier¶cieñ!niezerowy}.
+
+\smallskip
+
+\cite[Definicja 82, rozdzia³ 3.1.1]{rut}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%
+\section{Cia³o}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Cia³em}}\label{def:cialo}\index{cia³o} nazywamy \textbf{\emph{pier¶cieñ z jedynk±}} (Def. \ref{def:pierscien_z_jedynka}, str. \pageref{def:pierscien_z_jedynka}) spe³niaj±cy warunki:
+\begin{enumerate}
+\item zbiór $K$ ma przynajmniej dwa elementy
+\item dla ka¿dego elementu zbioru $K$ ró¿nego od zera grupy $(K, +)$ istnieje element \textbf{\emph{odwrotny}} (Def. \ref{def:element_odwrotny}, str. \pageref{def:element_odwrotny}):
+\begin{center}
+$\forall \: x \in K, \: x \neq \mathbf{0} \quad \exists \: x^{-1} \colon \qquad x \cdot x^{-1} \; = \; x^{-1} \cdot x  \; = \; \mathbf{1}$
+\end{center}
+\end{enumerate} 
+
+\smallskip
+
+\cite[Definicja 86, rozdzia³ 3.1.4]{rut}
+\end{definicja}
+

@@ -1,0 +1,450 @@
+\chapter{Rachunek ró¿niczkowy funkcji jednej zmiennej}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pochodna funkcji}
+
+\includegraphics[scale=1.5]{img/pochodna-pochodna_funkcji.png}
+
+\begin{definicja}
+Funkcja
+\[
+f \colon (a,b) \to \mathbb{R}
+\]
+ma \textbf{\emph{pochodn± w punkcie $x_0$}}\label{def:pochodna_funkcji} wtedy i tylko wtedy, gdy
+
+\[
+\exists \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0}
+\]
+
+\bigskip
+
+Pochodn± funkcji oznaczamy
+\[
+y', \quad f'(x_0), \quad \dfrac{dy}{dx}, \quad \dfrac{df(x_0)}{dx}, \quad \dot y
+\]
+
+\medskip
+
+czyli
+
+\[
+f'(x_0) = \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0}
+\]
+
+\medskip
+
+lub u¿ywaj±c $h = x - x_0$
+
+\[
+f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0+h) - f(x_0)}{h}
+\]
+
+\cite[Definicja 6.1]{ptak}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pochodna wy¿szego rzêdu}
+
+\begin{definicja}
+Niech funkcja $f \colon (a,b) \to \mathbb{R}$ bêdzie \textbf{ró¿niczkowalna} w~$(a,b)$, a~$x_0 \in (a,b)$.
+
+\medskip
+
+Mówimy, ¿e 
+\begin{itemize}
+\item $f$ jest \textbf{\emph{dwukrotnie ró¿niczkowalna}} w punkcie $x_0$,
+\end{itemize}
+
+\noindent lub ¿e
+
+\begin{itemize}
+\item $f$ ma \textbf{\emph{pochodn± drugiego rzêdu}}\label{def:pochodna_drugiego_rzedu} w punkcie $x_0$,
+\end{itemize}
+
+\medskip
+
+\noindent je¶li
+\begin{center}
+funkcja $f' \colon (a,b) \to \mathbb{R}$ jest \textbf{ró¿niczkowalna} w $x_0$,
+\end{center}
+
+\medskip
+
+\noindent co oznacza, ¿e
+
+\[
+\exists \left(f'\right)'(x_0) \quad \colon \quad f''(x_0) = \left(f'\right)'(x_0)
+\]
+
+\medskip
+
+\cite[Definicja 6.36]{ptak} \cite[Rozdzia³ 2.9]{zakowski1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Niech funkcja $f \colon (a,b) \to \mathbb{R}$ bêdzie \textbf{($n - 1$)-krotnie ró¿niczkowalna} w~$(a,b)$, a~$x_0 \in (a,b)$.
+
+\medskip
+
+Mówimy, ¿e 
+
+\begin{itemize}
+\item $f$ jest \textbf{\emph{$n$-krotnie ró¿niczkowalna}} w punkcie $x_0$,
+\end{itemize}
+
+\noindent lub ¿e
+
+\begin{itemize}
+\item $f$ ma \textbf{\emph{pochodn± $n$-tego rzêdu}}\label{def:pochodna_n-tego_rzedu} w punkcie $x_0$,
+\end{itemize}
+
+\medskip
+
+\noindent je¶li
+
+\begin{center}
+funkcja $f^{(n-1)} \colon (a,b) \to \mathbb{R}$ jest \textbf{ró¿niczkowalna} w $x_0$,
+\end{center}
+
+\medskip
+
+\noindent co oznacza, ¿e
+
+\[
+\exists \left(f^{(n-1)}\right)'(x_0) \quad \colon \quad f^{(n)}(x_0) = \left(f^{(n-1)}\right)'(x_0)
+\]
+
+\medskip
+
+\cite[Definicja 6.37]{ptak} \cite[Rozdzia³ 2.9]{zakowski1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretacja geometryczna}
+
+\includegraphics[scale=1.5]{img/pochodna-interpretacja_geometryczna.png}
+
+Geometrycznie \textbf{\emph{pochodna}} funkcji $y = f(x)$ w punkcie $x_0$ równa siê \textbf{wpó³czynnikowi k±towemu stycznej} (tangensowi k±ta $\alpha$, który prosta tworzy z dodatnim zwrotem osi $Ox$) do wykresu funkcji w tym punkcie.
+
+\cite[Paragraf 6.1]{krysicki1}
+
+\begin{twierdzenie}
+Je¿eli funkcja $f \colon (a,b) \to \mathbb{R}$ jest \textbf{ró¿niczkowalna} w $x_0 \in (a,b)$, to \textbf{styczna} do wykresu w punkcie $\left(x_0, f(x_0)\right)$ wyra¿a siê wzorem:
+
+\[
+y - f(x_0) = f'(x_0)(x-x_0)
+\]
+
+\medskip
+
+\cite[Wniosek 6.2]{ptak}
+\end{twierdzenie}
+
+
+%\bigskip
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Obliczanie pochodnej}
+
+TODO marginesy
+
+\[
+\begin{array}{|rclc|l|}\hline
+(c)' & = & 0 & \hspace{1cm} & c \textsl{ - sta³a} \\ \hline
+(x)' & = & 1 & & \\ \hline
+\left(x^a\right)' & = & a\;x^{a-1} & & x > 0, \quad a \in \mathbb{R}, \; a \neq 0 \\ \hline
+\left(x^n\right)' & = & n\;x^{n-1} & & n \in \mathbb{N^+} \\ \hline
+\left(\sqrt{x} \right)' & = & \dfrac{1}{2\sqrt{x}} & & x > 0 \\ \hline
+\left(\dfrac{1}{x} \right)' & = & - \dfrac{1}{x^2} & & x \in \mathbb{R} \setminus \{0\} \\ \hline
+\left(\sqrt[n]{x} \right)' & = & \dfrac{1}{n \; \sqrt[n]{x^{n-1}}} & & n \textsl{ - nieparzyste, } x \in \mathbb{R} \setminus \{0\} \\ \hline
+\left(\sqrt[n]{x} \right)' & = & \dfrac{1}{n \; \sqrt[n]{x^{n-1}}} & & n \textsl{ - parzyste, } x > 0 \\ \hline
+\left(\sin{x} \right)' & = & \cos{x} & &  \\ \hline
+\left(\cos{x} \right)' & = & -\sin{x} & &  \\ \hline
+\left(\tan{x} \right)' & = & \dfrac{1}{\cos^{2}{x}} & & x \in \mathbb{R} \setminus \left\{\frac{\pi}{2} + k\pi \colon k \in \mathbb{Z} \right\} \\ \hline
+\left(\cot{x} \right)' & = & - \dfrac{1}{\sin^{2}{x}} & & x \in \mathbb{R} \setminus \left\{k\pi \colon k \in \mathbb{Z} \right\} \\ \hline
+\left(\arcsin{x} \right)' & = & \dfrac{1}{\sqrt{1-x^2}} & & x \in (-1, 1) \\ \hline
+\left(\arccos{x} \right)' & = & -\dfrac{1}{\sqrt{1-x^2}} & & x \in (-1, 1) \\ \hline
+\left(\arctan{x} \right)' & = & \dfrac{1}{1 + x^2} & & x \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \\ \hline
+\left(\arccot{x} \right)' & = & - \dfrac{1}{1 + x^2} & & x \in \left(0, \pi\right) \\ \hline
+\left(\mathrm{e}^x \right)' & = & \mathrm{e}^x & &  \\ \hline
+\left(\mathrm{a}^x \right)' & = & \mathrm{a}^x \; \ln{a} & & a > 0 \\ \hline
+\left(\ln{x} \right)' & = & \dfrac{1}{x} & & x > 0 \\ \hline
+\end{array}
+\]
+
+\cite[Paragraf 6.1]{krysicki1} \cite[Twierdzenie 6.13]{ptak} \cite[Rozdzia³ 2.8, tabela 2.2a, 2.2b]{zakowski1}
+
+\medskip
+
+\begin{twierdzenie}[o dzia³aniach arytemtycznych na pochodnych]
+Niech funkcje $f, g \colon (a,b) \to \mathbb{R}$ bêd± ró¿niczkowalne (Def. \ref{def:funkcja_rozniczkowalna}, str. \pageref{def:funkcja_rozniczkowalna}) w $x_0$, a $\lambda \in \mathbb{R}$. Wtedy
+
+TODO odstepy
+
+\[
+\begin{array}{rcl}
+\left(f \pm g\right)'\left(x_0\right) & = & f'\left(x_0\right) \pm g'\left(x_0\right) \\
+\left(f \cdot g\right)'\left(x_0\right) & = & f'\left(x_0\right) g\left(x_0\right) + f\left(x_0\right) g'\left(x_0\right) \\
+\left(\lambda \cdot f\right)'\left(x_0\right) & = & \lambda f'\left(x_0\right) \\
+\left(\dfrac{f}{g}\right)'\left(x_0\right) & = & \dfrac{f'\left(x_0\right) g\left(x_0\right) - f\left(x_0\right) g'\left(x_0\right)}{g^2\left(x_0\right)}
+\end{array}
+\]
+\cite[Twierdzenie 6.9]{ptak} \cite[Rozdzia³ 2.8]{zakowski1}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}[o pochodnej funkcji z³o¿onej]
+Niech bêd± dane dwie funkcje:
+
+\[
+\begin{array}{rlcl}
+f \colon & (a,b) & \to & (c,d) \\
+g \colon & (c,d) & \to & \mathbb{R}
+\end{array}
+\]
+
+\medskip
+
+Za³ó¿my, ¿e funkcja
+
+\begin{itemize}
+\item $f$ jest \textbf{ró¿niczkowalna} (Def. \ref{def:funkcja_rozniczkowalna}, str. \pageref{def:funkcja_rozniczkowalna}) w punkcie $x_0$
+\item $g$ jest \textbf{ró¿niczkowalna} w punkcie $y_0 = f\left(x_0\right)$
+\end{itemize}
+
+\medskip
+
+Wtedy funkcja $g \circ f\colon (a,b) \to \mathbb{R}$ jest \textbf{ró¿niczkowalna} w punkcie $x_0$
+
+\[
+\left(g \circ f\right)'\left(x_0\right) = g'\Big(f\left(x_0\right)\Big) \cdot f'\left(x_0\right)
+\]
+
+albo
+
+\[
+\bigg(g\Big(f\left(x_0\right)\Big)\bigg)' = g'\Big(f\left(x_0\right)\Big) \cdot f'\left(x_0\right)
+\]
+
+\medskip
+
+\cite[Twierdzenie 6.10]{ptak} \cite[Rozdzia³ 2.8]{zakowski1}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}[o pochodnej funkcji odwrotnej]
+Niech bêd± dane funkcje
+
+\[
+\begin{array}{rlcl}
+f \colon & (a,b) & \to & (c,d) \\
+f^{-1} \colon & (c,d) & \to & (a,b)
+\end{array}
+\]
+
+\medskip
+
+Za³ó¿my, ¿e funkcja
+
+\begin{itemize}
+\item $f$ jest odwracalna
+\item $f^{-1}$ jest funkcj± odwrotn± (Def. \ref{def:relacja_odwrotna}, str. \pageref{def:relacja_odwrotna}) do $f$
+\item $f$ jest \textbf{ró¿niczkowalna} (Def. \ref{def:funkcja_rozniczkowalna}, str. \pageref{def:funkcja_rozniczkowalna}) w punkcie $x_0$
+\item $f^{-1}$ jest \textbf{ci±g³a} w punkcie $y_0 = f\left(x_0\right)$
+\end{itemize}
+
+\medskip
+
+Wtedy funkcja $f^{-1}$ jest \textbf{ró¿niczkowalna} w punkcie $y_0$ oraz
+
+\[
+\left(f^{-1}\right)' \left(y_0\right) = \dfrac{1}{f'\left(x_0\right)}
+\]
+
+\medskip
+
+\cite[Twierdzenie 6.11]{ptak} \cite[Rozdzia³ 2.8]{zakowski1}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Pochodn± logarytmiczn±}} funkcji $f$ nazywamy pochodn± jej logarytmu naturalnego
+
+\[
+\Big(\ln{f(x_0)}\Big)' = \dfrac{f'(x_0)}{f(x_0)}
+\]
+
+\medskip
+
+Znaj±c ju¿ pochodn± logarytmiczn± funkcji mo¿emy obliczyæ jej pochodn±
+
+\[
+f'(x_0) = f(x_0) \cdot \Big(\ln{f(x_0)}\Big)'
+\]
+
+\medskip
+
+\cite[Rozdzia³ 2.8]{zakowski1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Twierdzenia o pochodnych}
+
+Niech $f \colon (a,b) \to \mathbb{R}$
+
+\begin{twierdzenie}[ró¿niczkowalno¶æ a ci±g³o¶æ]
+Je¿eli funkcja $f$ jest \textbf{ró¿niczkowalna} w $x_0 \in (a,b)$, to $f$ jest \textbf{ci±g³a} w $x_0$.
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}[o zwi±zku miêdzy monotoniczno¶ci± o pochodn±]
+TODO
+\end{twierdzenie}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ró¿niczka funkcji}
+
+\cite{zakowski1}[Rozdzia³ 2.7]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Twierdzenie o przedstawieniu przyrostu funkcji}
+
+\begin{twierdzenie}[o przedstawieniu przyrostu funkcji]
+Je¿eli dziedzina funkcji $f$ zawiera pewne otoczenie $Q$ punktu $x_0$ oraz istnieje pochodna $f'(x_0)$, to dla ka¿dego przyrostu $\Delta x$ takiego, ¿e $x_0 + \Delta x \in Q$, przyrost funkcji
+
+\[
+\Delta f = f\left(x_0 + \Delta x\right) - f\left(x_0\right)
+\]
+
+\medskip
+
+mo¿na przedstawiæ nastêpuj±co
+
+\[
+\Delta f = f'\left(x_0\right) \Delta x + \alpha \Delta x
+\]
+
+\medskip
+
+przy czym $\alpha \to 0$, gdy $\Delta x$ d±¿y do zera w dowolny sposób.
+
+\medskip
+
+\begin{proof}
+Je¿eli przyjmiemy
+
+\[
+\alpha = \left\{ \begin{array}{ccl}
+\dfrac{\Delta f}{\Delta x} - f'(x_0) & \textsl{dla} & \Delta x \neq 0 \\
+0 & \textsl{dla} & \Delta x = 0
+\end{array} \right.
+\]
+
+\medskip
+
+to dla ka¿dego (dodatniego, ujemnego, b±d¼ równego zeru) przyrostu $\Delta x$ takiego, ¿e $x_0 + \Delta x \in Q$, przedstawienie $\Delta f = f'\left(x_0\right) \Delta x + \alpha \Delta x$ jest prawdziwe.
+
+Je¿eli $\Delta x \to 0$, to poniewa¿ istnieje granica
+
+\[
+\lim_{\Delta x \to 0} \dfrac{\Delta f}{\Delta x} = f'\left(x_0\right)
+\]
+
+\medskip
+
+wiêc wobec przyjêtego $\alpha$, $\alpha \to 0$, cnd.
+\end{proof}
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funkcja ró¿niczkowalna}
+
+\begin{definicja}
+Funkcjê $f$ nazywamy \textbf{\emph{ró¿niczkowaln±}}\label{def:funkcja_rozniczkowalna} w punkcie $x_0$, je¿eli jej przyrost 
+
+\[
+\Delta f = f\left(x_0 + \Delta x\right) - f\left(x_0\right)
+\]
+
+\medskip
+
+mo¿na dla ka¿dego $\Delta x$ dostatecznie bliskiego zeru przedstawiæ w postaci
+
+\[
+\Delta f = A \Delta x + o\left(\Delta x\right)
+\]
+
+\medskip
+
+gdzie
+
+\begin{itemize}
+\item $A$ jest sta³±,
+\item a $o\left(\Delta x\right)$ jest nieskoñczenie ma³± (Def. \ref{def:nieskonczenie_mala}, str. \pageref{def:nieskonczenie_mala}) rzêdu wy¿szego ni¿ $\Delta x$, gdy $\Delta x \to 0$.
+\end{itemize}
+\end{definicja}
+
+\medskip
+
+\emph{Wniosek}. Z twierdzenia o przedstawieniu przyrostu funkcji wynika, ¿e je¿eli \textbf{istnieje} $f'(x_0)$, to funkcja $f$ jest w punkcie $x_0$ \textbf{ró¿niczkowalna}, przy czym $A = f'(x_0)$.
+
+Na odwrót, je¿eli funkcja $f$ jest \textbf{ró¿niczkowalna} w punkcie $x_0$, to \textbf{istnieje} $f'(x_0) = A$.
+
+\medskip
+
+\emph{Wniosek}. Funkcja $f$ ma wiêc \textbf{pochodn±} w punkcie $x_0$ wtedy i tylko wtedy, gdy jest w tym punkcie \textbf{ró¿niczkowalna}, przy czym wówczas
+
+\[
+\Delta f = f'\left(x_0\right) \Delta x + o\left(\Delta x\right)
+\]
+
+\medskip
+
+dla ka¿dego $\Delta x$ dostatecznie bliskiego zeru.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ró¿niczka funkcji}
+
+\begin{definicja}
+\textbf{\emph{Ró¿niczk± funkcji}}\label{def:rozniczka_funkcji} $f$ w punkcie $x_0$ i dla przyrostu $\Delta x$ zmiennej niezale¿nej $x$ nazywamy iloczyn
+
+\[
+f'(x_0) \Delta x
+\]
+
+\medskip
+
+Ró¿niczkê oznaczamy symbolem $df(x_0)$, b±d¼ te¿ krótko $df$ lub $dy$.
+
+Mamy wiêc
+
+\[
+df(x_0) \; \stackrel{df}{=} \; f'(x_0) \Delta x
+\]
+
+lub krótko 
+
+\[
+dy \; \stackrel{df}{=} \; f'(x_0) \Delta x
+\]
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Interpretacja geometryczna}
+
+\vspace{5cm}
+TODO 2.24 str 106

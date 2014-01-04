@@ -1,0 +1,369 @@
+\chapter{Funkcje}
+
+Definicjê funkcji Czytelnik znajdzie na stronie \pageref{def:funkcja}, a podstawowe definicje zwi±zane z ni± na stronie \pageref{podstawowe_definicje_dla_funkcji}.
+
+\bigskip
+%%%%%%%
+\section{Wykres funkcji}
+
+Funkcjê liczbow± mo¿na interpretowaæ geometrycznie sporz±dzaj±c tzw. \textbf{\emph{wykres funkcji}} (Def. \ref{def:wykres_funkcji}, str. \pageref{def:wykres_funkcji}).
+
+Na p³aszczy¼nie kartezjañskiego uk³adu wspó³rzêdnych zaznaczamy punkty o wspó³rzêdnych $\left(x, f(x)\right)$, których zbiór, gdy $x$ przyjmuje wszystkie warto¶ci dziedziny funkcji (Def. \ref{def:dziedzina_funkcji}, str. \pageref{def:dziedzina_funkcji}) $f$, stanowi wykres funkcji.
+
+\includegraphics[scale=1.5]{img/funkcje-wykres_funkcji.png}
+
+\cite[Rozdzia³ 1.7]{zakowski1}
+
+\bigskip
+%%%%%%%
+\section{Wykres funkcji odwrotnej}
+
+Niech
+\[
+y = f(x)
+\]
+oraz
+\[
+y = f^{-1}(x)
+\]
+(Def. \ref{def:relacja_odwrotna}, str. \pageref{def:relacja_odwrotna})
+
+\medskip
+
+Wykres funkcji $f$ i wykres funkcji odwrotnej $f^{-1}$ s± symetrycznie po³o¿one wzglêdem dwusiecznej k±ta zawartego miêdzy dodatnimi pó³osiami wspó³rzêdnych
+
+\includegraphics[scale=1.5]{img/funkcje-funkcja_odwrotna.png}
+
+\cite[Paragraf 4.7]{krysicki1}
+
+\bigskip
+%%%%%%%
+\section{Parzysto¶æ. Nieparzysto¶æ}
+
+TODO Df
+
+\begin{definicja}
+Funkcjê $f \colon \mathbb{R} \supset Df \rightarrow \mathbb{R}$ nazywamy \textbf{\emph{parzyst±}}\label{def:funkcja_parzysta}, je¶li
+\[
+\forall x \in Df \colon \qquad -x \in Df \quad \wedge \quad f(-x) = f(x)
+\]
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+Funkcjê $f \colon \mathbb{R} \supset Df \rightarrow \mathbb{R}$ nazywamy \textbf{\emph{nieparzyst±}}\label{def:funkcja_nieparzysta}, je¶li
+\[
+\forall x \in Df \colon \qquad -x \in Df \quad \wedge \quad f(-x) = -f(x)
+\]
+\end{definicja}
+
+\cite[Rozdzia³ 5.2]{ptak}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Granice funkcji}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Granica lewostronna funkcji}
+
+\begin{definicja}[Cauchy'ego]
+Mówimy, ¿e liczba $g$ jest \textbf{\emph{granic± lewostronn± funkcji}}\label{def:granica_lewostronna_funkcji} $f(x)$ w punkcie $x = x_0$, co zapisujemy
+
+\[
+\lim_{x \to x_0^-} f(x) \; = \; g
+\]
+
+je¿eli dla ka¿dego $\varepsilon > 0$ istnieje taka liczba $\delta > 0$, ¿e
+
+\[
+\left| f(x) - g \right| < \varepsilon \qquad \textsl{ dla } \qquad x_0 - \delta < x < x_0
+\]
+
+\medskip
+
+Lub symbolicznie
+
+\[
+\lim_{x \to x_0^-} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall \varepsilon\!>\!0 \quad \exists \delta\!>\!0 \quad \forall x \colon \qquad x_0 - \delta < x < x_0 \quad \Rightarrow \quad \left| f(x) - g \right| < \varepsilon
+\]
+
+
+\cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}[Heinego]
+Mówimy, ¿e fukcja $f(x)$ ma w punkcie $x_0$ \textbf{\emph{granicê lewostronn±}} i piszemy
+
+\[
+\lim_{x \to x_0^-} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall (x_n) \subset \{x_n \subset Df, x_n < x_0\} \colon \qquad \lim_{n \to \infty} x_n = x_0 \quad \Rightarrow \quad \lim_{n \to \infty} f\left(x_n\right) = g
+\]
+
+\cite[Rozdzia³ 2.3]{zakowski1} \cite[Twierdzenie 5.33]{ptak} \cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Granica prawostronna funkcji}
+
+\begin{definicja}[Cauchy'ego]
+Mówimy, ¿e liczba $g$ jest \textbf{\emph{granic± prawostronn± funkcji}}\label{def:granica_prawostronna_funkcji} $f(x)$ w punkcie $x = x_0$, co zapisujemy
+
+\[
+\lim_{x \to x_0^+} f(x) \; = \; g
+\]
+
+je¿eli dla ka¿dego $\varepsilon > 0$ istnieje taka liczba $\delta > 0$, ¿e
+
+\[
+\left| f(x) - g \right| < \varepsilon \qquad \textsl{ dla } \qquad x_0 < x < x_0 + \delta
+\]
+
+\medskip
+
+Lub symbolicznie
+
+\[
+\lim_{x \to x_0^+} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall \varepsilon\!>\!0 \quad \exists \delta\!>\!0 \quad \forall x \colon \qquad x_0 < x < x_0 + \delta \quad \Rightarrow \quad \left| f(x) - g \right| < \varepsilon
+\]
+
+
+\cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}[Heinego] TODO Df
+Mówimy, ¿e fukcja $f(x)$ ma w punkcie $x_0$ \textbf{\emph{granicê prawostronn±}} i piszemy
+
+\[
+\lim_{x \to x_0^+} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall (x_n) \subset \{x_n \subset Df, x_n > x_0\} \colon \qquad \lim_{n \to \infty} x_n = x_0 \quad \Rightarrow \quad \lim_{n \to \infty} f\left(x_n\right) = g
+\]
+
+\cite[Rozdzia³ 2.3]{zakowski1} \cite[Twierdzenie 5.33]{ptak} \cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Granica funkcji}
+
+\begin{definicja}[Cauchy'ego]
+Mówimy, ¿e liczba $g$ jest \textbf{\emph{granic± funkcji}}\label{def:granica_funkcji} $f(x)$ w punkcie $x = x_0$, co zapisujemy
+
+\[
+\lim_{x \to x_0} f(x) \; = \; g
+\]
+
+je¿eli dla ka¿dego $\varepsilon > 0$ istnieje taka liczba $\delta > 0$, ¿e
+
+\[
+\left| f(x) - g \right| < \varepsilon \qquad \textsl{ dla } \qquad \left|x - x_0\right| < \delta
+\]
+
+\medskip
+
+Lub symbolicznie
+
+\[
+\lim_{x \to x_0} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall \varepsilon\!>\!0 \quad \exists \delta\!>\!0 \quad \forall x \colon \qquad \left|x - x_0\right| < \delta \quad \Rightarrow \quad \left| f(x) - g \right| < \varepsilon
+\]
+
+
+\cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}[Heinego] TODO (Df)
+Mówimy, ¿e fukcja $f(x)$ ma w punkcie $x_0$ \textbf{\emph{granicê}} i piszemy
+
+\[
+\lim_{x \to x_0} f(x) \: = \: g 
+\]
+\[
+\Updownarrow
+\]
+\[
+\forall (x_n) \subset Df\setminus \{x_0\} \colon \qquad \lim_{n \to \infty} x_n = x_0 \quad \Rightarrow \quad \lim_{n \to \infty} f\left(x_n\right) = g
+\]
+
+\cite[Rozdzia³ 2.3]{zakowski1} \cite[Twierdzenie 5.33]{ptak} \cite[Paragraf 5.1]{krysicki1}
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretacja geometryczna granic}
+
+Zapis
+\[
+\lim_{x \to x_0^-}
+\]
+
+\noindent geometrycznie oznacza, ¿e jakikolwiek we¼miemy w±ski pasek
+
+\begin{equation}
+\label{igg:pasek_l} g - \varepsilon \; < \; y \; < \; g + \varepsilon
+\end{equation}
+
+\noindent to musi istnieæ takie \emph{otoczenie lewostronne} punktu $x = x_0$, czyli taki przedzia³
+
+\begin{equation}
+\label{igg:otoczenie_l} x_0 - h \;< \;x \;< \;x_0, \qquad \textsl{ gdzie } \quad h > 0
+\end{equation}
+
+\noindent ¿e ca³y wykres funkcji dla $x$ z przedzia³u (\ref{igg:otoczenie_l}) znajduje siê w pasku (\ref{igg:pasek_l}).
+
+\includegraphics[scale=1.5]{img/funkcje-interpretacja_granicy-l.png}
+
+\bigskip
+
+Zapis
+\[
+\lim_{x \to x_0^+}
+\]
+
+\noindent geometrycznie oznacza, ¿e jakikolwiek we¼miemy w±ski pasek
+
+\begin{equation}
+\label{igg:pasek_p} g - \varepsilon \; < \; y \; < \; g + \varepsilon
+\end{equation}
+
+\noindent to musi istnieæ takie \emph{otoczenie prawostronne} punktu $x = x_0$, czyli taki przedzia³
+
+\begin{equation}
+\label{igg:otoczenie_p} x_0 \;< \;x \;< \;x_0 + h, \qquad \textsl{ gdzie } \quad h > 0
+\end{equation}
+
+\noindent ¿e ca³y wykres funkcji dla $x$ z przedzia³u (\ref{igg:otoczenie_p}) znajduje siê w pasku (\ref{igg:pasek_p}).
+
+\includegraphics[scale=1.5]{img/funkcje-interpretacja_granicy-p.png}
+
+\cite[Paragraf 5.2]{krysicki1}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Twierdzenia o granicach}
+
+\begin{twierdzenie}[granice a dzia³ania]
+Niech $\lim_{x \to x_0} f(x) = a$, $\lim_{x \to x_0} g(x) = b$ oraz $a, \:b, \:\lambda \: \in \mathbb{R}$. Wtedy
+
+\begin{itemize}
+\item $\lim_{x \to x_O} \left(f(x) \pm g(x)\right) \; = \; a \pm b$
+\item $\lim_{x \to x_O} \lambda f(x) \; = \; \lambda a$
+\item $\lim_{x \to x_O} \left(f(x) \cdot g(x)\right) \; = \; ab$
+\item $\lim_{x \to x_O} \dfrac{(f(x)}{g(x)} \; = \; \dfrac{a}{b}$, je¶li $b \neq 0$
+\end{itemize}
+
+\cite[Twierdzenie 5.37]{ptak}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}[l'H\^{o}spitala]
+TODO
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%
+\section{Ci±g³o¶æ}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definicja Cauchy'ego}
+
+\begin{definicja}[Cauchy'ego]
+Mówimy, ¿e funkcja $f$ jest \textbf{\emph{ci±g³a w punkcie $x_0$}}\label{def:funkcja_ciagla_w_punkcie} wtedy i~tylko wtedy, gdy (TODO Df)
+
+\begin{tabular*}{\textwidth}%
+{@{\extracolsep{\stretch{1}}}lc}
+& \\
+$\forall \varepsilon > 0 \quad \exists \delta > 0 \quad \forall x \in Df$
+& \vspace{0.3cm} \\
+\multicolumn{2}{c}{
+$|x - x_0| < \delta \quad \Rightarrow \quad |f(x) - f(x_0)| < \varepsilon$
+\vspace{0.3cm}
+}
+\end{tabular*}
+
+\includegraphics[scale=1.5]{img/funkcje-funkcja_ciagla.png}
+
+\end{definicja}
+
+\medskip
+\cite[Rozdzia³ 2.4]{zakowski1}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definicja za pomoc± granicy}
+
+\begin{twierdzenie}
+Funkcjê $f(x)$ nazywamy \textbf{\emph{ci±g³±}} w~punkcie $x_0$ wtedy i~tylko wtedy, gdy
+
+\[ 
+\exists \; \lim_{x \to x_0} f(x)
+\]
+
+oraz
+\[
+\lim_{x \to x_0} f(x) \quad = \quad f\left(x_0\right)
+\]
+
+
+\cite[Twierdzenie 5.36]{ptak} \cite[Paragraf 5.4]{krysicki1}
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funkcja ci±g³a}
+
+\begin{definicja}
+Mówimy, ¿e \textbf{\emph{funkcja}} $f$ jest \textbf{\emph{ci±g³a}}\label{def:funkcja_ciagla} wtedy i~tylko wtedy, gdy jest \textbf{ci±g³a w~ka¿dym punkcie} (Def. \ref{def:funkcja_ciagla_w_punkcie}, str. \pageref{def:funkcja_ciagla_w_punkcie}) swej \textbf{dziedziny}.
+
+\cite[Rozdzia³ 2.4]{zakowski1}
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funkcja ci±g³a na zbiorze}
+
+\begin{definicja}
+Mówimy, ¿e \textbf{\emph{funkcja}} $f$ jest \textbf{\emph{ci±g³a na zbiorze}}\label{def:funkcja_ciagla_na_zbiorze} $A \subset D_f$ (TODO Df) wtedy i~tylko wtedy, gdy jest \textbf{ci±g³a w~ka¿dym punkcie} (Def. \ref{def:funkcja_ciagla_w_punkcie}, str. \pageref{def:funkcja_ciagla_w_punkcie}) \textbf{zbioru} $A$.
+
+\cite[Rozdzia³ 2.4]{zakowski1}
+\end{definicja}

@@ -1,0 +1,227 @@
+\chapter{Wielomiany. Funkcje wymierne}
+
+\section{Pier¶cieñ ca³kowity wielomianów}
+
+Niech
+\begin{itemize}
+\item $x$ oznacza \emph{zmienn± zespolon±}, tzn. zmienn± nale¿±c± do cia³a $\mathbb{C}$ liczb zespolonych,
+\item $\mathbb{K}$ za¶ jedno z cia³ liczbowych:
+\begin{itemize}
+\item $\mathbb{C}$ - liczb zespolonych lub
+\item $\mathbb{R}$ - liczb rzeczywistych
+\end{itemize}
+\end{itemize}
+
+\medskip
+\begin{definicja}
+\textbf{\emph{Wielomianem}}\label{def:wielomian} nad cia³em liczbowym $\mathbb{K}$ nazywamy funkcjê zmiennej zespolonej $x$, okre¶lon± wzorem
+\[
+f(x) \; = \; a_n x^n + a_{n-1} x^{n-1} + \ldots + a_2 x^2 + a_1 x + a_0
+\]
+gdzie
+\begin{itemize}
+\item liczby $a_k$ nale¿± do cia³a $\mathbb{K}$ i nazywane s± \textbf{\emph{wspó³czynnikami wielomianu}}\label{def:wspolczynniki_wielomianu} ($k \: = \: 1, 2, \ldots, n$)
+\item $n$ jest liczb± ca³kowit± nieujemn±
+\item $a_0$ nazywamy \textbf{\emph{wyrazem wolnym}}\label{def:wyraz_wolny_wielomianu}
+\item je¿eli $a_n \neq 0$, to liczbê $n$ nazywamy \textbf{\emph{stopniem wielomianu}}\label{def:stopien_wielomianu}.
+\end{itemize}
+\end{definicja}
+
+\medskip
+\begin{twierdzenie}\label{tw:rownosc_wielomianow}
+Dwa wielomiany
+
+\medskip
+
+\begin{tabular}{rclc}
+$f(x)$ & $=$ & $a_n x^n + \ldots + a_0$ & $a_n \neq 0$ \\
+$g(x)$ & $=$ & $b_m x^m + \ldots + b_0$ & $b_m \neq 0$
+\end{tabular}
+
+\begin{itemize}
+\item dla których $m \leq n$
+\item które w $n + 1$ ró¿nych punktach $x_0, x_1, \ldots, x_n$ przybieraj± równe warto¶ci
+\item s± tego samego stopnia
+\item maj± odpowiednie wspó³czynniki równe
+\end{itemize}
+
+s± \textbf{identyczne}.
+
+\end{twierdzenie}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Pierwiastkiem}}\label{pierwiastek_wielomianu} niezerowego wielomianu $f(x)$ nazywamy liczbê $a$, gdy
+\[
+f(a) \; = \; 0
+\]
+
+Pierwiastek niezerowego wielomianu nazywamy tak¿e
+\begin{itemize}
+\item \textbf{\emph{miejscem zerowym}}\label{def:miejsce_zerowe_wielomianu}
+\item \textbf{\emph{zerem wielomianu}}\label{def:zero_wielomianu}
+\end{itemize}
+\end{definicja}
+
+\medskip
+
+\begin{twierdzenie}[B\'{e}zout]
+Wielomian $f(x)$ naturalnego stopnia jest wtedy i tylko wtedy podzielny przez dwumian $x - a$, gdy liczba $a$ jest zerem tego wielomianu.
+\end{twierdzenie}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{$k$-krotnym pierwiastkiem}}\label{def:k-krotny_pierwiastek_wielomianu} niezerowego wielomianu $f(x)$ nazywamy liczbê $a$ gdy $(x - a)^k$ jest dzielnikiem tego wielomianu, za¶ $(x - a)^{k+1}$ nie jest jego dzielnikiem.
+
+Liczbê $k$ nazywamy \textbf{\emph{krotno¶ci±}} tego pierwiastka.
+\end{definicja}
+
+\medskip
+
+\cite[Rozdzia³ 9.1]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wielomiany nad cia³em liczb zespolonych}
+Niech $W_n(z)$ bêdzie wielomianem naturalnego stopnia $n$ o wspó³czynnikach rzeczywistych
+\[
+W_n \quad = \quad
+a_n \: z^n
++ a_{n-1} \: z^{n-1}
++ \ldots
++ a_1 \: z
++ a_0
+\]
+
+gdzie
+\[
+a_i \in R \qquad i = 0, \: 1, \: \ldots, \: n
+\]
+
+\medskip
+\begin{twierdzenie}
+Je¿eli $W_n(z)$ jest wielomianem o wspó³czynnikach rzeczywistych, to
+\[
+\overline{ W_n(z) } \quad = \quad W_n( \overline{z} )
+\]
+\cite[Rozdzia³ 9.2]{trajdos}
+\end{twierdzenie}
+
+\medskip
+\begin{twierdzenie}
+Je¿eli $a$ jest $k$-krotnym pierwiastkiem wielomianu $W_n(z)$, to liczba $\overline{a}$, sprzê¿ona z pierwiastkiem $a$, jest tak¿e $k$-krotnym pierwiastkiem tego wielomianu.
+\[
+W_n(a) = 0 \qquad \Rightarrow \qquad W_n\left(\overline{a}\right) = 0
+\]
+\cite[Rozdzia³ 9.2]{trajdos}
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cia³o funkcji wymiernych}
+
+\begin{definicja}
+\textbf{\emph{Funkcj± wymiern±}}\label{def:funkcja_wymierna} nad cia³em liczbowym $\mathbb{K}$ nazywamy funkcjê zmiennej zespolonej $x$, okre¶lon± wzorem postaci
+\[
+f(x) \; = \; \dfrac{P_n(x)}{Q_m(x)}, \qquad Q \neq 0
+\]
+
+gdzie $P_n(x)$ i $Q_m(x)$ s± wielomianami zmiennej zespolonej $x$ nad cia³em liczbowym $K$.
+
+\medskip
+Funkcjê wymiern± nazywamy
+\begin{itemize}
+\item \textbf{\emph{w³a¶ciw±}}\label{def:funkcja_wymierna_wlasciwa} gdy $n < m$
+\item \textbf{\emph{niew³a¶ciw±}}\label{def:funkcja_wymierna_niewlasciwa}, gdy $m \geq n$
+\end{itemize}
+
+\end{definicja}
+
+\medskip
+
+\begin{twierdzenie}\label{tw:funkcja_wymierna_suma_wielomianu_i_funkcji_wymiernej_wlasciwej}
+Ka¿d± funkcjê wymiern± mo¿na przedstawiæ w postaci sumy wielomianu i funkcji wymiernej w³a¶ciwej.
+\[
+\dfrac{P_p(x)}{Q_q(x)} \; = \; W_w(x) \: + \: \dfrac{R_r(x)}{Q_q(x)}
+\]
+
+przy czym
+\begin{itemize}
+\item $w = 0$ lub $w = p - q$ gdy $P_p(x)/Q_q(x)$ jest funkcj± wymiern± niew³a¶ciw±
+\item $r < q$
+\end{itemize}
+\end{twierdzenie}
+
+\medskip
+
+\cite[Rozdzia³ 9.3]{trajdos}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{U³amki proste}
+
+\begin{definicja}
+\textbf{\emph{U³amkiem prostym}}\label{def:ulamek_prosty} nad cia³em $\mathbb{K}$ nazywamy funkcjê wymiern± nad tym cia³em:
+\[
+\dfrac{P_n(x)}{\left[Q_m(x)\right]^n}, \qquad Q \neq 0
+\]
+
+przy czym
+\begin{itemize}
+\item $Q$ jest wielomianem \textbf{nierozk³adalnym} w tym ciele
+\item $n < m$
+\item $n$ jest liczb± naturaln± 
+\end{itemize}
+
+\end{definicja}
+
+\bigskip
+
+U³amki proste nad cia³em
+\begin{itemize}
+\item $\mathbb{C}$ liczb zespolonych maj± postaæ
+\[
+\dfrac{A}{(x - a)^n}, \qquad \textnormal{ gdzie } A, a \textnormal{ - liczby zespolone}
+\]
+\item $\mathbb{R}$ liczb rzeczywistych maj± postaæ
+\begin{itemize}
+\item u³amki proste pierwszego rodzaju\label{def:ulamek_prosty_pierwszego_rodzaju}
+\[
+\dfrac{A}{(x - a)^n}, \qquad \textnormal{ gdzie } A, a \textnormal{ - liczby rzeczywiste}
+\]
+\item u³amki proste drugiego rodzaju\label{def:ulamek_prosty_drugiego_rodzaju}
+\[
+\dfrac{Ax + B}{(x^2 + px + q)^n},
+\begin{array}{c}
+\textnormal{ gdzie } A, B, p, q \textnormal{ - liczby rzeczywiste}, \\ 
+p^2 - 4q < 0
+\end{array}
+\]
+\end{itemize}
+\end{itemize}
+
+\medskip
+
+\begin{twierdzenie}\label{tw:o_rozkladzie_na_ulamki_proste}
+\textbf{Ka¿d± funkcjê wymiern± w³a¶ciw±} (Def. \ref{def:funkcja_wymierna_wlasciwa}, str. \pageref{def:funkcja_wymierna_wlasciwa}) w ciele $\mathbb{C}$ liczb zespolonych ($\mathbb{R}$ liczb rzeczywistych) mo¿na przedstawiæ w postaci \textbf{sumy u³amków prostych}.
+
+\medskip
+
+Ka¿demu czynnikowi w rozk³adzie jej \textbf{mianownika} typu
+\begin{itemize}
+\item $(x - a)^n$ (w ciele $\mathbb{C}$ i $\mathbb{R}$) odpowiada sk³adnik postaci
+\[
+\dfrac{A_n}{(x - a)^n} + \dfrac{A_{n-1}}{(x - a)^{n-1}} + \ldots + \dfrac{A_1}{x - a}
+\]
+\item $(x^2 + px + q)^n, \; p^2 - 4q < 0$ (w ciele $\mathbb{R}$) odpowiada sk³adnik postaci
+\[
+\dfrac{A_nx + B_n}{(x^2 + px + q)^n} + \dfrac{A_{n-1}x + B_{n-1}}{(x^2 + px + q)^{n-1}} + \ldots + \dfrac{A_1x + B_1}{x^2 + px + q}
+\]
+\end{itemize}
+\end{twierdzenie}
+
+\cite[Rozdzia³ 9.3]{trajdos}

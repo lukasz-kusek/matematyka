@@ -1,0 +1,259 @@
+\chapter{Wyznacznik macierzy kwadratowej}
+
+\begin{definicja}
+Niech
+
+\begin{itemize}
+\item $X$ bêdzie \textbf{przestrzeni± wektorow±} (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) nad cia³em~$K$ (Def. \ref{def:cialo}, str. \pageref{def:cialo})
+
+$\dim X \; = \; n$ (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni})
+\item $f_0 \; = \; X^n \to K$ bêdzie \textbf{form± $n$-liniow± antysymetryczn±} (Def. \ref{def:forma_wieloliniowa_antysymetryczna}, str. \pageref{def:forma_wieloliniowa_antysymetryczna}) tak±, ¿e $f_0 \neq 0$
+\item $u$ jest \textbf{endomorfizmem} (Def. \ref{def:endomorfizm}, str. \pageref{def:endomorfizm}) na $X$
+\item odwzorowanie 
+
+\[
+g\Big(x_1, \ldots, x_n\Big) \; = \; f_0\Big(u(x_1), \ldots, u(x_n) \Big)
+\]
+
+\medskip
+
+jest \textbf{form± $n$-liniow± antysymetryczn±}
+\end{itemize}
+
+\medskip
+
+\textbf{\emph{Wyznacznikiem}} endomorfizmu $u$ nazywamy skalar
+
+\[
+\alpha \; \in \; K
+\]
+
+\medskip
+
+\noindent ¿e dla dowolnego $x_1, \ldots, x_n$ zachodzi
+
+\[
+g \; = \; \alpha \: f_0
+\]
+
+\medskip
+
+\noindent czyli
+
+\[
+f_0\Big(u(x_1), \ldots, u(x_n) \Big)  \; = \; \alpha \: f_0\Big(x_1, \ldots, x_n \Big)
+\]
+
+\smallskip
+
+\cite[Definicja 3.11.1]{furdzik}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Wyznacznikiem macierzy kwadratowej}}\label{def:wyznacznik}\label{def:wyznacznik_macierzy_kwadratowej}~$A$ (Def. \ref{def:macierz_kwadratowa}, str. \pageref{def:macierz_kwadratowa}) nazywamy wyznacznik endomorfizmu (Def. \ref{def:endomorfizm}, str. \pageref{def:endomorfizm}) przestrzeni $X$ odpowiadaj±cego danej macierzy przy wybranej bazie rozpatrywanej przestrzeni.
+
+\smallskip
+
+\cite[Rozdzia³ 5]{przybylo} \cite[Definicja 3.11.2]{furdzik}
+\end{definicja}
+
+\medskip
+
+Wyznacznik oznaczamy 
+
+\[
+\det A \quad \textsl{,} \quad \det \left[
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}
+\right] \quad \textsl{,} \quad \left|
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}
+\right|
+\]
+
+Warto¶æ wyznacznika macierzy jest niezale¿na od wyboru przestrzeni $X$ i~wyboru bazy tej przestrzeni.
+
+\bigskip
+
+\begin{twierdzenie}[warto¶æ wyznacznika]
+Je¶li jest dana macierz
+
+\[
+A = [a_{ij}]_{n \times n} = \left[
+\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}
+\right]
+\]
+
+\medskip
+
+\noindent to warto¶æ wyznacznika $\det A$ oblicza siê ze wzoru
+
+\[
+\det A \quad = \quad \sum \: \textsl{sgn}\left(i_1, i_2, \ldots, i_n\right) \; a_{i_11} \: a_{i_22} \: \ldots \: a_{i_nn}
+\]
+
+\medskip
+
+\noindent gdzie sumowanie rozci±ga siê na wszystkie permutacje (Def. \ref{def:permutacja}, str. \pageref{def:permutacja}) $\left(i_1, i_2, \ldots, i_n\right)$ zbioru $\{1, 2, \ldots, n \}$.
+
+\smallskip
+
+\cite[Rozdzia³ 5]{przybylo}
+\end{twierdzenie}
+
+\medskip
+\noindent W szczególnych przypadkach mamy
+
+\medskip
+dla $n = 1$
+\[
+det\left[a_{11}\right] \quad = \quad a_{11}
+\]
+
+\medskip
+dla $n = 2$
+\[
+det\left[\begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right] \quad = \quad a_{11} \: a_{22} \; - \; a_{21} \: a_{12}
+\]
+
+\medskip
+dla $n = 3$
+
+\begin{center}
+\begin{tabular}{m{4cm}m{0,5cm}m{5cm}m{0,1cm}}
+$\det
+\left[
+\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}
+\right]$
+&
+$=$
+&
+$a_{11} \: a_{22} \: a_{33} \; + \; a_{21} \: a_{32} \: a_{13}$
+$\; + \; a_{31} \: a_{12} \: a_{23} \; - \; a_{21} \: a_{12} \: a_{33}$
+$\; - \; a_{11} \: a_{32} \: a_{23} \; - \; a_{31} \: a_{22} \: a_{13}$
+&
+\end{tabular}
+\end{center}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Podwyznaczniki}
+
+\begin{definicja}
+\textbf{\emph{Minorem (podwyznacznikiem)}}\label{def:minor} elementu $a_{ij}$ macierzy~$A$ nazywamy \textbf{wyznacznik} macierzy powsta³ej z~$A$ przez \textbf{skre¶lenie} $\mathbf{i}$-tego \textbf{wiersza} oraz $\mathbf{j}$-tej \textbf{kolumny}.
+\end{definicja}
+
+\medskip
+
+Minor oznaczmy $M_{ij}$.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenie Laplace'a}
+
+\begin{definicja}
+\textbf{\emph{Dope³nieniem algebraicznym}} elementu $a_{ij}$ nazywamy warto¶æ
+\[
+A_{ij} \quad = \quad \left(-1\right)^{i+j} M_{ij}
+\]
+\end{definicja}
+
+\bigskip
+
+\begin{twierdzenie}[Laplace'a]
+Dla ka¿dej macierzy $A$ o wymiarach $n \times n$ wyznacznik $\det A$ spe³nia regu³ê
+
+\[
+\det A \quad = \quad \sum_{j = 1}^n a_{ij} A_{ij}
+\]
+
+\medskip
+
+\noindent gdzie $\mathbf{i}$ oznacza \textbf{numer} dowolnie wybranego \textbf{wiersza} lub
+
+\[
+detA \quad = \quad \sum_{i = 1}^n a_{ij} A_{ij}
+\]
+
+\medskip
+
+\noindent gdzie $\mathbf{j}$ oznacza \textbf{numer} dowolnie wybranej \textbf{kolumny}.
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{W³asno¶ci wyznacznika}
+\smallskip
+\cite[Rozdzia³ 2.3]{trajdos}
+
+\medskip
+
+\begin{itemize}
+\item Wyznacznik macierzy kwadratowej jest równy wyznacznikowi macierzy transponowanej. 
+
+\[
+\det A \quad = \quad \det A^T
+\]
+\item Przestawienie dwóch wierszy (kolumn) w macierzy wyznacznika jest równowa¿ne pomno¿eniu wyznacznika przez $-1$
+\item Wyznacznik macierzy o dwóch jednakowych wierszach (kolumnach) jest równy zero.
+\item Mno¿±c wiersz (kolumnê) macierzy przez liczbê mno¿ymy przez tê liczbê ca³y wyznacznik tej macierzy.
+\item Wyznacznik o dwóch proporcjonalnych wierszach (kolumnach) jest równy zeru.
+\item Wyznacznik macierzy maj±cej wiersz (kolumnê) zerowy (Def. \ref{def:wiersz_zerowy}, str. \pageref{def:wiersz_zerowy}) jest równy zeru.
+\item Je¿eli w macierzy jeden z wierszy (lub jedna z kolumn) jest kombinacj± liniow± pozosta³ych wierszy (lub kolumn), to wyznacznik tej macierzy jest równy zeru.
+\item Wyznacznik nie zmieni warto¶ci, je¿eli do wiersza (kolumny) jego macierzy dodamy kombinacjê liniow± pozosta³ych wierszy (lub kolumn).
+\item W macierzy o wyznaczniku równym zeru wiersze (kolumny) s± liniowo zale¿ne.
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wyznacznik uk³adu wektorów}
+
+\begin{definicja}
+Je¿eli
+
+\begin{itemize}
+\item $B \; = \; (b_1, \ldots, b_n)$ jest baz± (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni}) w~przestrzeni $X$ (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa})
+\item $(x_1, x_2, \ldots, x_n) \in X$
+\item oraz
+
+\[
+x_j \; = \; \sum_{i=1}^n x_j^i \: b_i
+\]
+\end{itemize}
+
+\bigskip
+
+\noindent to \textbf{\emph{wyznacznikiem uk³adu wektorów}}\label{def:wyznacznik_ukladu_wektorow} $(x_1, x_2, \ldots, x_n)$ nazywamy \textbf{wyznacznik macierzy}, której \textbf{kolumny} stanowi± \textbf{wspó³rzêdne} wektorów wzglêdem bazy $B$ i~zapisujemy
+
+\[
+\det\phantom{}_B(x_1, x_2, \ldots, x_n) = \left[
+\begin{array}{cccc}
+x^1_1 & x^1_2 & \cdots & x^1_n \\
+x^2_1 & x^2_2 & \cdots & x^2_n \\
+\vdots & \vdots & \ddots & \\
+x^n_1 & x^n_2 & \cdots & x^n_n
+\end{array}
+\right]
+\]
+
+\cite[Definicja 3.11.4]{furdzik}
+\end{definicja}

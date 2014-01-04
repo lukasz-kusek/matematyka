@@ -1,0 +1,363 @@
+\chapter{Ci±g liczbowy}
+
+\begin{definicja}
+\textbf{\emph{Ci±giem}}\label{def:ciag}\index{ci±g} liczb rzeczywistych nazywamy dowoln± funkcjê (Def. \ref{def:funkcja}, str. \pageref{def:funkcja})
+
+\[
+a \colon \; \mathbb{N} \: \rightarrow \: \mathbb{R}
+\]
+
+\bigskip
+
+\noindent Bêdziemy pisaæ $a_n$ zamiast $a(n)$
+
+\medskip
+
+\noindent oraz
+\begin{itemize}
+  \item $(a_n)_{n=1}^\infty \subset \mathbb{R}$
+  \item $\left\{a_n\right\}_{n=1}^\infty \subset \mathbb{R}$
+  \item $\left(a_n\right) \subset \mathbb{R}$
+\end{itemize}
+zamiast $a \colon \mathbb{N} \rightarrow \mathbb{R}$
+
+\smallskip
+
+\cite[Rozdzia³ 4.1]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Liczby $a_1, a_2, \ldots$ nazywamy \textbf{\emph{wyrazami ci±gu}}\index{ci±g!wyrazy} $\left(a_n\right)$.
+
+\smallskip
+
+\cite[Paragraf 2.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Symbol $a_n$ nazywamy \textbf{\emph{wyrazem ogólnym}}\index{ci±g!wyraz ogólny} ci±gu $\left(a_n\right)$.
+
+\smallskip
+
+\cite[Paragraf 2.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ci±g ograniczony}
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{ograniczonym od góry}}\label{def:ciag_ograniczony_od_gory}\index{ci±g!ograniczony od góry}, je¶li
+
+\begin{center}
+istnieje $M \in \mathbb{R}$ takie, ¿e $a_n \leq M$ dla ka¿dego $n \in \mathbb{N}$
+\end{center}
+
+\noindent czyli
+
+\[
+\exists \: M \in \mathbb{R} \quad \forall \: n \in \mathbb{N} \colon \qquad a_n \leq M
+\]
+
+\smallskip
+
+\cite[Definicja 4.1]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{ograniczonym od do³u}}\label{def:ciag_ograniczony_od_dolu}\index{ci±g!ograniczony od do³u}, je¶li
+
+\begin{center}
+istnieje $M \in \mathbb{R}$ takie, ¿e $a_n \geq M$ dla ka¿dego $n \in \mathbb{N}$
+\end{center}
+
+\noindent czyli
+
+\[
+\exists \: M \in \mathbb{R} \quad \forall \: n \in \mathbb{N} \colon \qquad a_n \geq M
+\]
+
+\smallskip
+
+\cite[Definicja 4.1]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{ograniczonym}}\label{def:ciag_ograniczony}\index{ci±g!ograniczony}, je¶li
+
+\begin{center}
+istnieje $M \in \mathbb{R}$ takie, ¿e $\left|a_n\right| \leq M$ dla ka¿dego $n \in \mathbb{N}$
+\end{center}
+
+\noindent czyli
+
+\[
+\exists \: M \in \mathbb{R} \quad \forall \: n \in \mathbb{N} \colon \qquad \left|a_n\right| \leq M
+\]
+
+\smallskip
+
+\cite[Definicja 4.1]{ptak}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ci±g monotoniczny}
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{rosn±cym}}\label{def:ciag_rosnacy}\index{ci±g!rosn±cy}, je¶li
+
+\[
+a_n \: \leq \: a_{n+1}
+\]
+
+\noindent dla $n \in \mathbb{N}$.
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{silnie rosn±cym}}\label{def:ciag_silnie_rosnacy}\index{ci±g!silnie rosn±cy}, je¶li
+
+\[
+a_n \: < \: a_{n+1}
+\]
+
+\noindent dla $n \in \mathbb{N}$.
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{malej±cym}}\label{def:ciag_malejacy}\index{ci±g!malej±cy}, je¶li
+
+\[
+a_n \: \geq \: a_{n+1}
+\]
+
+\noindent dla $n \in \mathbb{N}$.
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{silnie malej±cym}}\index{ci±g!silnie malej±cy}, je¶li
+
+\[
+a_n \: > \: a_{n+1}
+\]
+
+\noindent dla $n \in \mathbb{N}$.
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{monotonicznym}}\index{ci±g!monotoniczny}, je¶li jest ci±giem
+
+\begin{itemize}
+\item \textbf{\emph{rosn±cym}}
+\item lub \textbf{\emph{malej±cym}}.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ci±g $\left(a_n\right)$ nazywamy \textbf{\emph{silnie monotonicznym}}\index{ci±g!silnie monotoniczny}, je¶li jest ci±giem
+
+\begin{itemize}
+\item \textbf{\emph{silnie rosn±cym}}
+\item lub \textbf{\emph{silnie malej±cym}}.
+\end{itemize}
+
+\smallskip
+
+\cite[Definicja 4.3]{ptak}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Ci±g zbie¿ny. Granica ci±gu}
+
+\begin{definicja}[Cauchy'ego]
+Mówimy, ¿e ci±g $\left(a_n\right)$ jest \textbf{\emph{zbie¿ny}}\label{def:ciag_zbiezny}\index{ci±g!zbie¿ny} do $g \in \mathbb{R}$ ($g$ jest \textbf{\emph{granic± ci±gu}}\index{granica!ci±gu}) je¶li
+
+\begin{center}
+dla dowolnego $\varepsilon > 0$ istnieje $\delta \in \mathbb{R}$ takie, ¿e dla dowolnego $n > \delta$ zachodzi $\left| a_n - g \right| < \varepsilon$,
+\end{center}
+
+\noindent czyli
+
+\[
+\lim_{n \to \infty} a_n = g \; \textsl{ lub } \; a_n \to g \quad \Leftrightarrow \quad \forall \: \varepsilon\!>\!0 \;\;\; \exists \: \delta\!\in\!\mathbb{R} \;\;\; \forall \: n\!>\!\delta \quad \left|a_n - g \right| < \varepsilon
+\]
+
+\begin{center}
+\includegraphics[scale=1.5]{img/ciagi-ciag_zbiezny.png}
+\end{center}
+
+\smallskip
+
+\cite[Definicja 4.4]{ptak}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Mówimy, ¿e ci±g $\left(a_n\right)$ jest \textbf{\emph{rozbie¿ny do plus nieskoñczono¶ci}}\index{ci±g!rozbie¿ny do plus nieskoñczono¶ci} wtedy i~tylko wtedy, gdy
+
+\[
+\forall \: M \quad \exists \: \delta \quad \forall \: n > \delta \qquad a_n > M
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 2.1]{zakowski1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Mówimy, ¿e ci±g $\left(a_n\right)$ jest \textbf{\emph{rozbie¿ny do minus nieskoñczono¶ci}}\index{ci±g!rozbie¿ny do minus nieskoñczono¶ci} wtedy i~tylko wtedy, gdy
+
+\[
+\forall \: M \quad \exists \: \delta \quad \forall \: n > \delta \qquad a_n < M
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 2.1]{zakowski1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twierdzenia o ci±gach}
+
+\begin{twierdzenie}[Zbie¿no¶æ ci±gów a dzia³ania]
+Niech
+\begin{itemize}
+\item $\lim_{n \to \infty} a_n \; = \; a \: \in \: \mathbb{R}$,
+\item $\lim_{n \to \infty} b_n \; = \; b \: \in \: \mathbb{R}$
+\item oraz $\lambda \: \in \: \mathbb{R}$.
+\end{itemize}
+
+\medskip
+
+\noindent Wtedy
+
+\begin{itemize}
+\item $\lim_{n \to \infty} \left(a_n \pm b_n \right) \; = \; a \pm b$
+\item $\lim_{n \to \infty} \left(\lambda \: a_n\right) \; = \; \lambda \: a_n$
+\item $\lim_{n \to \infty} \left(a_n \cdot b_n\right) \; = \; a_n \cdot b_n$
+\item $\lim_{n \to \infty} \left(\dfrac{a_n}{b_n}\right) \; = \; \dfrac{a}{b}, \qquad b_n \neq 0, \quad b \neq 0$
+\end{itemize}
+
+\smallskip
+
+\cite[Twierdzenie 4.14]{ptak}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}
+Je¶li ci±g $\left(a_n\right)$ jest \textbf{zbie¿ny} (Def. \ref{def:ciag_zbiezny}, str. \pageref{def:ciag_zbiezny}), to jest \textbf{ograniczony} (Def. \ref{def:ciag_ograniczony}, str. \pageref{def:ciag_ograniczony}).
+
+\smallskip
+
+\cite[Twierdzenie 4.18]{ptak}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}[o trzech ci±gach]
+Niech bêd± dane trzy ci±gi 
+
+\[
+\left(a_n\right), \left(b_n\right), \left(c_n\right)
+\]
+
+\noindent takie, ¿e
+
+\[
+a_n \leq b_n \leq c_n
+\]
+
+\noindent dla ka¿dego $n > \delta \in \mathbb{N}$ oraz
+
+\[
+\lim_{n \to \infty} a_n \quad = \lim_{n \to \infty} c_n \quad = \quad g
+\]
+
+\noindent to $\left(b_n\right)$ jest \textbf{\emph{zbie¿ny}}, a
+
+\[
+\lim_{n \to \infty} b_n \quad = \quad g
+\]
+
+\smallskip
+
+\cite[Twierdzenie 4.21]{ptak}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}
+Ka¿dy ci±g
+
+\begin{itemize}
+\item \textbf{rosn±cy} (Def. \ref{def:ciag_rosnacy}, str. \pageref{def:ciag_rosnacy})
+\item i \textbf{ograniczony od góry} (Def. \ref{def:ciag_ograniczony_od_gory}, str. \pageref{def:ciag_ograniczony_od_gory})
+\end{itemize}
+
+\noindent jest \textbf{zbie¿ny} (Def. \ref{def:ciag_zbiezny}, str. \pageref{def:ciag_zbiezny}).
+
+\smallskip
+
+\cite[Twierdzenie 4.23]{ptak}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}
+Ka¿dy ci±g
+
+\begin{itemize}
+\item \textbf{malej±cy} (Def. \ref{def:ciag_malejacy}, str. \pageref{def:ciag_malejacy})
+\item i \textbf{ograniczony od do³u} (Def. \ref{def:ciag_ograniczony_od_dolu}, str. \pageref{def:ciag_ograniczony_od_dolu})
+\end{itemize}
+
+\noindent jest \textbf{zbie¿ny} (Def. \ref{def:ciag_zbiezny}, str. \pageref{def:ciag_zbiezny}).
+
+\smallskip
+
+\cite[Twierdzenie 4.23]{ptak}
+\end{twierdzenie}

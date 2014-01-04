@@ -1,0 +1,610 @@
+\chapter{Cia³o liczb zespolonych}
+
+\medskip
+
+Literatura do tego dzia³u: \cite{przybylo} - 2, \cite{ptak} - 3.3, \cite{kostrykin1} - 5.1\newline
+Zadania do teog dzia³u: \cite{krysicki1} - 8.1, \cite{przybylo} - 2, \cite{ptak} - 3
+
+\begin{definicja}
+Cia³em \textbf{\emph{liczb zespolonych}}\label{def:liczby_zespolone}\label{def:liczba_zespolona} nazywamy cia³o (Def. \ref{def:cialo}, str. \pageref{def:cialo}) $(C, \oplus, \odot)$, w którym $C = \mathbb{R} \times \mathbb{R}$, a dzia³ania $\oplus$ oraz $\odot$ s± okre¶lone nastêpuj±co:
+\begin{center}
+\begin{enumerate}
+\item $\forall a, b, c, d \in \mathbb{R} \colon \qquad (a, b) \oplus (c, d) = (a + b, c + d)$
+\item $\forall a, b, c, d \in \mathbb{R} \colon \qquad (a, b) \odot (c, d) = (ac - bd, ad + bc)$
+\end{enumerate}
+\end{center}
+\cite[Rozdzia³ 2]{przybylo}
+\end{definicja}
+
+\bigskip
+
+W³a¶ciwo¶ci:
+\begin{itemize}
+\item elementem neutralnym (Def. \ref{def:element_neutralny}, str. \pageref{def:element_neutralny}) dzia³ania $\oplus$ jest liczba $\mathbf{(0,0)}$  
+\item elementem neutralnym dzia³ania $\odot$ jest liczba $\mathbf{(1,0)}$
+\item elementem przeciwnym (Def. \ref{def:element_przeciwny}, str. \pageref{def:element_przeciwny}) do liczby $(a, b)$ jest liczba
+\[
+-(a,b) = (-a, -b)
+\]
+\item elementem odwrotnym (Def. \ref{def:element_odwrotny}, str. \pageref{def:element_odwrotny}) do liczby $(a, b)$ jest liczba 
+\[
+(a,b)^{-1} = \left(\dfrac{a}{a^2 + b^2}, \dfrac{-b}{a^2 + b^2} \right)
+\]
+\end{itemize}
+
+\bigskip
+\begin{definicja}
+\textbf{\emph{Czê¶ci± rzeczywist±}}\label{def:czesc_rzeczywista} liczby zespolonej $z = (a, b)$ nazywamy liczbê rzeczywist± $a$ i oznaczamy
+\[
+Re \: z \quad = \quad a
+\]
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Czê¶ci± urojon±}}\label{def:czesc_urojona} liczby zespolonej $z = (a, b)$ nazywamy liczbê rzeczywist± $b$ i oznaczamy
+\[
+Im \: z \quad = \quad b
+\]
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Odejmowaniem}} liczb zespolonych nazywamy dodawanie pierwszego argumentu dzia³ania i elementu przeciwnego do drugiego argumentu dzia³ania.
+\[
+(a, b) \oplus -(c, d)
+\]
+
+\smallskip
+co oznaczamy
+\[
+(a, b) \ominus (c, d)
+\]
+\end{definicja}
+
+\bigskip
+Liczba $(x, y)$ jest wynikiem odejmowania $(a, b) \ominus (c, d)$, gdy:
+\[
+\begin{array}{rcl}
+(a, b) \ominus (c, d) & = & (x, y) \\ 
+(a, b) \oplus -(c, d) & = & (x, y) \\
+(a, b) \oplus (-c, -d) & = & (x, y)
+\end{array}
+\]
+
+\medskip
+
+Z definicji dodawania i równo¶ci liczb zespolonych wynika, ¿e $a - c = x$ i $b - d = y$, st±d
+\[
+(a, b) \ominus (c, d) = (a - c, b -d)
+\]
+
+\bigskip
+\begin{definicja}
+\textbf{\emph{Dzieleniem}} liczb zespolonych nazywamy mno¿enie pierwszego argumentu i elementu odwrotnego do drugiego argumentu dzia³ania.
+\[
+(a,b) \odot (c, d)^{-1}
+\]
+\smallskip
+co oznaczamy
+\[
+\cdot\dfrac{(a,b)}{(c,d)}
+\]
+\end{definicja}
+
+\bigskip
+Lizcba $(x, y)$ jest wynikiem dzielenia $\cdot\dfrac{(a,b)}{(c,d)}$, gdy:
+\[
+\begin{array}{rcl}
+\cdot\dfrac{(a,b)}{(c,d)} & = & (x, y) \vspace{0.2cm} \\
+(a,b) \odot (c, d)^{-1} & = & (x, y) \vspace{0.2cm} \\
+(a,b) \odot \left(\dfrac{c}{c^2 + d^2}, \dfrac{-d}{c^2 + d^2} \right) &=& (x,y)
+\end{array}
+\]
+
+\medskip
+Z definicji mno¿enia i równo¶ci liczb zespolonych wynika, ¿e:
+\[
+\left\{
+\begin{array}{rlc}
+a \cdot \dfrac{c}{c^2 + d^2} - b \cdot \dfrac{-d}{c^2 + d^2} &=& x
+\vspace{0.5cm}
+\\
+
+a \cdot \dfrac{-d}{c^2 + d^2} + b \cdot \dfrac{c}{c^2 + d^2} &=& y
+\end{array}
+\right.
+\]
+
+\smallskip
+st±d
+\[
+\cdot\dfrac{(a,b)}{(c,d)} = 
+\left(
+\dfrac{ac +bd}{c^2 + d^2},
+\dfrac{bc -ad}{c^2 + d^2}
+\right)
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interpretacja geometryczna}
+
+\medskip
+Liczby zespolone i dzia³ania na nich mo¿na interpretowaæ geometrycznie. Wykorzystuj±c twierdzenie z geometrii analitycznej o istnieniu wzajemnie jednoznacznej odpowiednio¶ci miêdzy punktami p³aszczyzny i uporz±dkowanymi parami ortokartezjañskich wspó³rzêdnych punktu bêdziemy \textbf{\emph{liczbê zespolon±}} $\mathbf{(a, b)}$ interpretowaæ jako \textbf{\emph{punkt}} o wspó³rzêdnych $\mathbf{a}$ i $\mathbf{b}$. Ka¿dej wiêc liczbie zespolonej odpowiada dok³adnie jeden punkt p³aszczyzny, zwanej wtedy \textbf{\emph{p³aszczyzn± zespolon±}}.
+
+\smallskip
+Osie uk³adu nazywaæ bêdziemy
+\begin{itemize}
+\item \textbf{\emph{osi± rzeczywist±}}\label{def:os_rzeczywista} - o¶, na której le¿± punkty odpowiadaj±ce liczbom zespolonym o czê¶ci urojonej (Def. \ref{def:czesc_urojona}, str. \pageref{def:czesc_urojona}) równej zeru
+\item \textbf{\emph{osi± urojon±}}\label{os_urojona} - o¶, na której le¿± punkty odpowiadaj±ce liczbom zespolonym o czê¶ci rzeczywistej (Def. \ref{def:czesc_rzeczywista}, str. \pageref{def:czesc_rzeczywista}) równej zeru
+\end{itemize}
+
+\medskip
+Analogicznie jak to czynili¶my w uk³adzie ortokartezjañskim na p³aszczy¼nie euklidesowej punktowi $z = a + bi$ bêdziemy przypisywaæ wektor wodz±cy punktu, oznaczany tak¿e przez $z$
+\[
+z = a \cdot \mathbf{1} + b \cdot i
+\]
+\smallskip
+gdzie przez $\mathbf{1}$ oznaczyli¶my wersor osi rzeczywistej, a przez $i$ wersor osi urojonej.
+\cite[Rozdzia³ 1.2]{trajdos}
+
+\includegraphics[scale=1.5]{img/zespolone-plaszczyzna_zespolona.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Postaæ algebraiczna}
+
+\medskip
+
+\begin{definicja}
+Parê $(0, 1)$ oznaczamy symbolem $i$ oraz nazywamy \textbf{\emph{jednostk± urojon±}}\label{def:jednostka_urojona}.
+\cite[Rozdzia³ 2]{przybylo}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Ka¿d± liczbê zespolon± $(a, b)$ mo¿na zapisaæ w postaci $\mathbf{z = a + b\mathit{i}}$ (gdzie $i$ to jednostka urojona). Zapis taki nazywamy \textbf{\emph{postaci± algebraiczn±}}\label{def:postac_algebraiczna} liczby zespolonej.
+\cite[Rozdzia³ 2]{przybylo}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dodawanie i odejmowanie}
+\medskip
+Dodawanie dwóch liczb $z_1, z_2 \in \mathbb{C}$ postaci $z_1 = a_1 + b_1i$ oraz $z_2 = a_2 + b_2i$ mo¿emy zapisaæ w nastêpuj±cy sposób
+\[
+z_1 \oplus z_2 = \left( a_1 + a_2 \right) + \left( b_1 + b_2 \right)i
+\]
+
+\smallskip
+a odejmowanie
+\[
+z_1 \ominus z_2 = \left( a_1 - a_2 \right) + \left( b_1 - b_2 \right)i
+\]
+
+\medskip
+Dodawanie liczb zespolonych interpretujemy geometrycznie jako dodawanie przyporz±dkowanych im wektorów, za¶ odejmowanie jako odejmowanie wektorów
+\cite[Rozdzia³ 1.2]{trajdos}
+
+\includegraphics[scale=1.5]{img/zespolone-dodawanie_odejmowanie.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mno¿enie}
+\medskip
+Mno¿enie dwóch liczb $z_1, z_2 \in \mathbb{C}$ postaci $z_1 = a_1 + b_1i$ oraz $z_2 = a_2 + b_2i$ mo¿emy zapisaæ w nastêpuj±cy sposób
+\[
+z_1 \odot z_2 = \left(a_1a_2 - b_1b_2\right) + \left(a_1b_2 + b_1a_2\right)i 
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dzielenie}
+\medskip
+Dzielenie dwóch liczb $z_1, z_2 \in \mathbb{C}$ postaci $z_1 = a_1 + b_1i$ oraz $z_2 = a_2 + b_2i$ mo¿emy zapisaæ w nastêpuj±cy sposób
+\[
+\cdot\dfrac{z_1}{z_2} = \dfrac{a_1a_2 + b_1b_2}{a_2^2 + b_2^2} + \dfrac{b_1a_2 - a_1b_2}{a_2^2 + b_2^2}i 
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Modu³ liczby zespolonej}
+\medskip
+\begin{definicja}
+\textbf{\emph{Modu³em}}\label{def:modul_liczby_zespolonej} liczby zespolonej $z = a + bi$ nazywamy rzeczywist± liczbê nieujemn±
+\[
+|z| \quad = \quad \sqrt{a^2 + b^2}
+\]
+\end{definicja}
+\medskip
+Modu³ liczby zespolonej interpretujemy geometrycznie jako d³ugo¶æ wektora wodz±cego punktu odpowiadaj±cego tej liczbie i oznaczamy $r$
+\[
+r \quad = \quad |z|
+\]
+
+\includegraphics[scale=1.5]{img/zespolone-modul.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Liczba zespolona sprzê¿ona}
+\medskip
+\begin{definicja}
+\textbf{\emph{Liczb± sprzê¿on±}}\label{def:liczba_zespolona_sprzezona} z~liczb± 
+
+\[
+z \; = \; a + bi
+\]
+
+\noindent nazywamy liczbê 
+
+\[
+a - bi
+\]
+
+\noindent i~oznaczamy $\overline{z}$
+
+\[
+\overline{z} \; = \; a - bi
+\]
+\cite[Rozdzia³ 1.1]{trajdos}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+Dwie liczby, z którach jedna jest sprzê¿ona z drug±, nazywamy \textbf{\emph{liczbami sprzê¿onymi}}.
+\end{definicja}
+
+\medskip
+W³asno¶ci:
+\begin{itemize}
+\item Liczby sprzê¿one maj± równe modu³y
+\[
+|z| \quad = \quad \left|\overline{z}\right|
+\]
+\item Ilocznyn liczb sprzê¿onych jest równy kwadratowi ich wspólnego modu³u
+\[
+z \cdot \overline{z} \quad = \quad |z|^2
+\] 
+\end{itemize}
+
+\medskip
+Geometrycznie liczba sprzê¿ona z liczb± $z$ jest symetrycznym odbiciem wzglêdem osi rzeczywistej (Def. \ref{def:os_rzeczywista}, str. \pageref{def:os_rzeczywista}).
+
+\includegraphics[scale=1.5]{img/zespolone-liczba_sprzezona.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Postaæ trygonometryczna}
+\medskip
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Argument liczby zespolonej}
+\medskip
+\begin{definicja}
+\textbf{\emph{Argumentem}}\label{def:argument_liczby_zespolonej} liczby zespolonej $z = a + bi \: \neq \mathbf{0}$ nazywamy ka¿d± liczbê rzeczywist± $\varphi$ spe³niaj±c± warunki
+\[
+\left\{
+\begin{array}{rcl}
+cos\: \varphi &=& \dfrac{a}{|z|} \\
+sin\: \varphi &=& \dfrac{b}{|z|}
+\end{array}
+\right.
+\]
+gdzie $|z|$ jest modu³em (Def. \ref{def:modul_liczby_zespolonej}, str. \pageref{def:modul_liczby_zespolonej}) liczby zespolonej $z$.
+\medskip
+Argument liczby zespolonej $z$ oznaczamy
+\[
+Arg \: z
+\]
+\cite[Rozdzia³ 1.2]{trajdos}
+\end{definicja}
+
+\medskip
+\begin{definicja}
+\textbf{\emph{Argumentem g³ównym}} liczby zespolonej $z$ nazywamy ten sposród argumentów liczby zespolonej $z$, który nale¿y do przedzia³u $\langle 0, 2\pi)$ i oznaczamy
+\[
+arg \: z
+\]
+\cite[Rozdzia³ 1.2]{trajdos}
+\end{definicja}
+
+\medskip
+Pomiêdzy argumentem g³ówny a argumentem liczby zespolonej $z$ zachodzi zale¿no¶æ
+\[
+Arg \: z \quad = \quad arg \: z + 2k\pi, \qquad k = 0, \pm1, \ldots
+\]
+\medskip
+
+Dla liczby $(0, 0)$ nie okre¶la siê argumentu.
+
+\medskip
+Geometrycznie, argument liczby zespolonej jest miar± wzglêdn± k±ta, jaki tworzy wektor wodz±cy punktu $z$ z osi± rzeczywist± (Def. \ref{def:os_rzeczywista}, str. \pageref{def:os_rzeczywista}).
+
+\includegraphics[scale=1.5]{img/zespolone-argument.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ trygonometryczna liczby zespolonej}
+\medskip
+\begin{definicja}
+Ka¿d± liczbê zespolon± mo¿na zapisaæ w postaci
+\[
+r \: \left( cos \: \varphi + i \: sin \: \varphi \right)
+\]
+zwanej \textbf{\emph{postaci± trygonometryczn±}} liczby zespolonej. Czynnik $r$ jest modu³em (Def. \ref{def:modul_liczby_zespolonej}, str. \pageref{def:modul_liczby_zespolonej}) liczby za¶ $\varphi$ jest dowolnym jej argumentem (Def. \ref{def:argument_liczby_zespolonej}, str. \pageref{def:argument_liczby_zespolonej}).
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mno¿enie}
+\medskip
+Niech bêd± dane dwie liczby zespolone w postaci trygonometrycznej
+\[
+z_1 \quad = \quad r_1 \: \left(cos \: \varphi_1 + i \: sin \: \varphi_1 \right)
+\]
+\[
+z_2 \quad = \quad r_2 \: \left(cos \: \varphi_2 + i \: sin \: \varphi_2 \right)
+\]
+
+\medskip
+Ich iloczynem bêdzie liczba
+\[
+\begin{array}{rcl}
+z_1 z_2 & = &
+\left[
+r_1 \: \left(cos \: \varphi_1 + i \: sin \: \varphi_1 \right)
+\right]
+\left[
+r_2 \: \left(cos \: \varphi_2 + i \: sin \: \varphi_2 \right)
+\right] = \\
+& = & r_1 r_2
+\left[
+\left(
+cos \: \varphi_1
+cos \: \varphi_2
+-
+sin \: \varphi_1
+sin \: \varphi_2
+\right)
++
+i
+\left(
+cos \: \varphi_1
+sin \: \varphi_2
++
+sin \: \varphi_1
+cos \: \varphi_2
+\right)
+\right]
+
+\end{array}
+\]
+
+\medskip
+lub po zastosowaniu wzorów trygonometrycznych
+\[
+z_1 z_2 = r_1 r_2
+\left[
+cos \left(\varphi_1 + \varphi_2 \right)
++ i \:
+sin \left(\varphi_1 + \varphi_2 \right)
+\right]
+\]
+
+\medskip
+Wnioski:
+\begin{itemize}
+\item modu³ iloczynu liczb zespolonych jest równy iloczynowi ich modu³ów
+\[
+\left| z_1 z_2 \right| = \left|z_1\right| \left|z_2\right|
+\]
+\item argument iloczynu liczb zespolonych jest równy sumie ich argumentów
+\[
+Arg \left(z_1 z_2 \right) = Arg \: z_1 + Arg \: z_2
+\]
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dzielenie}
+\medskip
+Niech bêd± dane dwie liczby zespolone w postaci trygonometrycznej
+\[
+z_1 \quad = \quad r_1 \: \left(cos \: \varphi_1 + i \: sin \: \varphi_1 \right)
+\]
+\[
+z_2 \quad = \quad r_2 \: \left(cos \: \varphi_2 + i \: sin \: \varphi_2 \right)
+\]
+
+\medskip
+Ich ilorazem bêdzie liczba
+\[
+\begin{array}{rcl}
+\cdot \dfrac{z_1}{z_2} & = &
+\dfrac{
+r_1 \: \left(cos \: \varphi_1 + i \: sin \: \varphi_1 \right)
+}
+{
+r_2 \: \left(cos \: \varphi_2 + i \: sin \: \varphi_2 \right)
+} = \vspace{0.5cm}\\
+& = &
+\dfrac{r_1}{r_2}
+\dfrac{\left(cos \: \varphi_1 + i sin \: \varphi_1 \right) \left(cos \: \varphi_2 - i sin \: \varphi_2 \right)}{cos^2 \: \varphi_2 + cos^2 \: \varphi_2}
+
+\end{array}
+\]
+
+\medskip
+lub po zastosowaniu wzorów trygonometrycznych
+\[
+\cdot \dfrac{z_1}{z_2} = \dfrac{r_1}{r_2}
+\left[
+cos \left(\varphi_1 - \varphi_2 \right)
++ i \:
+sin \left(\varphi_1 - \varphi_2 \right)
+\right]
+\]
+
+\medskip
+Wnioski:
+\begin{itemize}
+\item modu³ ilorazu liczb zespolonych jest równy ilorazowi ich modu³ów
+\[
+\left| \cdot \dfrac{z_1}{z_2} \right| = \dfrac{\left|z_1\right|}{\left|z_2\right|}
+\]
+\item argument ilorazu liczb zespolonych jest równy ró¿nicy ich argumentów
+\[
+Arg \: \cdot \dfrac{z_1}{z_2} = Arg \: z_1 - Arg \: z_2
+\]
+\end{itemize}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Potêgowanie}
+\medskip
+Niech bêdzie dana liczba zespolona w postaci trygonometrycznej
+\[
+z \quad = \quad r \: \left(cos \: \varphi + i \: sin \: \varphi\right)
+\]
+
+\medskip
+Jej potêg± o wyk³adniku naturalnym bêdzie
+\[
+z^n \quad = \quad r^n \: \left(cos \: n\varphi + i \: sin \: n\varphi\right)
+\]
+gdzie $n \in \mathbb{N}$
+
+\bigskip
+\subsubsection{Wyprowadzanie wzorów trygonometrycznych}
+Niech bêdzie dana liczba zespolona $z$ o module równym 1 ($|z| = 1$)
+\[
+z \quad = \quad cos \: \varphi + i \: sin \: \varphi
+\]
+\medskip
+Chcemy policzyæ $z^2$. \linebreak
+\medskip
+Ze wzoru na potêgê liczby zespolonej w postaci trygonometrycznej mamy
+\[
+z^2 \quad = \quad cos \: 2\varphi + i \: sin \: 2\varphi
+\]
+\medskip
+Mo¿emy tak¿e skorzystaæ z takiego równania
+\[
+\begin{array}{rcl}
+z^2 & = & \left(cos \: \varphi + i \: sin \: \varphi\right)^2 = \\
+& = & cos^2 \: \varphi - sin^2 \: \varphi + i \: 2 \: sin \: \varphi cos \: \varphi
+\end{array}
+\]
+\medskip
+Z równo¶ci liczb zespolonych wynika, ¿e
+\[
+\left\{
+\begin{array}{rcl}
+cos \: 2\varphi & = & cos^2 \: \varphi - sin^2 \: \varphi \\
+sin \: 2\varphi & = & 2 \: sin \: \varphi cos \: \varphi
+\end{array}
+\right.
+\]
+\medskip
+Wyprowadzili¶my w ten sposób wzory na $cos \: 2\varphi$ i $sin \: 2\varphi$.
+W ogólno¶ci, dla dowolnego $n$, otrzymyjemy wzór Moivre'a.
+\medskip
+\begin{definicja}
+\textbf{\emph{Wzorem Moivre'a}} nazywamy równanie
+\[
+\left(
+cos \: \varphi + i \: sin \: \varphi \right)^n
+\quad 
+=
+\quad
+cos\left(n\varphi\right) + i \: sin\left(n\varphi\right)
+\]
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pierwiastkowanie}
+\medskip
+\begin{definicja}
+Je¿eli $z_0 = r_0\left(cos \: \varphi_0 + i \: sin \: \varphi_0\right) \: \neq \: 0$, przy czym $\varphi_0 = arg \: z_0$, to liczba $\omega = R \left(cos \: \psi + i \: sin \: \psi \right)$ jest \textbf{\emph{pierwiastkiem stopnia $n$}} z $z_0$ wtedy i tylko wtedy, gdy
+\[
+R^n \quad = \quad r_0
+\]
+
+oraz
+\[
+n \: \psi \quad = \quad \varphi_0 + 2k\pi
+\]
+
+gdzie $k$ jest liczb± ca³kowit±.
+\cite[Rozdzia³ 1.3]{trajdos}
+\end{definicja}
+
+
+\bigskip
+St±d
+\[
+R \quad = \quad \sqrt[n]{r_0}
+\]
+
+oraz
+\[
+\psi \quad = \quad \dfrac{\varphi_0}{n} + \dfrac{2\pi}{n}k, \qquad k = 0, \pm1, \pm2, \ldots
+\]
+
+\bigskip
+Wszystkie ró¿ne pierwiastki stopnia $n$ z liczby $z_0$ mo¿na zapisaæ wzorem
+\[
+\omega_k \quad = \quad \sqrt[n]{r_0}
+\left[
+  cos \left(
+    \dfrac{\varphi_0}{n} + \dfrac{2\pi}{n}k
+      \right)
+  +
+  i \:
+  sin \left(
+    \dfrac{\varphi_0}{n} + \dfrac{2\pi}{n}k
+      \right)
+\right]
+\]
+
+\bigskip
+Na rysunku zosta³o przedstawionych $n$ pierwiastków stopnia $n$ liczby $z_0 \neq 0$. Odcinki przerywane ³±cz±ce kolejne pierwiastki tworz± wielobok foremny wpisany w okr±g o promieniu $\sqrt[n]{r_0}$.
+
+\includegraphics[scale=1.5]{img/zespolone-pierwiastkowanie.png}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Wzór Eulera}
+\medskip
+\begin{definicja}
+\label{def:wzor_eulera} Potêgê $e^z$ o podstawie $e$ i wyk³adniku $z = a + bi$, nale¿±cym do cia³a liczb zespolonych, okre¶lamy w sposób nastêpuj±cy
+\[
+\begin{array}{rcl}
+e^{ib} & = & cos \: b + i \: sin \: b \\
+e^z & = & e^a \: e^{ib}
+\end{array}
+\]
+\end{definicja}
+
+\medskip
+Definicja \ref{def:wzor_eulera} wprowadza nowy symbol $e^{i\varphi}$ na oznaczenie liczby o module równym $1$ i argumencie $\varphi$, mianowicie
+\[
+e^{i\varphi} = cos \: \varphi + i \: sin \: \varphi
+\]
+
+\smallskip
+
+Równo¶æ ta umo¿liwia zapisanie dowolnej liczby zespolonej $a + ib = r \left( cos\: \varphi + i \: sin \: \varphi \right)$ w tzw. \textbf{\emph{postaci wyk³adniczej}}.
+\[
+r \: e^{i\varphi}
+\]

@@ -1,0 +1,1601 @@
+\chapter{Rachunek ca³kowy funkcji jednej zmiennej}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Funkcja pierwotna}
+
+\begin{definicja}
+\textbf{\emph{Funkcj± pierwotn±}}\label{def:funkcja_pierwotna}\index{funkcja!pierwotna} funkcji $f(x)$ w~przedziale $a < x < b$ nazywamy ka¿d± tak± funkcjê $F(x)$, ¿e
+
+\[
+F'(x) \quad = \quad f(x)
+\]
+
+\medskip
+
+dla ka¿dego $x$ z~przedzia³u $a < x < b$.
+
+\cite[Paragraf 15.1]{krysicki1} \cite[Rozdia³ 3.4]{zakowski1}
+\end{definicja}
+
+\medskip
+
+\begin{twierdzenie}
+Je¿eli $F(x)$ i $G(x)$ s± funkcjami pierwotnymi $f(x)$, to
+
+\[
+F(x) - G(x) \quad = \quad \textsl{const}
+\]
+
+(Dwie funkcje maj±ce w~danym przedziale tê sam± skoñczon± pochodn± \textbf{mog± siê ró¿niæ co najwy¿ej o~sta³±})
+
+\cite[Paragraf 15.1]{krysicki1}
+\end{twierdzenie}
+
+\medskip
+
+\begin{twierdzenie}[o istnieniu funkcji pierwotnej]
+\label{tw:o_istnieniu_funkcji_pierwotnej}
+Je¿eli funkcja $f$ jest \textbf{ci±g³a} (jest klasy $C^0$) (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) na pewnym przedziale, to \textbf{posiada} na tym przedziale \textbf{funkcjê pierwotn±}.
+
+\cite[Rozdzia³ 3.4]{zakowski1}
+\end{twierdzenie}
+
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ca³ka nieoznaczona}
+
+\begin{definicja}
+\textbf{\emph{Ca³k± nieoznaczon±}}\label{def:calka_nieoznaczona}\index{ca³ka!nieoznaczona} funkcji $f(x)$, oznaczon± symbolem
+
+\[
+\int f(x) \: \textnormal{d}x
+\]
+
+nazywamy wyra¿enie
+
+\[
+F(x) + C
+\]
+
+gdzie
+\begin{itemize}
+\item $F(x)$ jest funkcj± pierwotn± funkcji f(x) (Def. \ref{def:funkcja_pierwotna}, str. \pageref{def:funkcja_pierwotna})
+\item a $C$ jest dowoln± sta³±.
+\end{itemize}
+
+Jest wiêc
+
+\[
+\int f(x) \: \textnormal{d}x \quad = \quad F(x) + C, \quad \textsl{gdzie} \quad F'(x) = f(x)
+\]
+
+\cite[Paragraf 15.1]{krysicki1} \cite[Rozdzia³ 3.5]{zakowski1}
+\end{definicja}
+
+\medskip
+
+Je¿eli funkcja posiada na pewnym przedziale \textbf{funkcjê pierwotn±}, to mówimy, ¿e \textbf{jest} ona na tym przedziale \textbf{ca³kowalna} (w~sensie Newtona).
+
+\cite[Rozdzia³ 3.4]{zakowski1}
+
+\bigskip
+
+Z powy¿szego oraz twierdzenia [\ref{tw:o_istnieniu_funkcji_pierwotnej}, str. \pageref{tw:o_istnieniu_funkcji_pierwotnej}] wynika, ¿e
+
+\smallskip
+
+je¿eli funkcja $f$ jest \textbf{ci±g³a} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) na pewnym przedziale to jest \textbf{ca³kowalna} na tym przedziale.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Obliczanie ca³ki nieoznaczonej}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Podstawowe wzory}
+
+\begin{center}
+\begin{tabular}{|m{2cm}m{0,3cm}m{3cm}|m{3cm}|m{0,1cm}}
+\cline{1-4}
+ 
+$\int 0 \: \textnormal{d}x$ &
+$=$ &
+$C$ &
+ &
+ \\[10pt] \cline{1-4}
+ 
+$\int x^a \: \textnormal{d}x$ &
+$=$ &
+$\dfrac{x^{a+1}}{a+1} + C$ &
+$a \neq -1, \; x>0$ &
+ \\[18pt] 
+ 
+$\int \textnormal{d}x$ &
+$=$ &
+$x + C$ &
+ &
+ \\[10pt]
+ 
+$\int\dfrac{\textnormal{d}x}{\sqrt{x}}$ &
+$=$ &
+$2\sqrt{x} + C$ &
+$x>0$ &
+ \\[15pt]
+ 
+$\int \dfrac{\textnormal{d}x}{x^2}$ &
+$=$ &
+$-\dfrac{1}{x} + C$ &
+$x \neq 0$ &
+ \\[18pt] \cline{1-4}
+ 
+$\int \dfrac{\textnormal{d}x}{x}$ &
+$=$ &
+$ln|x| + C$ &
+$x \neq 0$ &
+ \\[18pt] \cline{1-4}
+ 
+$\int a^x \: \textnormal{d}x$ &
+$=$ &
+$\dfrac{a^x}{\ln a} + C$ &
+$a>0, \: a \neq 1$ &
+ \\[15pt]
+ 
+$\int e^x \: \textnormal{d}x$ &
+$=$ &
+$e^x + C$ &
+ &
+ \\[10pt] \cline{1-4}
+ 
+$\int \cos x \: \textnormal{d}x$ &
+$=$ &
+$\sin x + C$ &
+ &
+ \\[10pt] \cline{1-4}
+
+$\int \sin x \: \textnormal{d}x$ &
+$=$ &
+$- \cos x + C$ &
+ &
+ \\[10pt] \cline{1-4}
+  
+$\int \dfrac{\textnormal{d}x}{\cos^2 x}$ &
+$=$ &
+$\tg x + C$ &
+$\cos x \neq 0$ &
+ \\[18pt] \cline{1-4}
+  
+$\int \dfrac{\textnormal{d}x}{\sin^2}$ &
+$=$ &
+$-\ctg x + C$ &
+$\sin x \neq 0$ &
+ \\[18pt] \cline{1-4}
+ 
+$\int \dfrac{\textnormal{d}x}{\sqrt{1-x^2}}$ &
+$=$ &
+$\arcsin x + C$ &
+$-1<x<1$ &
+ \\[18pt] \cline{1-4}
+ 
+$\int \dfrac{\textnormal{d}x}{\sqrt{1-x^2}}$ &
+$=$ &
+$- \arccos x + C$ &
+$-1<x<1$ &
+ \\[18pt] \cline{1-4}
+ 
+   $\int \dfrac{\textnormal{d}x}{x^2 + 1}$ &
+$=$ &
+$\arc \tg x + C$ &
+ &
+ \\[18pt] \cline{1-4}
+ 
+$\int \dfrac{\textnormal{d}x}{x^2 + 1}$ &
+$=$ &
+$-\arc \ctg x + C$ &
+ &
+ \\[18pt] \cline{1-4}
+ 
+$\int \sinh x \: \textnormal{d}x$ &
+$=$ &
+$\cosh x + C$ &
+ &
+ \\[10pt] \cline{1-4}
+ 
+$\int \cosh \: \textnormal{d}x$ &
+$=$ &
+$\sinh + C$ &
+ &
+ \\[10pt] \cline{1-4}
+  
+\end{tabular}
+\end{center}
+
+\cite[Paragraf 15.2]{krysicki1}
+
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{W³asno¶ci ca³ek nieoznaczonych}
+
+\begin{twierdzenie}[o ca³ce sumy]\label{tw:o_calce_sumy}
+Ca³ka sumy równa siê sumie ca³ek, tzn. (jest to tzw. addytywno¶æ ca³ki wzglêdem funkcji podca³kowej)
+
+\[
+\int \Big(f(x) + g(x)\Big) \textnormal{d}x \quad = \quad \int f(x) \: \textnormal{d}x + \int g(x) \: \textnormal{d}x
+\]
+
+\cite[Paragraf 15.3, (15.3.1)]{krysicki1}
+\end{twierdzenie}
+
+\medskip
+
+\begin{twierdzenie}\label{tw:o_wyniesieniu_stalego_czynnika_przed_znak_calki}
+Sta³y czynnik wolno wynie¶æ przed znak ca³ki, tzn.
+
+\[
+\int A \: f(x) \: \textnormal{d}x \quad = \quad A \int f(x) \: \textnormal{d}x, \quad A \neq 0, \; A = \textsl{const}
+\]
+
+\cite[Paragraf 15.3, (15.3.2)]{krysicki1}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³kowanie przez czê¶ci}
+
+\begin{twierdzenie}[o ca³kowaniu przez czê¶ci]\label{tw:o_calkowaniu_przez_czesci}
+Je¿eli funkcje $f(x)$ i~$g(x)$ maj± na pewnym przedziale ci±g³e pochodne $f'(x)$ i~$g'(x)$, to
+
+\[
+\int f'(x) \: g(x) \: \textnormal{d}x \quad = \quad f(x)\: g(x) - \int f(x) \: g'(x) \: \textnormal{d}x
+\]
+
+\medskip
+
+na tym przedziale
+
+\cite[Rozdzia³ 3.6]{zakowski1}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³kowanie przez podstawienie}
+
+\begin{twierdzenie}[o ca³kowaniu przez podstawienie]\label{tw:o_calkowaniu_przez_podstawienie}
+Je¿eli dla $a \: \leq \: x \: \leq \: b$
+
+\begin{itemize}
+\item $g(x) = u$ jest funkcj± maj±c± \textbf{ci±g³± pochodn±}
+\item oraz $A \: \leq \: g(x) \: \leq \: B$,
+\item a funkcja $f(u)$ jest \textbf{ci±g³a} w~przedziale $\langle A,B\rangle$
+\end{itemize}
+
+to
+
+\[
+\int f\Big(g(x)\Big) \: g'(x) \: \textnormal{d}x \quad = \quad \int f(u) \: du
+\]
+
+\medskip
+
+przy czym po sca³kowaniu prawej strony nale¿y w~otrzymanym wyniku podstawiæ $u \: = \: g(x)$
+
+\cite[Paragraf 15.3, (15.3.4)]{krysicki1}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³ki funkcji wymiernych}
+
+Ca³ka funkcji wymiernej (Def. \ref{def:funkcja_wymierna}, str. \pageref{def:funkcja_wymierna}), to ca³ka postaci
+
+\[
+\int \frac{P_n(x)}{Q_m(x)} \: \textnormal{d}x
+\]
+
+\medskip
+
+\noindent Przy obliczaniu powy¿szej ca³ki nale¿y:
+
+\begin{itemize}
+\item je¿eli funkcja wymierna jest \textbf{niew³a¶ciwa}, czyli $m \geq n$ (Def. \ref{def:funkcja_wymierna_niewlasciwa}, str. \pageref{def:funkcja_wymierna_niewlasciwa}), to nale¿y \textbf{podzieliæ licznik przez mianownik} i~przedstawiæ t± funkcjê jako \textbf{sumê wielomianu} oraz \textbf{funkcji wymiernej w³a¶ciwej} (Tw. \ref{tw:funkcja_wymierna_suma_wielomianu_i_funkcji_wymiernej_wlasciwej}, str. \pageref{tw:funkcja_wymierna_suma_wielomianu_i_funkcji_wymiernej_wlasciwej}), czyli mamy
+
+\[
+\int \dfrac{P_p(x)}{Q_q(x)} \: \textnormal{d}x \quad = \quad \int \Big( W_w(x) \: + \: \dfrac{R_r(x)}{Q_q(x)} \Big) \: \textnormal{d}x
+\]
+
+\medskip
+
+nastêpnie skorzystaæ z~twierdzenia o~ca³ce sumy (Tw. \ref{tw:o_calce_sumy}, str. \pageref{tw:o_calce_sumy}), st±d mamy
+
+\[
+\int \dfrac{P_p(x)}{Q_q(x)} \: \textnormal{d}x \quad = \quad \int W_w(x) \: \textnormal{d}x \; + \; \int \dfrac{R_r(x)}{Q_q(x)} \: \textnormal{d}x
+\]
+
+\medskip
+
+Pierwsz± ca³kê obliczamy korzystaj±c z~twierdzenia o~ca³ce sumy, z~twierdzenia o~wyniesieniu sta³ego czynnika przed znak ca³ki (Tw. \ref{tw:o_wyniesieniu_stalego_czynnika_przed_znak_calki}, str. \pageref{tw:o_wyniesieniu_stalego_czynnika_przed_znak_calki}) oraz podstawowych wzorów na obliczanie ca³ki.
+
+\smallskip
+
+Drug± ca³kê obliczamy w~sposób podany poni¿ej.
+
+\item je¿eli funkcja wymierna jest \textbf{w³a¶ciwa}, czyli $n < m$ (Def. \ref{def:funkcja_wymierna_wlasciwa}, str. \pageref{def:funkcja_wymierna_wlasciwa}), to przedstawiamy j± jako \textbf{sumê u³amków prostych} (Tw. \ref{tw:o_rozkladzie_na_ulamki_proste}, str. \pageref{tw:o_rozkladzie_na_ulamki_proste}).
+\end{itemize}
+
+\cite[Paragraf 16.1]{krysicki1}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Ca³kowanie u³amków prostych pierwszego rodzaju}
+
+U³amki proste pierwszego rodzaju (Def. \ref{def:ulamek_prosty_pierwszego_rodzaju}, str. \pageref{def:ulamek_prosty_pierwszego_rodzaju}) ca³kujemy korzystaj±c z~twierdzenia o~ca³kowaniu przez podstawienie (Tw. \ref{tw:o_calkowaniu_przez_podstawienie}, str. \pageref{tw:o_calkowaniu_przez_podstawienie}) i~podstawienia
+
+\[
+u \quad = \quad x - a
+\]
+
+\medskip
+
+st±d
+
+\[
+\int \frac{A}{(x - a)^n} \: \textnormal{d}x \quad = \quad A \int \frac{1}{u^n} \: du
+\]
+
+\medskip
+
+i w koñcu
+
+\[
+\int \frac{A}{(x - a)^n} \: \textnormal{d}x \quad = \quad \left\{ \begin{array}{cllc}
+A & \ln |x-a| + C, & \textsl{gdy } r = 1 & \\[4pt]
+\dfrac{A}{1-r} & (x-a)^{1-r} + C, &  \textsl{gdy TODO ?? ->} r \geq 2 &
+\end{array} \right.
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Ca³kowanie u³amków prostych drugiego rodzaju}
+
+U³amki proste drugiego rodzaju (Def. \ref{def:ulamek_prosty_drugiego_rodzaju}, str. \pageref{def:ulamek_prosty_drugiego_rodzaju}) ca³kujemy korzystaj±c, w~pierwszej kolejno¶ci, z~twierdzenia o~ca³ce sumy (Tw. \ref{tw:o_calce_sumy}, str. \pageref{tw:o_calce_sumy}), z~twierdzenia o~wyniesieniu sta³ego czynnika przed znak ca³ki (Tw. \ref{tw:o_wyniesieniu_stalego_czynnika_przed_znak_calki}, str. \pageref{tw:o_wyniesieniu_stalego_czynnika_przed_znak_calki}), z~czego uzyskujemy dwie ca³ki
+
+\begin{itemize}
+\item pierwsz± postaci
+
+\[
+\int \frac{2x + p}{(x^2 +px + q)^n} \: \textnormal{d}x
+\]
+
+\medskip
+
+gdzie licznik podca³kowej funkcji wymiernej ma postaæ pochodnej funkcji mianownika bêd±cej w~potêdze
+
+\item drug± postaci
+
+\[
+\int \frac{1}{(x^2 +px + q)^n} \: \textnormal{d}x
+\]
+
+\end{itemize}
+
+\bigskip
+
+Aby otrzymaæ te ca³ki licznik $Ax + B$ u³amka prostego przekszta³camy, w~ogólnym przypadku, nastêpuj±co
+
+\[
+Ax + B \; = \; \frac{A}{2} \cdot 2x + B \; = \; \frac{A}{2} (2x + p - p) + B \; = \; \frac{A}{2} (2x + p) + B - \frac{Ap}{2}
+\]
+
+\bigskip
+
+St±d do sca³kowania u³amka prostego drugiego rodzaju zastosujemy nastêpuj±ce przekszta³cenie 
+
+\[
+\begin{array}{rcrlcc}
+\int \dfrac{Ax + B}{(x^2 + px + q)^n} & = &  \dfrac{A}{2} & \int \dfrac{2x + p}{(x^2 +px + q)^n} \: \textnormal{d}x & + & \\[10pt]
+& + & \left(B - \dfrac{Ap}{2}\right) & \int \dfrac{1}{(x^2 +px + q)^n} \: \textnormal{d}x & &
+\end{array}
+\]
+
+\bigskip
+
+Pierwsz± ca³kê 
+
+\[
+\int \frac{2x + p}{(x^2 +px + q)^n} \: \textnormal{d}x
+\]
+
+\medskip
+
+obliczamy stosuj±c podstawienie 
+
+\[
+t \; = \; x^2 +px + q
+\]
+
+\medskip
+
+st±d
+
+\[
+\textnormal{d}t \; = \; (2x + p) \: \textnormal{d}x
+\]
+
+\medskip
+
+Otrzymujemy wiêc
+
+\[
+\int \frac{2x + p}{(x^2 +px + q)^n} \: \textnormal{d}x \quad = \quad \int \frac{1}{t^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+Dalsze ca³kowanie przebiega tak, jak w~przypadku u³amka prostego.
+
+\bigskip
+
+Drug± ca³kê
+
+\[
+\int \frac{1}{(x^2 +px + q)^n} \: \textnormal{d}x
+\]
+
+\medskip
+
+przekszta³camy tak, aby otrzymaæ
+
+\[
+\int \frac{1}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+
+w~ogólnym przypadku stosuj±c podstawienie
+
+\[
+t \; = \; \frac{2x +p}{\sqrt{-\Delta}}
+\]
+
+\cite[Rozdzia³ 3.8]{zakowski1}
+
+\bigskip
+
+Ca³kê 
+
+\[
+\int \frac{1}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+dla 
+
+\begin{itemize}
+\item $n = 1$ rozwi±zujemy korzystaj±c z podstawowych wzorów ca³kowania
+
+\[
+\int \frac{1}{t^2 + 1} \: \textnormal{d}t \; = \; \arc \tg{t} + C
+\]
+
+\item $n > 1$ rozwi±zujemy korzystaj±c ze \textbf{wzoru redukuj±cego} (lub \textbf{rekurencyjnego})
+
+\[
+I_n = \frac{1}{2n-2} \cdot \frac{t}{(t^2 + 1)^{n-1}} + \frac{2n-3}{2n-2} \; I_{n-1}, \qquad \textsl{gdzie } I_n = \int \frac{1}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+którego wyprowadzenie znajduje siê poni¿ej.
+
+\bigskip
+
+\textbf{Wyprowadzenie}
+
+\medskip
+
+Aby obliczyæ ca³kê
+
+\[
+I_n = \int \frac{1}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+zastosujemy przekszta³cenie
+
+\[
+\int \frac{1}{(t^2 + 1)^n} \: \textnormal{d}t \; = \; \int \frac{t^2 + 1 - t^2}{(t^2 + 1)^n} \: \textnormal{d}t \; =
+\]
+
+\[
+ = \; \int \frac{1}{(t^2 + 1)^{n-1}} \: \textnormal{d}t \; - \; \int \frac{t^2}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+czyli mamy
+
+\[
+I_n \; = \; I_{n-1} \; - \; \int \frac{t^2}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+Drug± ca³kê zapisujemy jako
+
+\[
+\int \frac{t^2}{(t^2 + 1)^n} \: \textnormal{d}t \; = \; \int t \cdot \frac{t}{(t^2 + 1)^n} \: \textnormal{d}t
+\]
+
+\medskip
+
+i~ca³kujemy przez czê¶ci (Tw. \ref{tw:o_calkowaniu_przez_czesci}, str. \pageref{tw:o_calkowaniu_przez_czesci}). St±d otrzymujemy
+
+\[
+\int \frac{t^2}{(t^2 + 1)^n} \: \textnormal{d}t \; = \; \frac{-1}{2n -2} \cdot \frac{t}{(t^2 +1)^{n-1}} + \frac{1}{2n-2} \; I_{n-1}
+\]
+
+\medskip
+
+Po podstawieniu do wzoru na $I_n$ otrzymujemy zapisany wy¿ej \textbf{wzór redukcyjny}.
+
+\cite[Zadanie 16.21]{krysicki1}
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³ki funkcji trygonometrycznych}
+
+Ca³ki trygonometryczne obliczamy stosuj±c podstawienia charakterystyczne dla danych typów.
+
+\begin{itemize}
+\item 
+\[
+\int R(\sin x) \cos x \: \textnormal{d}x
+\]
+
+\begin{eqnarray*}
+t 	& = & \sin x \\
+\textnormal{d}t	& = & \cos x \: \textnormal{d}x
+\end{eqnarray*}
+
+\item
+
+\[
+\int R(\cos x) \sin x \: \textnormal{d}x
+\]
+
+\begin{eqnarray*}
+t 	& = & \cos x \\
+- \textnormal{d}t	& = & \sin x \: \textnormal{d}x
+\end{eqnarray*}
+
+\item
+
+\[
+\int R(\sin^2 x, \cos^2 x, \sin x \cos x) \: \textnormal{d}x
+\]
+
+\begin{eqnarray*}
+t 							& = & \tg x \\
+\arc \tg t					& = & x \\
+\frac{1}{1 + t^2} \: \textnormal{d}t		& = & \textnormal{d}x
+\end{eqnarray*}
+
+\[
+\sin^2 x \; = \; \frac{\sin^2 x}{1} \; = \; \frac{\sin^2 x}{\cos^2 x + \sin^2 x} \; = \; \frac{\tg^2 x}{1 + \tg^2 x} \; = \; \frac{t^2}{1 + t^2}
+\]
+
+\[
+\cos^2 x \; = \; \frac{\cos^2 x}{1} \; = \; \frac{\cos^2 x}{\cos^2 x + \sin^2 x} \; = \; \frac{1}{1 + \tg^2 x} \; = \; \frac{1}{1 + t^2}
+\]
+
+\[
+\sin x \cos x \; = \; \frac{\sin x \cos x}{1} \; = \; \frac{\sin x \cos x}{\cos^2 x + \sin^2 x} \; = \; \frac{\tg x}{1 + \tg^2 x} \; = \; \frac{t}{1 + t^2}
+\]
+
+\item
+
+\[
+\int R(\sin x, \cos x) \: \textnormal{d}x
+\]
+
+\begin{eqnarray*}
+t 							& = & \tg \frac{x}{2} \\
+\arc \tg t					& = & \frac{x}{2} \\
+\frac{2}{1 + t^2} \: \textnormal{d}t		& = & \textnormal{d}x
+\end{eqnarray*}
+
+\[
+\sin x \; = \; \frac{2 \sin \frac{x}{2} \cos \frac{x}{2}}{1} \; = \; \frac{2 \sin \frac{x}{2} \cos \frac{x}{2}}{\cos^2 \frac{x}{2} + \sin^2 \frac{x}{2}} \; = \; \frac{2 \tg \frac{x}{2}}{1 + \tg^2 \frac{x}{2}} \; = \; \frac{2t}{1 + t^2}
+\]
+
+\[
+\cos x \; = \; \frac{\cos^2 \frac{x}{2} - \sin^2 \frac{x}{2}}{1} \; = \; \frac{\cos^2 \frac{x}{2} - \sin^2 \frac{x}{2}}{\cos^2 \frac{x}{2} + \sin^2 \frac{x}{2}} \; = \; \frac{1 - \tg^2 \frac{x}{2}}{1 + \tg^2 \frac{x}{2}} \; = \; \frac{1 - t^2}{1 + t^2}
+\]
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ca³ki funkcji niewymiernych}
+
+\subsubsection{Ca³ki funkcji zawieraj±cych pierwiastki z~wyra¿enia liniowego}
+
+\cite[Paragraf 17.1]{krysicki1}
+
+\medskip
+
+Je¿eli funkcja podca³kowa jest funkcj± wymiern± potêg zmiennej $x$~o~wyk³adnikach postaci $\dfrac{m}{n}$, gdzie $m$, $n$ s± liczbami naturalnymi wzglêdem siebie pierwszymi, to wykonujemy podstawienie
+
+\[
+x \; = \; t^N
+\]
+
+\medskip
+
+gdzie $N$ oznacza wspólny mianownik u³amków postaci $\dfrac{m}{n}$.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Podstawienia Eulera - Ca³ki funkcji zawieraj±cych pierwiastek kwadratowy z~trójmianu kwadratowego}
+
+Ca³kê postaci
+
+\[
+\int R\left(x, \sqrt{ax^2 + bx +c}\right) \: \textnormal{d}x
+\]
+
+\medskip
+
+mo¿emy obliczyæ stosuj±c \textbf{podstawienie Eulera}. W~zale¿no¶ci od warunków stosujemy podstawienia:
+
+\begin{enumerate}
+\item gdy $a \; > \; 0$
+
+\[
+\sqrt{ax^2 + bx +c} \; = \; t \pm \sqrt{a} \: x
+\]
+
+\medskip
+
+\item gdy $\Delta = b^2 -4ac \; > \; 0 \qquad \Big(ax^2 + bx +c \; = \; a(x-x_1)(x-x_2)\Big)$
+
+\[
+\sqrt{ax^2 + bx +c} \; = \; (x-x_{1})t
+\]
+
+\medskip
+
+lub
+
+\[
+\sqrt{ax^2 + bx +c} \; = \; (x-x_{2})t
+\]
+\end{enumerate}
+
+\medskip
+
+Równania podnosimy obustronnie do kwadratu. Obliczamy $x$ i~wstawiamy do podstawienia. Otrzymujemy w~ten sposób podstawienie dla $\sqrt{ax^2 + bx +c}$ zale¿ne jedynie od $t$. Równanie z~wyliczonym $x$ ró¿niczkujemy.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Ca³kowanie przy pomocy metody wspó³czynników nieoznaczonych}
+
+\cite[Paragraf 17.3, Zadanie 17.46, 17.47]{krysicki1}
+
+\medskip
+
+\textbf{Metodê wspó³czynników nieoznaczonych} stosujemy przy obliczaniu ca³ek postaci
+
+\[
+\int \frac{W_n(x)}{\sqrt{ax^2 + bx +c}} \: \textnormal{d}x
+\]
+
+\medskip
+
+gdzie $W_n(x)$ jest wielomianem (Def. \ref{def:wielomian}, str. \pageref{def:wielomian}) stopnia $n$ (Def. \ref{def:stopien_wielomianu}, str. \pageref{def:stopien_wielomianu}). Ca³ka ta równa siê wyra¿eniu
+
+\[
+W_{n-1}(x) \: \sqrt{ax^2 + bx +c} \; + \; A \int \frac{1}{\sqrt{ax^2 + bx +c}} \: \textnormal{d}x
+\]
+
+\medskip
+
+gdzie $W_{n-1}(x)$ jest wielomianem stopnia $n-1$, a $A$ - pewn± sta³±.
+
+\bigskip
+
+\noindent Aby obliczyæ \textbf{wspó³czynniki (nieoznaczone) wielomianu} $W_{n-1}$ oraz~$\mathbf{A}$
+
+\begin{enumerate}
+\item ró¿niczkujemy obie strony to¿samo¶ci
+
+
+\begin{align*}
+\int \frac{W_n(x)}{\sqrt{ax^2 + bx +c}} \: \textnormal{d}x \; \equiv \; W_{n-1}(x) \: \sqrt{ax^2 + bx +c} \; + \\
++ \; A \int \frac{1}{\sqrt{ax^2 + bx +c}} \: \textnormal{d}x
+\end{align*}
+
+\medskip
+
+otrzymujemy
+
+\begin{align*}
+\frac{W_n(x)}{\sqrt{ax^2 + bx +c}} \; \equiv \; W_{n-1}'(x) \: \sqrt{ax^2 + bx +c} \; + \\
++ \; W_{n-1}(x) \: \frac{2ax + b}{2\sqrt{ax^2 + bx +c}} \; + \\
++ \; A \: \frac{1}{\sqrt{ax^2 + bx +c}}
+\end{align*}
+
+\item mno¿ymy obie strony to¿samo¶ci przez $\sqrt{ax^2 + bx +c}$
+
+\[
+W_n(x) \; \equiv \; W_{n-1}'(x) \: (ax^2 + bx +c) \; + \; W_{n-1}(x) \: \frac{2ax + b}{2} \; + \; A
+\]
+
+\item korzystaj±c z~(Tw. \ref{tw:rownosc_wielomianow}, str. \pageref{tw:rownosc_wielomianow}) przyrównujemy kolejno odpowiednie wspó³czynniki.
+\end{enumerate}
+
+\medskip
+
+Obliczone wspó³czynniki wstawiamy do pierwotnej to¿samo¶ci i~obliczamy ca³kê
+
+\[
+\int \frac{1}{\sqrt{ax^2 + bx +c}} \: \textnormal{d}x
+\]
+
+\medskip
+
+Otrzymany wynik wstawiamy do to¿samo¶ci. W~ten sposób otrzymujemy warto¶æ pierwotnej ca³ki.
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Inne rodzaje podstawieñ}
+
+\begin{itemize}
+\item
+
+\[
+\int R(x, \sqrt{a^2 - x^2}) \: \textnormal{d}x
+\]
+
+\[
+x \; = \; a \: \sin t \quad \vee \quad x = a \: \tgh t
+\]
+
+\item
+
+\[
+\int R(x, \sqrt{a^2 + x^2}) \: \textnormal{d}x
+\]
+
+\[
+x \; = \; a \: \tg t \quad \vee \quad x = a \: \sinh t
+\]
+
+\item
+
+\[
+\int R(x, \sqrt{x^2 - a^2}) \: \textnormal{d}x
+\]
+
+\[
+x \; = \; \frac{a}{\cos t} \quad \vee \quad x = a \: \cosh t
+\]
+
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ca³ka oznaczona}
+
+Zak³adamy, ¿e funkcja $f(x)$ jest ograniczona w~przedziale domkniêtym $\langle a,b\rangle$ (Def. \ref{def:funkcja_ograniczona_w_przedziale}, str. \pageref{def:funkcja_ograniczona_w_przedziale})
+
+\vspace{5cm}
+
+TODO rysunek konstrukcji
+
+\bigskip
+
+Dokonajmy nastêpuj±cej konstrukcji:
+
+\begin{itemize}
+\item dokonujemy $m$ ró¿nych podzia³ów ($P_1$, $P_2$, $\ldots$, $P_m$) przedzia³u $\langle a,b\rangle$ na czê¶ci (dzielimy w~ró¿ny sposób przedzia³ $\langle a,b\rangle$ na mniejsze przedzia³y)
+
+\item przyjmujemy, ¿e w~wyniku \textbf{podzia³u $\mathbf{P_m}$ otrzymali¶my przedzia³y}
+
+\[
+\langle x_{i-1} , x_{i} \rangle, \qquad \textsl{gdzie } n = 1, 2, \ldots n_m
+\]
+
+gdzie
+
+\begin{itemize}
+\item $n_m$ - liczba przedzia³ów
+\item $x_0 = a$
+\item $x_{n_m} = b$
+\item liczby $x_i$ tworz± ci±g silnie rosn±cy (Def. \ref{def:ciag_silnie_rosnacy}, str. \pageref{def:ciag_silnie_rosnacy})
+\end{itemize}
+
+\medskip
+
+Przedzia³y te nazywamy \textbf{przedzia³ami cz±stkowymi podzia³u} $P_m$.
+
+\item oznaczamy d³ugo¶ci przedzia³ów
+
+\[
+x_i - x_{i-1} \; = \; \Delta x_i
+\]
+
+\item oznaczamy \textbf{d³ugo¶æ najd³u¿szego przedzia³u cz±stkowego} podzia³u $P_m$ przez $\mathbf{\delta_m}$
+
+\[
+\delta_m \; = \; \sup{\Delta x_i}
+\]
+
+\item Ci±g (Def. \ref{def:ciag}, str. \pageref{def:ciag}) podzia³ów $\{P_m\}$ nazywamy \textbf{normalnym ci±giem podzia³ów}, je¿eli
+
+\[
+\lim_{n \to \infty} \delta_m = 0
+\]
+
+\item tworzymy \textbf{sumê $\mathbf{S_m}$ iloczynów}
+\begin{itemize}
+\item \textbf{warto¶ci funkcji} $\mathbf{f(c_i)}$ w~dowolnym punkcie $c_i$ przedzia³u $\langle x_{i-1} , x_{i} \rangle$
+\item oraz \textbf{d³ugo¶ci} $\mathbf{\Delta x_i}$ tych przedzia³ów
+\end{itemize}
+
+przy podziale $P_m$
+
+\[
+S_m \; = \; \sum_{i=1}^{n_m} \: f(c_i) \: \Delta x_i
+\]
+
+\end{itemize}
+
+\begin{definicja}
+Je¿eli
+
+\begin{itemize}
+\item \textbf{ci±g} $\mathbf{\{S_m\}}$ dla $m \to \infty$ jest \textbf{zbie¿ny} (Def. \ref{def:ciag_zbiezny}, str. \pageref{def:ciag_zbiezny})
+\item \textbf{i}, dodatkowo, jest \textbf{zbie¿ny do tej samej granicy} przy \textbf{ka¿dym} normalnym normalnym ci±gu podzia³ów $\{P_m\}$, niezale¿nie od wyboru punktów $c_i$,
+\end{itemize}
+
+\noindent to funkcjê $f(x)$ nazywamy \textbf{funkcj± ca³kowaln± w~przedziale} $\langle a,b\rangle$, a~granicê ci±gu $S_m$ nazywamy \textbf{ca³k± oznaczon±}\index{ca³ka!oznaczona} funkcji $f(x)$ \textbf{w~granicach od $a$ do $b$} i~oznaczamy symbolem
+
+\[
+\int\limits_a^b f(x) \: \textnormal{d}x
+\]
+
+
+\end{definicja}
+
+\cite[Paragraf 19.1]{krysicki1}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretacja geometryczna ca³ki oznaczonej}
+
+\vspace{5cm}
+
+TODO rysunek
+
+\bigskip
+
+\begin{twierdzenie}
+Je¿eli w przedziale $\langle a,b\rangle$ jest
+
+\[
+f \geq 0
+\]
+
+\medskip
+
+\noindent to \textbf{pole obszaru} ograniczonego
+
+\begin{itemize}
+\item ³ukiem krzywej $y = f(x)$,
+\item odcinkiem osi $Ox$
+\item prost± $x=a$
+\item prost± $x=b$
+\end{itemize}
+
+\noindent równa siê ca³ce oznaczonej
+
+\[
+\int\limits_a^b f(x) \: \textnormal{d}x
+\]
+
+\cite[Paragraf 19.2]{krysicki1}
+
+\end{twierdzenie}
+
+\medskip
+
+\noindent\textbf{Wniosek}
+
+Je¿eli w~przedziale $\langle a,b\rangle$ jest
+
+\[
+f \leq 0
+\]
+
+\medskip
+
+to pole równa siê 
+
+\[
+- \int\limits_a^b f(x) \: \textnormal{d}x
+\]
+
+\bigskip
+
+\noindent\textbf{Wniosek}
+
+Zawsze pole okre¶lonego wy¿ej obszaru mo¿na wyraziæ ca³k± oznaczon±\label{wn:pole_obszaru_ogolnie}
+
+\[
+\int\limits_a^b |f(x)| \: \textnormal{d}x
+\]
+
+\cite[Paragraf 19.2]{krysicki1}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{W³asno¶ci ca³ki oznaczonej}
+
+\cite[Paragraf 19.3]{krysicki1}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Addytywno¶æ ca³ki wzglêdem przedzia³u ca³kowania}
+
+\begin{twierdzenie}
+Je¿eli $a \leq b \leq c$, to (TODO niekonieczne za³o¿enie)
+
+\[
+\int\limits_a^c f(x) \: \textnormal{d}x \quad = \quad \int\limits_a^b f(x) \: \textnormal{d}x + \int\limits_b^c f(x) \: \textnormal{d}x
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Addytywno¶æ ca³ki wzglêdem funkcji podca³kowej}
+
+\begin{twierdzenie}
+Ca³ka sumy równa siê sumie ca³ek, tzn.
+
+\[
+\int\limits_a^b \Big(f(x)+g(x)\Big) \: \textnormal{d}x \quad = \quad \int\limits_a^b f(x) \: \textnormal{d}x + \int\limits_a^b g(x) \: \textnormal{d}x
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Wynoszenie sta³ego czynnika przed znak ca³ki oznaczonej}
+
+\begin{twierdzenie}
+Sta³y czynnik mo¿na wynie¶æ przed znak ca³ki
+
+\[
+\int\limits_a^b A \: f(x) \: \textnormal{d}x \quad = \quad A \: \int\limits_a^b f(x) \: \textnormal{d}x
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Parzysto¶æ i~nieparzysto¶æ funkcji podca³kowej}
+
+\begin{twierdzenie}
+Je¿eli $f(x) \in C^0 \Big(\langle -a,a\rangle\Big)$ i~jest nieparzysta (Def. \ref{def:funkcja_nieparzysta}, str. \pageref{def:funkcja_nieparzysta}), to
+
+\[
+\int\limits_{-a}^a f(x) \: \textnormal{d}x \quad = \quad 0
+\]
+\end{twierdzenie}
+
+\medskip
+
+\begin{twierdzenie}
+Je¿eli $f(x) \in C^0 \Big(\langle -a,a\rangle\Big)$ i~jest parzysta (Def. \ref{def:funkcja_parzysta}, str. \pageref{def:funkcja_parzysta}), to
+
+\[
+\int\limits_{-a}^a f(x) \: \textnormal{d}x \quad = \quad 2 \: \int\limits_0^a f(x) \: \textnormal{d}x \;
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Twierdzenie o warto¶ci ¶redniej}
+
+\begin{twierdzenie}
+Je¿eli $f(x) \in C^0 \Big(\langle a,b\rangle\Big)$, to istnieje $c \in (a,b)$ takie, ¿e
+
+\[
+\int\limits_a^b f(x) \: \textnormal{d}x \quad = \quad f(c)(b-a)
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Zwi±zek miêdzy ca³k± oznaczon± a~nieoznaczon±}
+
+\begin{twierdzenie}
+Je¿eli przez $F(x)$ oznaczymy funkcjê pierwotn± (Def. \ref{def:funkcja_pierwotna}, str. \pageref{def:funkcja_pierwotna}) funkcji $f(x) \in C^0 \Big(\langle a,b\rangle\Big)$, to
+
+\[
+\int\limits_a^b f(x) \: \textnormal{d}x \quad = \quad F(b) - F(a)
+\]
+\end{twierdzenie}
+
+\medskip
+
+\noindent\textbf{Oznaczenia}
+
+$F(b) - F(a)$ oznaczaæ mo¿na przez
+
+\begin{itemize}
+\item $\big[F(x)\big]_a^b$
+\item $F(x)|_a^b$
+\item $F(x)|_{x=a}^{x=b}$
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Ca³kowanie przez czê¶ci ca³ek oznaczonych}
+
+\begin{twierdzenie}
+Je¿eli $f(x), g(x) \in C^1 \Big(\langle a,b\rangle\Big)$, to
+
+\[
+\int\limits_a^b f'(x) \: g(x) \: \textnormal{d}x \quad = \quad \big[f(x) \: g(x)\big]_a^b - \int\limits_a^b f(x) \: g'(x) \: \textnormal{d}x
+\]
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Ca³kowanie przez podstawienie ca³ek oznaczonych}
+
+\begin{twierdzenie}\label{tw:o_calkowaniu_przez_podstawienie_calek_oznaczonych}
+Je¿eli 
+\begin{itemize}
+\item $g'(x)$ jest funkcj± ci±g³± (Def. \ref{def:funkcja_ciagla}, str. \pageref{def:funkcja_ciagla}),
+\item $g(x)$ jest funkcj± silnie rosn±c± (Def. \ref{def:funkcja_silnie_rosnaca}, str. \pageref{def:funkcja_silnie_rosnaca}) w~przedziale $\langle a,b\rangle$
+\item $f(t)$ jest ci±g³a w~przedziale $\Big\langle g(a), g(b)\Big\rangle$ (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze})
+\end{itemize}
+
+\medskip
+
+to
+
+\[
+\int\limits_a^b f\Big(g(x)\Big) \: g'(x) \: \textnormal{d}x \quad = \quad \int\limits_{g(a)}^{g(b)} f(t) \: \textnormal{d}t
+\]
+
+\medskip
+
+Podstawienie
+
+\[
+t \; = \; g(x)
+\]
+
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Zastosowanie ca³ki oznaczonej}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Obliczanie pola obszaru p³askiego}
+
+TODO
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Obliczanie pola obszaru p³askiego, gdy linia ograniczaj±ca okre¶lona jest w~postaci parametrycznej}
+
+\cite[Paragraf 20.1]{krysicki1}
+
+\medskip
+
+Je¿eli linia ograniczaj±ca okre¶lona jest w~\textbf{postaci parametrycznej}
+
+\[
+\begin{array}{rcl}
+x & = & g(t)\\[4pt]
+y & = & h(t)
+\end{array}
+\]
+
+\medskip
+
+\noindent gdzie w~przedziale $\langle t_1, t_2\rangle$
+
+\begin{itemize}
+\item funkcje $g(t)$ i~$h(t)$ s± \textbf{ci±g³e} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) 
+\item funkcja $g(t)$ jest \textbf{rosn±ca} (Def. \ref{def:funkcja_rosnaca}, str. \pageref{def:funkcja_rosnaca})
+\item funkcja $g(t)$ ma \textbf{pochodn±} (Def. \ref{def:pochodna_funkcji}, str. \pageref{def:pochodna_funkcji})  \textbf{ci±g³±} 
+\end{itemize}
+
+\bigskip
+
+\noindent to, korzystaj±c z~(Tw. \ref{tw:o_calkowaniu_przez_podstawienie_calek_oznaczonych}, str. \pageref{tw:o_calkowaniu_przez_podstawienie_calek_oznaczonych}) oraz wniosków z~interpretacji geometrycznej ca³ki oznaczonej (Wn. \ref{wn:pole_obszaru_ogolnie}, str. \pageref{wn:pole_obszaru_ogolnie}), \textbf{pole obszaru} ograniczonego:
+
+\begin{itemize}
+\item dan± lini± ograniczaj±c± ($x \; = \; g(t)$, $y \; = \; h(t)$)
+\item odcinkiem osi $Ox$
+\item prost± $x \; = \; x_1$ ($x_1 \; = \; g(t_1)$)
+\item prost± $x \; = \; x_2$ ($x_2 \; = \; g(t_2)$)
+\end{itemize}
+
+\medskip
+
+\noindent wyra¿a siê wzorem
+
+\[
+P \quad = \quad \int\limits_{x_1}^{x_2} |y| \: \textnormal{d}x \quad = \quad \int\limits_{t_1}^{t_2} |h(t)| \: g'(t) \: \textnormal{d}t
+\]
+
+\bigskip
+
+\noindent W~przypadku, gdy
+
+\begin{itemize}
+\item za³o¿enia s± \textbf{takie same} jak powy¿ej
+\item a funkcja $g(t)$ jest \textbf{malej±ca}
+\end{itemize}
+
+\medskip
+
+\noindent to \textbf{pole obszaru} wyra¿a siê 
+
+\[
+P \quad = \quad \int\limits_{x_1}^{x_2} |y| \: \textnormal{d}x \quad = \quad -\int\limits_{t_1}^{t_2} |h(t)| \: g'(t) \: \textnormal{d}t
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Obliczanie pola obszaru p³askiego, gdy linia ograniczaj±ca okre¶lona jest we wspó³rzêdnych biegunowych}
+
+\cite[Paragraf 20.1]{krysicki1}
+
+\medskip
+
+Je¿eli linia ograniczaj±ca dana jest we wspó³rzêdnych biegunowych (Def. \ref{def:uklad_wspolrzednych_biegunowych}, str. \pageref{def:uklad_wspolrzednych_biegunowych})
+
+\[
+r \; = \; f(\theta)
+\]
+
+\medskip
+
+\noindent gdzie 
+
+\begin{itemize}
+\item $f(\theta)$ jest funkcj± \textbf{nieujemn±} (Def. \ref{def:funkcja_nieujemna}, str. \pageref{def:funkcja_nieujemna}) \textbf{ci±g³±} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) w~przedziale $\langle \alpha, \beta\rangle$
+\item a przy tym $\beta - \alpha \: \in \: (0, 2\pi)$
+\end{itemize}
+
+\medskip
+
+\noindent to \textbf{pole obszaru} ograniczonego
+
+\begin{itemize}
+\item lini± ograniczaj±c± $r \; = \; f(\theta)$
+\item promieniem wodz±cym (Def. \ref{def:promien_wodzacy}, str. \pageref{def:promien_wodzacy}) o~amplitudzie (Def. \ref{def:amplituda_promiena_wodzacego}, str. \pageref{def:amplituda_promiena_wodzacego}) $\alpha$
+\item promieniem wodz±cym o~amplitudzie $\beta$
+\end{itemize}
+
+\medskip
+
+\noindent wyra¿a siê wzorem (TODO sk±d $r^2$? - wyprowadzenie)
+
+\[
+P \quad = \quad \frac{1}{2} \: \int\limits_{\alpha}^{\beta} r^2 \: d\theta \quad = \quad \frac{1}{2} \: \int\limits_{\alpha}^{\beta} \Big(f(\theta)\Big)^2 \: d\theta
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Obliczanie d³ugo¶ci ³uku}
+
+\cite[Paragraf 20.2]{krysicki1}
+
+\medskip
+
+Je¿eli krzywa dana jest:
+
+\begin{itemize}
+\item równaniem postaci
+
+\[
+y \; = \; f(x)
+\]
+
+przy czym 
+\begin{itemize}
+\item funkcja $f(x)$ ma w~przedziale $\langle a,b\rangle$ \textbf{pochodn±} (Def. \ref{def:pochodna_funkcji}, str. \pageref{def:pochodna_funkcji}) \textbf{ci±g³±} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}),
+\end{itemize}
+
+to \textbf{d³ugo¶æ ³uku} wyra¿a siê wzorem
+
+\[
+L \quad = \quad \int\limits_{a}^{b} \sqrt{1 + \left(\frac{\textnormal{d}y}{\textnormal{d}x}\right)^2} \: \textnormal{d}x
+\]
+
+\medskip
+
+a \textbf{ró¿niczka ³uku} ma postaæ
+
+\[
+dL \quad = \quad \sqrt{1 + \left(\frac{\textnormal{d}y}{\textnormal{d}x}\right)^2} \: \textnormal{d}x
+\]
+
+\bigskip
+
+\item parametrycznie 
+
+\[
+\begin{array}{rcl}
+x & = & g(t)\\[4pt]
+y & = & h(t)
+\end{array}
+\]
+
+przy czym
+
+\begin{itemize}
+\item funkcje $g(t)$ i~$h(t)$ maj± w~przedziale $\langle t_1,t_2\rangle$ \textbf{pochodne ci±g³e}
+\item ³uk \textbf{nie ma} czê¶ci wielokrotnych
+\end{itemize}
+
+to \textbf{d³ugo¶æ ³uku} wyra¿a siê wzorem 
+
+\[
+L \quad = \quad \int\limits_{t_1}^{t_2} \sqrt{\left(\frac{\textnormal{d}x}{\textnormal{d}t}\right)^2 + \left(\frac{\textnormal{d}y}{\textnormal{d}t}\right)^2} \: \textnormal{d}t
+\]
+
+\medskip
+
+a \textbf{ró¿niczka ³uku} ma postaæ
+
+\[
+dL \quad = \quad \sqrt{\left(\frac{\textnormal{d}x}{\textnormal{d}t}\right)^2 + \left(\frac{\textnormal{d}y}{\textnormal{d}t}\right)^2} \: \textnormal{d}t
+\]
+
+\bigskip
+
+\item równaniem we wspó³rzêdnych biegunowych (Def. \ref{def:uklad_wspolrzednych_biegunowych}, str. \pageref{def:uklad_wspolrzednych_biegunowych})
+
+\[
+r \; = \; f(\theta)
+\]
+
+przy czym
+
+\begin{itemize}
+\item funkcje $f(\theta)$ ma w~przedziale $\langle \alpha,\beta\rangle$ \textbf{pochodn± ci±g³±}
+\item ³uk \textbf{nie ma} czê¶ci wielokrotnych
+\end{itemize}
+
+to \textbf{d³ugo¶æ ³uku} wyra¿a siê wzorem 
+
+\[
+L \quad = \quad \int\limits_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \: d\theta
+\]
+
+\medskip
+
+a \textbf{ró¿niczka ³uku} ma postaæ
+
+\[
+dL \quad = \quad \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \: d\theta
+\]
+
+\end{itemize}
+
+TODO wyprowadzenia
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Obliczanie objêto¶ci i~pola powierzchni bry³y obrotowej}
+
+\cite[Paragraf 20.3]{krysicki1} \cite[Rozdzia³ 3.10]{zakowski1}
+
+\medskip
+
+Dla \textbf{bry³y obrotowej} (Def. \ref{def:bryla_obrotowa}, str. \pageref{def:bryla_obrotowa}) powsta³ej przez obrót wokó³ osi~$Ox$ krzywej danej
+
+\begin{itemize}
+\item równaniem
+\[
+y \; = \; f(x)
+\]
+
+\noindent gdzie $f(x)$ jest w~przedziale $\langle a,b\rangle$
+
+\begin{itemize}
+\item ci±g³a
+\item nieujemna
+\end{itemize}
+
+\noindent \textbf{Objêto¶æ} wyra¿a siê wzorem
+
+\[
+V \quad = \quad \pi \: \int\limits_{a}^{b} y^2 \: \textnormal{d}x
+\]
+
+\medskip
+
+\noindent a \textbf{pole powierzchni} - wzorem
+
+\[
+S \quad = \quad 2\pi \: \int\limits_{a}^{b} y \: \sqrt{1 + \left(\frac{\textnormal{d}y}{\textnormal{d}x}\right)^2} \: \textnormal{d}x
+\]
+
+\bigskip
+
+\item w postaci parametrycznej
+
+\[
+\begin{array}{rcl}
+x & = & g(t)\\[4pt]
+y & = & h(t)
+\end{array}
+\]
+
+\noindent przy czym w~przedziale $\langle t_1, t_2\rangle$
+
+\begin{itemize}
+\item funkcje $g(t)$ i~$h(t)$ maj± \textbf{pochodne} (Def. \ref{def:pochodna_funkcji}, str. \pageref{def:pochodna_funkcji}) \textbf{ci±g³e} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) 
+\item funkcja $g(t)$ jest \textbf{silnie rosn±ca} (Def. \ref{def:funkcja_silnie_rosnaca}, str. \pageref{def:funkcja_silnie_rosnaca}) lub \textbf{silnie malej±ca} (Def. \ref{def:funkcja_silnie_malejaca}, str. \pageref{def:funkcja_silnie_malejaca})
+\item funkcja $h(t)$ jest \textbf{nieujemna} (Def. \ref{def:funkcja_nieujemna}, str. \pageref{def:funkcja_nieujemna})
+\end{itemize}
+
+\medskip
+
+\noindent \textbf{Objêto¶æ} wyra¿a siê wzorem
+
+\[
+V \quad = \quad \pi \: \int\limits_{t_1}^{t_2} y^2 \: \frac{\textnormal{d}x}{\textnormal{d}t}\: \textnormal{d}x
+\]
+
+\medskip
+
+\noindent a \textbf{pole powierzchni} - wzorem
+
+\[
+S \quad = \quad 2\pi \: \int\limits_{t_1}^{t_2} y \: \sqrt{\left(\frac{\textnormal{d}x}{\textnormal{d}t}\right)^2 + \left(\frac{\textnormal{d}y}{\textnormal{d}t}\right)^2} \: \textnormal{d}t
+\]
+\end{itemize}
+
+TODO wyprowadzenie
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ca³ka niew³a¶ciwa}
+
+\begin{definicja}
+Je¿eli funkcja $f(x)$ okre¶lona na przedziale $\langle a,b)$, gdzie
+
+\begin{itemize}
+\item $b \in \mathbb{R}$
+\item lub $b = +\infty$
+\end{itemize}
+
+\medskip
+
+\noindent jest w~tym przedziale \textbf{ci±g³a} (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) oraz \textbf{istnieje granica} (Def. \ref{def:granica_funkcji}, str. \pageref{def:granica_funkcji})
+
+\[
+\lim_{\alpha \to b^-} \int\limits_{a}^{\alpha} f(x) \: \textnormal{d}x
+\]
+
+\medskip
+
+\noindent i~jest to liczba rzeczywista, to granicê t± nazywamy \textbf{ca³k± niew³a¶ciw± funkcji}\label{def:calka_niewlasciwa} $f(x)$ i~oznaczamy
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x
+\]
+
+\medskip
+
+\noindent Zatem
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x \quad = \quad \lim_{\alpha \to b^-} \int\limits_{a}^{\alpha} f(x) \: \textnormal{d}x
+\]
+
+\cite[Definicja 8.27]{ptak} \cite[Paragraf 21.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+
+\begin{definicja}
+Je¿eli funkcja $f(x)$ okre¶lona na przedziale $(a,b\rangle$, gdzie
+
+\begin{itemize}
+\item $a \in \mathbb{R}$
+\item lub $a = -\infty$
+\end{itemize}
+
+\medskip
+
+\noindent to otrzymujemy w~analogiczny sposób do (Def. \ref{def:calka_niewlasciwa}, str. \pageref{def:calka_niewlasciwa})
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x \quad = \quad \lim_{\alpha \to a^+} \int\limits_{\alpha}^{b} f(x) \: \textnormal{d}x
+\]
+
+\cite[Definicja 8.27]{ptak} \cite[Paragraf 21.1]{krysicki1}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metody ca³kowania przybli¿onego}
+
+\cite[Rozdzia³ 3.11]{zakowski1} \cite[Rozdzia³ XXII]{krysicki1}
+
+\medskip
+
+W tym podrozdziale przedstawione s± konstrukcje metod obliczania \textbf{przybli¿onej warto¶ci ca³ki funkcji} ci±g³ej (Def. \ref{def:funkcja_ciagla_na_zbiorze}, str. \pageref{def:funkcja_ciagla_na_zbiorze}) $f(x)$ w~przedziale $\langle a,b\rangle$
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x
+\]
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Metoda prostok±tów}
+
+\begin{itemize}
+\item \textbf{dzielimy przedzia³} $\langle a,b\rangle$ punktami
+
+\[
+x_k \; = \; a + \lambda \: k \qquad k = 1, 2, \ldots, n-1
+\]
+
+na $n$ podprzedzia³ów o~jednakowej d³ugo¶ci $\lambda$
+
+\[
+\lambda \; = \; \frac{b - a}{n}
+\]
+
+\item pocz±tek $a$ i~koniec $b$ przedzia³u oznaczamy
+
+\[
+\begin{array}{rcl}
+a & = & x_0\\[4pt]
+b & = & x_n
+\end{array}
+\]
+
+\item w~ka¿dym z~podprzedzia³ów $\langle x_{k-1}, x_k\rangle$ \textbf{wybieramy ¶rodek} przedzia³u $\xi_k$
+
+\[
+\xi_k \; = \; \frac{x_{k-1} + x_k}{2}
+\]
+
+\item dla ka¿dego ¶rodka $\xi_k$ podprzedzia³u $\langle x_{k-1}, x_k\rangle$ \textbf{obliczamy warto¶æ funkcji} $f(x)$ w~tym punkcie
+
+\[
+y_k \; = \; f(\xi_k)
+\]
+
+\item \textbf{warto¶æ przybli¿on± ca³ki} obliczamy przez \textbf{sumowanie pól prostok±tów} o~bokach $\lambda$ i~$y_k$
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x \quad \approx \quad \lambda \: \sum_{k=1}^{n} y_k
+\]
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Metoda trapezów}
+
+\begin{itemize}
+\item \textbf{dzielimy przedzia³} $\langle a,b\rangle$ punktami
+
+\[
+x_k \; = \; a + \lambda \: k \qquad k = 1, 2, \ldots, n-1
+\]
+
+na $n$ podprzedzia³ów o~jednakowej d³ugo¶ci $\lambda$
+
+\[
+\lambda \; = \; \frac{b - a}{n}
+\]
+
+\item pocz±tek $a$ i~koniec $b$ przedzia³u oznaczamy
+
+\[
+\begin{array}{rcl}
+a & = & x_0\\[4pt]
+b & = & x_n
+\end{array}
+\]
+
+\item dla ka¿dego punktu $x_k$ \textbf{obliczamy warto¶æ funkcji} $f(x)$ w~tym punkcie
+
+\[
+y_k \; = \; f(x_k) \qquad k = 0, 1, \ldots, n
+\]
+
+\item \textbf{warto¶æ przybli¿on± ca³ki} obliczamy przez \textbf{sumowanie pól trapezów prostok±tnych} o~podstawach $y_{k-1}$ i~$y_k$ oraz wysoko¶ci $\lambda$
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x \quad \approx \quad \frac{\lambda}{2} \: \sum_{k=1}^{n} \Big(y_{k-1} +y_k\Big)
+\]
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Metoda Simpsona}
+
+\begin{itemize}
+\item \textbf{dzielimy przedzia³} $\langle a,b\rangle$ punktami
+
+\[
+x_k \; = \; a + \lambda \: k \qquad k = 1, 2, \ldots, 2n-1
+\]
+
+na parzyst± $2n$ podprzedzia³ów o~jednakowej d³ugo¶ci $\lambda$
+
+\[
+\lambda \; = \; \frac{b - a}{2n}
+\]
+
+\item pocz±tek $a$ i~koniec $b$ przedzia³u oznaczamy
+
+\[
+\begin{array}{rcl}
+a & = & x_0\\[4pt]
+b & = & x_{2n}
+\end{array}
+\]
+
+\item w ka¿dym punkcie $x_k$ ($k = 0,1,2,\ldots, 2n$) \textbf{obliczamy warto¶æ funkcji} podca³kowej $f(x)$
+
+\[
+y_k \; = \; f(x_k)
+\]
+
+\item dla ka¿dego podprzedzia³u $\langle x_{2i-2}, x_{2i}\rangle$ ($i = 1,2, \ldots, n$) \textbf{ca³kê}
+
+\[
+\int\limits_{x_{2i-2}}^{x_{2i}} f(x) \: \textnormal{d}x \qquad i = 1,2, \ldots, n
+\]
+
+\textbf{zastêpujemy} ca³k± z~funkcji
+
+\[
+h_i(x) \; = \; a_i \: x^2 + b_i \: x + c_i
+\]
+
+tak dobranej, aby spe³nione by³y warunki
+
+\[
+\begin{array}{rcl}
+h_i(x_{2i-2}) & = & y_{2i-2}\\[4pt]
+h_i(x_{2i-1}) & = & y_{2i-1}\\[4pt]
+h_i(x_{2i}) & = & y_{2i}
+\end{array}
+\]
+
+czyli mamy
+
+\[
+\int\limits_{x_{2i-2}}^{x_{2i}} f(x) \: \textnormal{d}x \quad = \quad \int\limits_{x_{2i-2}}^{x_{2i}} h_i(x) \: \textnormal{d}x
+\]
+
+\item \textbf{warto¶æ przybli¿on± ca³ki} obliczamy przez \textbf{sumowanie warto¶ci ca³ek} okre¶lonych powy¿ej
+
+\[
+\int\limits_{a}^{b} f(x) \: \textnormal{d}x \quad \approx \quad \sum_{i=1}^{n} \: \int\limits_{x_{2i-2}}^{x_{2i}} h_i(x) \: \textnormal{d}x
+\]
+\end{itemize}

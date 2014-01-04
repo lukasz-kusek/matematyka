@@ -1,0 +1,1457 @@
+\chapter{Geometria analityczna}
+
+\begin{definicja}
+Niech
+
+\begin{itemize}
+\item $\chi$ bêdzie przestrzeni± afiniczn± (Def. \ref{def:przestrzen_afiniczna}, str. \pageref{def:przestrzen_afiniczna})
+\item przestrzeñ euklidesowa $\vec{E_n}$ (Def. \ref{def:przestrzen_euklidesowa}, str. \pageref{def:przestrzen_euklidesowa}) bêdzie przestrzeni± wektorów swobodnych przestrzeni afinicznej $\chi$ (Def. \ref{def:przestrzen_wektorow_swobodnych}, str. \pageref{def:przestrzen_wektorow_swobodnych})
+\end{itemize}
+
+Przestrzeñ $\chi$ nazywamy, wówczas, \textbf{\emph{afiniczn± przestrzeni± euklidesow±}}\label{def:afiniczna_przestrzen_euklidesowa} i~oznaczamy 
+
+\[
+E_n
+\]
+
+\smallskip
+
+\cite[Definicja 5.1.1]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Uk³ady wspó³rzêdnych}
+
+\subsection{Kartezjañski uk³ad wspó³rzêdnych}
+
+\begin{definicja}
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow±
+\item $(0; \; e_1, e_2, e_3)$ bêdzie uk³adem wspó³rzêdnych (Def. \ref{def:uklad_wspolrzednych}, str. \pageref{def:uklad_wspolrzednych}) w~przestrzeni $E_3$
+\item wektory $e_1, e_2, e_3$ tworz± bazê \textbf{ortonormaln±} (Def. \ref{def:baza_ortonormalna}, str. \pageref{def:baza_ortonormalna}) i~wyznaczaj± osie liczbowe $X,Y,Z$ przez punkt~$0$
+\end{itemize}
+
+Wówczas prostok±tny uk³ad wspó³rzêdnych o~pocz±tku w~punkcie~$0$ i~osiach $X,Y,Z$
+
+\[
+(0; \; e_1, e_2, e_3)
+\]
+
+\noindent nazywamy \textbf{\emph{uk³adem kartezjañskim}}\label{def:uklad_kartezjanski}.
+
+\smallskip
+
+\cite[Definicja 5.1.1]{furdzik}
+\end{definicja}
+
+Wektory stanowi±ce bazê uk³adu kartezjañskiego
+
+\[
+e_1, \; e_2, \; e_3
+\]
+
+\noindent oznacza siê przez
+
+\[
+\vec{i}, \; \vec{j}, \; \vec{k}
+\]
+
+\bigskip
+
+Wektor
+
+\[
+v \; = \; x \: \vec{i} + y \: \vec{j} + z \: \vec{k} \quad \in \quad \vec{E_3}
+\]
+
+\noindent dany w~$E_3$ przy zadanym kartezjañskim uk³adzie wspó³rzêdnych bêdziemy zapisywaæ
+
+\[
+v \; = \; [x,y,z]
+\]
+
+\cite[Definicja 5.1.1]{furdzik}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Biegunowy uk³ad wspó³rzêdnych}
+
+TODO
+
+\smallskip
+
+\cite[Rozdzia³ 5.C.1]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Walcowy uk³ad wspó³rzêdnych}
+
+TODO
+
+\smallskip
+
+\cite[Rozdzia³ 5.C.1]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sferyczny uk³ad wspó³rzêdnych}
+
+TODO
+
+\smallskip
+
+\cite[Rozdzia³ 5.C.1]{trajdos}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Orientacja przestrzeni wektorowej rzeczywistej}
+
+\begin{definicja}
+Niech
+
+\begin{itemize}
+\item $V$ bêdzie \textbf{przestrzeni± wektorow±} (Def. \ref{def:przestrzen_wektorowa}, str. \pageref{def:przestrzen_wektorowa}) rzeczywist± $n$-wymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni})
+\item $B$ i~$B'$ bêd± dwiema \textbf{bazami} (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni}) w~przestrzeni $V$
+\end{itemize}
+
+Mówimy, ¿e bazy $B$ i $B'$ s± \textbf{\emph{zgodnie zorientowane}}\label{def:bazy_zgodnie_zorientowane}, je¿eli
+
+\[
+\det\phantom{}_B (B') \; > \; 0
+\]
+
+\medskip
+
+Mówimy, ¿e bazy $B$ i $B'$ s± \textbf{\emph{przeciwnie zorientowane}}\label{def:bazy_przeciwnie_zorientowane}, je¿eli
+
+\[
+\det\phantom{}_B (B') \; < \; 0
+\]
+
+(Def. \ref{def:wyznacznik_ukladu_wektorow}, str. \pageref{def:wyznacznik_ukladu_wektorow}) 
+
+\smallskip
+
+\cite[Definicja 5.1.3]{furdzik}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+TODO Przestrzen wektorowa zorientowana\label{def:przestrzen_wektorowa_zorientowana}
+
+\smallskip
+
+\cite[Definicja 5.1.4]{furdzik}
+\end{definicja}
+
+\medskip
+
+\begin{definicja}
+TODO Przestrzen afiniczna zorientowana
+
+\smallskip
+
+\cite[Definicja 5.1.4]{furdzik}
+\end{definicja}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Iloczyn skalarny}
+
+\begin{twierdzenie}
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow± (Def. \ref{def:afiniczna_przestrzen_euklidesowa}, str. \pageref{def:afiniczna_przestrzen_euklidesowa}) 
+\item $(0; \; \vec{i}, \vec{j}, \vec{k})$ bêdzie \textbf{kartezjañskim} uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) w~przestrzeni $E_3$
+\item $u, v \; \in \; \vec{E}_3$
+\item $u = [x_1, y_1, z_1]$
+\item $v = [x_2, y_2, z_2]$
+\end{itemize}
+
+\medskip
+Wówczas \textbf{iloczyn skalarny} (Def. \ref{def:iloczyn_skalarny_przestrzen_euklidesowa}, str. \pageref{def:iloczyn_skalarny_przestrzen_euklidesowa})\label{tw:iloczyn_skalarny_w_E3} wektorów $u$ i~$v$ wyra¿a siê wzorem
+
+\[
+(u|v) \; = \; x_1 \: x_2 + y_1 \: y_2 + z_1 \: z_2
+\]
+
+\medskip
+
+\noindent lub korzystaj±c z~innego oznaczenia iloczynu skalarnego
+
+\[
+u \circ v \; = \; x_1 \: x_2 + y_1 \: y_2 + z_1 \: z_2
+\]
+
+\bigskip
+
+\begin{proof}
+Wektory $u$ i~$v$ zapisujemy przy u¿yciu wektorów $\vec{i}, \; \vec{j}, \; \vec{k}$ bazy (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni}) przestrzeni $\vec{E}_3$
+
+\begin{eqnarray*}
+u & = & x_1 \: \vec{i} + y_1 \: \vec{j} + z_1 \: \vec{k}\\
+v & = & x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k}
+\end{eqnarray*}
+
+\medskip
+
+Obliczamy iloczyn skalarny wektorów $u$ i~$v$
+
+\[
+(u|v) \; = \; (x_1 \: \vec{i} + y_1 \: \vec{j} + z_1 \: \vec{k} \; | \; x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})
+\]
+
+\medskip
+
+Korzystaj±c z w³asno¶ci iloczynu skalarnego (W³. \ref{wl:iloczyn_skalarny_przestrzen_euklidesowa}, str. \pageref{wl:iloczyn_skalarny_przestrzen_euklidesowa})
+
+\begin{align*}
+(u|v) \; = \; (x_1 \: \vec{i} \; | \; x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})\\
++ \: (y_1 \: \vec{j} \;| \; x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})\\
++ \: (z_1 \: \vec{k} \; | \; x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})
+\end{align*}
+
+\begin{align*}
+(u|v) \; = \; (x_1 \: \vec{i} \; | \; x_2 \: \vec{i}) + (x_1 \: \vec{i} \; | \; y_2 \: \vec{j}) + (x_1 \: \vec{i} \; | \; z_2 \: \vec{k})\\
++ \: (y_1 \: \vec{j} \;| \; x_2 \: \vec{i}) + (y_1 \: \vec{j} \;| \; y_2 \: \vec{j}) + (y_1 \: \vec{j} \;| \; z_2 \: \vec{k})\\
++ \: (z_1 \: \vec{k} \; | \; x_2 \: \vec{i}) + (z_1 \: \vec{k} \; | \; y_2 \: \vec{j}) + (z_1 \: \vec{k} \; | \; z_2 \: \vec{k})
+\end{align*}
+
+\begin{align*}
+(u|v) \; = \; x_1 \: x_2 \: (\vec{i} \; | \; \vec{i}) + x_1 \: y_2 \: (\vec{i} \; | \; \vec{j}) + x_1 \: z_2 \: (\vec{i} \; | \; \vec{k})\\
++ \: y_1 \: x_2 \: (\vec{j} \; | \; \vec{i}) + y_1 \: y_2 \: (\vec{j} \; | \; \vec{j}) + y_1 \: z_2 \: (\vec{j} \; | \; \vec{k})\\
++ \: z_1 \: x_2 \: (\vec{k} \; | \; \vec{i}) + z_1 \: y_2 \: (\vec{k} \; | \; \vec{j}) + z_1 \: z_2 \: (\vec{k} \; | \; \vec{k})
+\end{align*}
+
+\medskip
+
+Poniewa¿ wektory $\vec{i}, \; \vec{j}, \; \vec{k}$ tworz± bazê ortonormaln± (Def. \ref{def:baza_ortonormalna}, str. \pageref{def:baza_ortonormalna}), to
+
+\begin{eqnarray*}
+(\vec{i} \; | \; \vec{i}) & = & 1\\
+(\vec{j} \; | \; \vec{j}) & = & 1\\
+(\vec{k} \; | \; \vec{k}) & = & 1\\
+(\vec{i} \; | \; \vec{j}) & = & 0\\
+(\vec{i} \; | \; \vec{k}) & = & 0\\
+(\vec{j} \; | \; \vec{i}) & = & 0\\
+(\vec{j} \; | \; \vec{k}) & = & 0\\
+(\vec{k} \; | \; \vec{i}) & = & 0\\
+(\vec{k} \; | \; \vec{j}) & = & 0
+\end{eqnarray*}
+
+\medskip
+
+Ostatecznie otrzymujemy
+
+\[
+(u|v) \; = \; x_1 \: x_2 + y_1 \: y_2 + z_1 \: z_2
+\]
+
+\end{proof}
+
+\smallskip
+
+\cite[Twierdzenie 5.1.1]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{D³ugo¶æ wektora}
+
+\begin{twierdzenie}
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow± (Def. \ref{def:afiniczna_przestrzen_euklidesowa}, str. \pageref{def:afiniczna_przestrzen_euklidesowa}) 
+\item $(0; \; \vec{i}, \vec{j}, \vec{k})$ bêdzie \textbf{kartezjañskim} uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) w~przestrzeni $E_3$
+\item $u \; \in \; \vec{E}_3$
+\item $u = [x, y, z]$
+\end{itemize}
+
+\medskip
+
+\textbf{D³ugo¶æ} (Def. \ref{def:dlugosc_wektora_euklidesowa}, str. \pageref{def:dlugosc_wektora_euklidesowa})\label{tw:dlugosc_wektora_w_E3} tego wektora oznaczamy 
+
+\[
+|u|
+\]
+
+\medskip
+
+\noindent a wyra¿a siê wzorem
+
+\[
+|u| \; = \; \sqrt{x^2 + y^2 + z^2}
+\]
+
+\bigskip
+
+\begin{proof}
+Zgodnie z definicj± d³ugo¶ci wektora (Def. \ref{def:dlugosc_wektora_euklidesowa}, str. \pageref{def:dlugosc_wektora_euklidesowa}) mamy
+
+\[
+\|v\| \; = \; \sqrt{(v|v)}
+\]
+
+\medskip
+
+Zgodnie z twierdzeniem (Tw. \ref{tw:iloczyn_skalarny_w_E3}, str. \pageref{tw:iloczyn_skalarny_w_E3}) mamy
+
+\[
+(v|v) \; = \; x \: x + y \: y + z \: z
+\]
+
+\medskip
+
+\noindent czyli
+
+\[
+(v|v) \; = \; x^2 + y^2 + z^2
+\]
+
+\medskip
+
+Wstawiaj±c do d³ugo¶ci wektora mamy
+
+\[
+\|v\| \;= \; \sqrt{x^2 + y^2 + z^2}
+\]
+
+\medskip
+
+\noindent i korzystaj±c z nowego oznaczenia
+
+\[
+|v| \; = \; \sqrt{x^2 + y^2 + z^2}
+\]
+
+\end{proof}
+
+\smallskip
+
+\cite[Wniosek 5.1.1]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+
+\begin{twierdzenie}
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow± (Def. \ref{def:afiniczna_przestrzen_euklidesowa}, str. \pageref{def:afiniczna_przestrzen_euklidesowa}) 
+\item $(0; \; \vec{i}, \vec{j}, \vec{k})$ bêdzie \textbf{kartezjañskim} uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) w~przestrzeni $E_3$
+\item $A(x_1, y_1, z_1)$ bêdzie dowolnym punktem przestrzeni $E_3$
+\item $B(x_2, y_2, z_2)$ bêdzie dowolnym punktem przestrzeni $E_3$
+\end{itemize}
+
+\medskip
+
+\textbf{Odleg³o¶æ punktów} $A$ i~$B$ wyra¿a siê wzorem
+
+\[
+|AB| \; = \; \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]
+
+\bigskip
+
+\begin{proof}
+Korzystaj±c z~ró¿nicy punktów (Def. \ref{def:roznica_punktow}, str. \pageref{def:roznica_punktow}) otrzymujemy \textbf{wektor ³±cz±cy punkty} $A$ i~$B$
+
+\[
+\overrightarrow{AB}
+\]
+
+\medskip
+
+\label{:roznica_punktow_E3}Przy zadanym kartezjañskim uk³adzie wspó³rzêdnych mo¿emy zapisaæ (TODO poszukaæ definicji dla wyprowadzenia ponizej)
+
+\[
+\overrightarrow{AB} \; = \; [x_2 - x_1, \; y_2 - y_1, \; z_2 - z_1]
+\]
+
+\medskip
+
+D³ugo¶æ tego wektora wynosi
+
+\[
+|\overrightarrow{AB}| \; = \; \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]
+
+\end{proof}
+
+\smallskip
+
+\cite[Definicja 5.1.2]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Zwi±zek iloczynu skalarnego, d³ugo¶ci wektorów oraz k±ta zawartego miêdzy nimi}
+
+\begin{twierdzenie}
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow± (Def. \ref{def:afiniczna_przestrzen_euklidesowa}, str. \pageref{def:afiniczna_przestrzen_euklidesowa}) 
+\item $(0; \; \vec{i}, \vec{j}, \vec{k})$ bêdzie kartezjañskim uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) w~przestrzeni $E_3$
+\item $x, y, z \; \in \; \vec{E}_3$
+\item $z = y - x$
+\item $\varphi \; = \; \angle(x,y)$
+\end{itemize}
+
+\vspace{5cm}
+TODO rysunek 
+
+\medskip
+
+\textbf{Zwi±zek} miêdzy \textbf{iloczynem skalarnym} wektorów $x$, $y$, ich \textbf{d³ugo¶ciami} $|x|$, $|y|$, oraz \textbf{k±tem} zawartym miêdzy tymi wektorami $\angle(x,y)$ wyra¿a siê wzorem
+
+\[
+(x \: | \: y) \; = \; |x| \: |y| \: \cos \varphi
+\]
+
+\bigskip
+
+\begin{proof}
+\textbf{Wzór kosinusów} z~geometrii elementarnej zastosowany do utworzonego z~wektorów $x$, $y$, $z$ trójk±ta, gdzie d³ugo¶ci boków, to d³ugo¶ci wektorów (Tw. \ref{tw:dlugosc_wektora_w_E3}, str. \pageref{tw:dlugosc_wektora_w_E3}), przyjmuje postaæ
+
+\[
+|z|^2 \; = \; |x|^2 + |y|^2 - 2 |x||y| \cos \varphi
+\]
+
+\medskip
+
+Z~drugiej strony, korzystaj±c z \textbf{definicji d³ugo¶ci wektora} (Def. \ref{def:dlugosc_wektora_euklidesowa}, str. \pageref{def:dlugosc_wektora_euklidesowa}) mamy
+
+\[
+|z|^2 \; = \; |y-x|^2 \; = \; \left(\sqrt{(y-x \; | \; y-x)}\right)^2
+\]
+
+\medskip
+
+Poniewa¿ \textbf{iloczyn skalarny} jest \textbf{okre¶lony dodatnio} (Def. \ref{def:iloczyn_skalarny_przestrzen_euklidesowa}, str. \pageref{def:iloczyn_skalarny_przestrzen_euklidesowa}), to
+
+\[
+|z|^2 \; = \; (y-x \; | \; y-x)
+\]
+
+\medskip
+
+Wykorzystuj±c \textbf{dwuliniowo¶æ} (Def. \ref{def:forma_dwuliniowa}, str. \pageref{def:forma_dwuliniowa}) i~\textbf{symetryczno¶æ} (Def. \ref{def:forma_dwuliniowa_symetryczna}, str. \pageref{def:forma_dwuliniowa_symetryczna}) iloczynu skalarnego, otrzymujemy
+
+\[
+|z|^2 \; = \; (y \: | \: y) + (x \: | \: x) - 2 \: (x \: | \: y)
+\]
+
+\medskip
+
+Z definicji d³ugo¶ci wektora (Def. \ref{def:dlugosc_wektora_euklidesowa}, str. \pageref{def:dlugosc_wektora_euklidesowa}) wstawiamy do równania i~otrzymujemy
+
+\[
+|z|^2 \; = \; |y|^2 + |x|^2 - 2 \: (x \: | \: y)
+\]
+
+\medskip
+
+Porównuj±c wyra¿enia na $|z|^2$, otrzymujemy ostatecznie
+
+\[
+(x \: | \: y) \; = \; |x| \: |y| \: \cos \varphi
+\]
+\end{proof}
+
+\smallskip
+
+\cite[Paragraf 3.1.1]{kostrykin2}
+\end{twierdzenie}
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Iloczyn wektorowy}
+
+Niech $\vec{E}_3$ bêdzie \textbf{zorientowan±} (Def. \ref{def:przestrzen_wektorowa_zorientowana}, str. \pageref{def:przestrzen_wektorowa_zorientowana}) przestrzeni± euklidesow± (Def. \ref{def:przestrzen_euklidesowa}, str. \pageref{def:przestrzen_euklidesowa}).
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Iloczynem wektorowym}}\label{def:iloczyn_wektorowy} w~$\vec{E}_3$ nazywamy odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie})
+
+\[
+\times \; \colon \; \vec{E}_3 \times \vec{E}_3 \rightarrow \vec{E}_3
+\]
+
+\medskip
+
+\noindent okre¶lone
+
+\begin{enumerate}
+\item je¿eli $v_1, v_2 \in \vec{E}_3$ s± \textbf{liniowo zale¿ne} (Def. \ref{def:liniowa_zaleznosc_wektorow}, str. \pageref{def:liniowa_zaleznosc_wektorow}), to 
+
+\[
+v_1 \times v_2 \; = \; 0
+\]
+
+\item je¿eli $v_1, v_2 \in \vec{E}_3$ s± \textbf{liniowo niezale¿ne} (Def. \ref{def:liniowa_niezaleznosc_wektorow}, str. \pageref{def:liniowa_niezaleznosc_wektorow}), to
+
+\[
+v_1 \times v_2 \; = \; v
+\]
+
+\medskip
+
+gdzie $v$ spe³nia warunki:
+
+\begin{itemize}
+\item $v \: \bot \: v_1$
+\item $v \: \bot \: v_2$
+\item $|v| \; = \; |v_1|\:|v_2| \: \sin \angle (v_1, v_2), \qquad \angle (v_1, v_2) \in (0, \pi)$
+\item trójka $(v_1, v_2, v)$ jest \textbf{zgodnie zorientowana} (Def. \ref{def:bazy_zgodnie_zorientowane}, str. \pageref{def:bazy_zgodnie_zorientowane}) z~przyjêt± w~$\vec{E}_3$ baz± (Def. \ref{def:baza_przestrzeni}, str. \pageref{def:baza_przestrzeni})
+\end{itemize}
+\end{enumerate}
+
+\smallskip
+
+\cite[Definicja 5.1.8]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{W³asno¶ci iloczynu wektorowego}
+
+Je¿eli\label{wl:iloczyn_wektorowy}
+
+\begin{itemize}
+\item $v_1, v_2, v_3 \in \vec{E}_3$
+\item $\alpha \in \mathbb{R}$
+\end{itemize}
+
+\medskip
+
+\noindent to
+
+\begin{enumerate}
+\item $v_1 \: \times \: v_2 \; = \; - \: v_2 \: \times \: v_1$
+\item $v_1 \: \times \: (v_2 \: + \: v_3) \; = \; (v_1 \: \times \: v_2) \: + \: (v_1 \times v_3)$
+\item $\alpha \: (v_1 \: \times \: v_2) \; = \; (\alpha \: v_1) \: \times \: v_2$
+\end{enumerate}
+
+\smallskip
+
+\cite[Twierdzenie 5.1.3]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretacja geometryczna}
+
+\vspace{5cm}
+
+\medskip
+
+TODO rysunek
+
+\medskip
+
+\begin{twierdzenie}
+Je¿eli 
+
+\begin{itemize}
+\item $v_1$, $v_2$ s± niezerowymi wektorami
+\end{itemize}
+
+\medskip
+
+\noindent to \textbf{d³ugo¶æ} wektora 
+
+\[
+v_1 \times v_2
+\]
+
+\medskip
+
+\noindent liczbowo \textbf{równa} siê \textbf{polu równoleg³oboku} zbudowanego na tych wektorach.
+
+\[
+P \; = \; \left|v_1 \times v_2\right|
+\]
+
+\cite[Wniosek 5.1.2]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczyn wektorowy w uk³adzie kartezjañskim}
+
+\begin{twierdzenie}
+Je¿eli
+
+\begin{itemize}
+\item w~$E_3$ dany jest kartezjañski uk³ad wspó³rzêdnych $(0; \; \vec{i}, \vec{j}, \vec{k})$ (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski})
+\item $v_1 \; = \; [x_1, y_1, z_1]$
+\item $v_2 \; = \; [x_2, y_2, z_2]$
+\end{itemize}
+
+\medskip
+
+\noindent to
+
+\[
+v_1 \: \times \: v_2 \; = \; [	y_1 \: z_2 \; - \; z_1 \: y_2, \;
+								z_1 \: x_2 \; - \; x_1 \: z_2, \;
+								x_1 \: y_2 \; - \; y_1 \: x_2	]
+\]
+
+\medskip
+
+\noindent lub
+
+\[
+v_1 \: \times \: v_2 \; = \;
+\left|\begin{array}{cc}
+y_1 & z_1\\
+y_2 & z_2
+\end{array}\right| \: \vec{i}
+\; - \; \left|\begin{array}{cc}
+x_1 & z_1\\
+x_2 & z_2
+\end{array}\right| \: \vec{j}
+\; + \; \left|\begin{array}{cc}
+x_1 & y_1\\
+x_2 & y_2
+\end{array}\right| \: \vec{k}
+\]
+
+\medskip
+
+\noindent lub
+
+\[
+v_1 \: \times \: v_2 \; = \;
+\left|\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}\\
+x_1 & y_1 & z_1\\
+x_2 & y_2 & z_2
+\end{array}\right|
+\]
+
+\bigskip
+
+\begin{proof}
+Obliczamy iloczyn wektorowy wektorów $v_1$ i~$v_2$
+
+\[
+v_1 \: \times \: v_2 \; = \; (x_1 \: \vec{i} + y_1 \: \vec{j} + z_1 \: \vec{k}) \; \times \; (x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})
+\]
+
+\medskip
+
+Korzystaj±c z~w³asno¶ci iloczynu wektorowego (W³. \ref{wl:iloczyn_wektorowy}, str. \pageref{wl:iloczyn_wektorowy})
+
+\begin{align*}
+v_1 \: \times \: v_2 \; = \; (x_1 \: \vec{i}) \; \times \; (x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})\\
++ \: (y_1 \: \vec{j}) \; \times \; (x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})\\
++ \: (z_1 \: \vec{k}) \; \times \; (x_2 \: \vec{i} + y_2 \: \vec{j} + z_2 \: \vec{k})
+\end{align*}
+
+\begin{align*}
+v_1 \: \times \: v_2 \; = \; (x_1 \: \vec{i}) \; \times \; (x_2 \: \vec{i}) + (x_1 \: \vec{i}) \; \times \; (y_2 \: \vec{j}) + (x_1 \: \vec{i}) \; \times \; (z_2 \: \vec{k})\\
++ \: (y_1 \: \vec{j}) \; \times \; (x_2 \: \vec{i}) + (y_1 \: \vec{j}) \; \times \; (y_2 \: \vec{j}) + (y_1 \: \vec{j}) \; \times \; (z_2 \: \vec{k})\\
++ \: (z_1 \: \vec{k}) \; \times \; (x_2 \: \vec{i}) + (z_1 \: \vec{k}) \; \times \; (y_2 \: \vec{j}) + (z_1 \: \vec{k}) \; \times \; (z_2 \: \vec{k})
+\end{align*}
+
+\begin{align*}
+v_1 \: \times \: v_2 \; = \; x_1 \: x_2 \: (\vec{i} \; \times \; \vec{i}) + x_1 \: y_2 \: (\vec{i} \; \times \; \vec{j}) + x_1 \: z_2 \: (\vec{i} \; \times \; \vec{k})\\
++ \: y_1 \: x_2 \: (\vec{j} \; \times \; \vec{i}) + y_1 \: y_2 \: (\vec{j} \; \times \; \vec{j}) + y_1 \: z_2 \: (\vec{j} \; \times \; \vec{k})\\
++ \: z_1 \: x_2 \: (\vec{k} \; \times \; \vec{i}) + z_1 \: y_2 \: (\vec{k} \; \times \; \vec{j}) + z_1 \: z_2 \: (\vec{k} \; \times \; \vec{k})
+\end{align*}
+
+\medskip
+
+Poniewa¿ wektory $\vec{i}, \; \vec{j}, \; \vec{k}$ tworz± bazê ortonormaln± (Def. \ref{def:baza_ortonormalna}, str. \pageref{def:baza_ortonormalna}), to
+
+\begin{eqnarray*}
+\vec{i} \; \times \; \vec{i} & = & 0\\
+\vec{j} \; \times \; \vec{j} & = & 0\\
+\vec{k} \; \times \; \vec{k} & = & 0\\
+\vec{i} \; \times \; \vec{j} & = & \vec{k}\\
+\vec{i} \; \times \; \vec{k} & = & -\vec{j}\\
+\vec{j} \; \times \; \vec{i} & = & -\vec{k}\\
+\vec{j} \; \times \; \vec{k} & = & \vec{i}\\
+\vec{k} \; \times \; \vec{i} & = & \vec{j}\\
+\vec{k} \; \times \; \vec{j} & = & -\vec{i}
+\end{eqnarray*}
+
+\medskip
+
+Ostatecznie otrzymujemy
+
+\begin{align*}
+v_1 \: \times \: v_2 \; = \; 			(y_1 \: z_2 \; - \; z_1 \: y_2) \; \vec{i}\\
+								 + \;	(z_1 \: x_2 \; - \; x_1 \: z_2) \; \vec{j}\\
+								 + \;	(x_1 \: y_2 \; - \; y_1 \: x_2) \; \vec{k}
+\end{align*}
+
+\end{proof}
+
+\smallskip
+
+\cite[Twierdzenie 5.1.4]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Iloczyn mieszany}
+
+Niech $\vec{E}_3$ bêdzie \textbf{zorientowan±} (Def. \ref{def:przestrzen_wektorowa_zorientowana}, str. \pageref{def:przestrzen_wektorowa_zorientowana}) przestrzeni± euklidesow± (Def. \ref{def:przestrzen_euklidesowa}, str. \pageref{def:przestrzen_euklidesowa}).
+
+\bigskip
+
+\begin{definicja}
+\textbf{\emph{Iloczynem mieszanym}}\label{def:iloczyn_mieszany} w~$\vec{E}_3$ nazywamy odwzorowanie (Def. \ref{def:odwzorowanie}, str. \pageref{def:odwzorowanie})
+
+\[
+\vec{E}_3 \times \vec{E}_3 \times \vec{E}_3 \rightarrow \mathbb{R}
+\]
+
+\medskip
+
+\noindent takie, ¿e
+
+\[
+(v_1, v_2, v_3) \; \rightarrow \; (v_1 \: \times \: v_2) \: \circ \: v_3
+\]
+
+\smallskip
+
+\cite[Definicja 5.1.9]{furdzik}
+\end{definicja}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{W³asno¶ci iloczynu mieszanego}
+
+Je¶li $v_1, v_2, v_3 \in \vec{E}_3$, to
+
+\begin{itemize}
+\item $(v_1 \: \times \: v_2) \: \circ \: v_3 \: = \: 0 \; \Leftrightarrow \; v_1, v_2, v_3$ s± \textbf{liniowo zale¿ne} (Def. \ref{def:liniowa_zaleznosc_wektorow}, str. \pageref{def:liniowa_zaleznosc_wektorow})
+
+Dla wektorów niezerowych $v_1, v_2, v_3$ oznacza to, ¿e s± równoleg³e do pewnej p³aszczyzny.
+\item $(v_1 \: \times \: v_2) \: \circ \: v_3 \; = \; v_1 \: \circ \: (v_2 \: \times \: v_3)$
+\end{itemize}
+
+\smallskip
+
+\cite[Twierdzenie 5.1.5]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interpretacja geometryczna}
+
+\begin{twierdzenie}
+Je¿eli
+
+\begin{itemize}
+\item w~$E_3$ dany jest kartezjañski uk³ad wspó³rzêdnych $(0; \; \vec{i}, \vec{j}, \vec{k})$ (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski})
+\item $v_1 \; = \; [x_1, y_1, z_1]$
+\item $v_2 \; = \; [x_2, y_2, z_2]$
+\item $v_3 \; = \; [x_3, y_3, z_3]$
+\end{itemize}
+
+\medskip
+
+\noindent to
+
+\[
+(v_1 \: \times \: v_2) \: \circ \: v_3 \; = \; 
+\left|\begin{array}{ccc}
+x_1 & y_1 & z_1\\
+x_2 & y_2 & z_2\\
+x_3 & y_3 & z_3
+\end{array}\right|
+\]
+
+\smallskip
+
+\cite[Twierdzenie 5.1.6]{furdzik}
+\end{twierdzenie}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iloczyn mieszany w uk³adzie kartezjañskim}
+
+\vspace{5cm}
+
+\medskip
+
+TODO rysunek
+
+\medskip
+
+\begin{twierdzenie}
+Je¿eli 
+
+\begin{itemize}
+\item $v_1$, $v_2$, $v_3$ s± niezerowymi wektorami
+\end{itemize}
+
+\medskip
+
+\noindent to \textbf{warto¶æ bezwzglêdna} iloczynu mieszanego
+
+\[
+(v_1 \: \times \: v_2) \: \circ \: v_3
+\]
+
+\medskip
+
+\noindent \textbf{równa} siê \textbf{objêto¶ci równoleg³o¶cianu} zbudowanego na tych wektorach.
+
+\[
+V \; = \; \Big|(v_1 \: \times \: v_2) \: \circ \: v_3\Big|
+\]
+
+\cite[Wniosek 5.1.3]{furdzik}
+\end{twierdzenie}
+
+
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{P³aszczyzna w przestrzeni}
+
+Niech
+
+\begin{itemize}
+\item w~$E_3$ dany bêdzie kartezjañski uk³ad wspó³rzêdnych $(0; \; \vec{i}, \vec{j}, \vec{k})$ (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski})
+\item $P_0 \: (x_0, y_0, z_0)$
+\item $P \: (x, y, z)$
+\item $v \; = \; [v_1, v_2, v_3]$
+\item $u \; = \; [u_1, u_2, u_3]$
+\item $v$ i~$u$ s± \textbf{liniowo niezale¿ne} (Def. \ref{def:liniowa_niezaleznosc_wektorow}, str. \pageref{def:liniowa_niezaleznosc_wektorow})
+\item $\vec{n} \; = \; v \: \times u$
+\item dana bêdzie \textbf{p³aszczyzna} $\pi$
+\item $P_0 \: \in \: \pi$
+\item $P \: \in \: \pi$
+\item $v \; || \; \pi$
+\item $u \; || \; \pi$
+\item $\vec{n} \; \bot \; \pi$
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ ogólna}
+
+Tworzymy wektor ³±cz±cy punkty $P$ i~$P_0$ (Def. \ref{def:roznica_punktow}, str. \pageref{def:roznica_punktow}) (Tw. \ref{:roznica_punktow_E3}, str. \pageref{:roznica_punktow_E3})
+
+\[
+\overrightarrow{P_0 \: P} \; = \; [x - x_0, \: y - y_0, \: z - z_0]
+\]
+
+\medskip
+
+Przyjmujemy wspó³rzêdne wektora $\vec{n}$
+
+\[
+\vec{n} \; = \; [A, \: B, \: C]
+\]
+
+\medskip
+
+Równanie p³aszczyzny $\pi$ \textbf{przechodz±cej} przez punkt $P_0$ i~\textbf{prostopad³ej} do $\vec{n}$ ($\vec{n}$ nazywamy \textbf{wektorem normalnym}\label{def:wektor_normalny_plaszczyzny} p³aszczyzny $\pi$) wyra¿a siê wzorem
+
+\[
+\overrightarrow{P_0 \: P} \; \circ \; \vec{n} \; = \; 0
+\]
+
+\medskip
+
+Z~twierdzenia o~iloczynie skalarnym w~$\vec{E}_3$ (Def. \ref{tw:iloczyn_skalarny_w_E3}, str. \pageref{tw:iloczyn_skalarny_w_E3}) z~kartezjañskim uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) otrzymujemy równanie p³aszczyzny w~nastêpuj±cej postaci
+
+\[
+A \: (x - x_0) \; + \; B \: (y - y_0) \; + \; C \: (z - z_0) \; = \; 0
+\]
+
+\medskip
+
+Przyjmuj±c, ¿e
+
+\[
+D \; = \; - A \: x_0 \; - \; B \: y_0 \; - \; C \: z_0
+\]
+
+\medskip
+
+\noindent otrzymujemy \textbf{\emph{postaæ ogóln±}} równania p³aszczyzny $\pi$
+
+\[
+A \: x \; + \; B \: y \; + \; C \: z \; + \; D \; = \; 0
+\]
+
+\smallskip
+
+\cite[Równanie 5.2.4]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ odcinkowa}
+
+Niech
+
+\begin{itemize}
+\item $\pi$ bêdzie p³aszczyzn± o~równaniu ogólnym $Ax \: + \: By \: + \: Cz \: + \: D = 0$
+\item $\pi$ \textbf{nie przechodzi} przez \textbf{pocz±tek} uk³adu wspó³rzêdnych ($D \neq 0$)
+\item $\pi$ \textbf{nie jest równoleg³a} do ¿adnej \textbf{osi} uk³adu wspó³rzêdnych ($A \neq 0$, $B \neq 0$, $C \neq 0$)
+\end{itemize}
+
+\medskip
+
+Równanie p³aszczyzny $\pi$ mo¿emy, wtedy zapisaæ w~\textbf{\emph{postaci odcinkowej}}
+
+\[
+\frac{x}{-\frac{D}{A}} + \frac{y}{-\frac{D}{B}} + \frac{z}{-\frac{D}{C}} \; = \; 1
+\]
+
+\medskip
+
+\noindent lub, przyjmuj±c oznaczenia $-\frac{D}{A} = a$, $-\frac{D}{B} = b$, $-\frac{D}{C} = c$
+
+\[
+\frac{x}{a} + \frac{y}{b} + \frac{z}{b} \; = \; 1
+\]
+
+\medskip
+
+Punkty
+
+\[
+(a, 0, 0)\quad
+(0, b, 0)\quad
+(0, 0, c)
+\]
+
+\medskip
+
+\noindent s± punktami przeciêcia p³aszczyzny $\pi$ z~osiami uk³adu wspó³rzêdnych.
+
+
+\smallskip
+
+\cite[Równanie 5.2.6]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ parametryczna}
+
+\[
+\pi \; \colon \; P \; = \; P_0 + t \: v + s \: u, \qquad t,s \in \mathbb{R}
+\]
+
+\smallskip
+
+\cite[Równanie 5.2.1]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Prosta w przestrzeni}
+
+Niech
+
+\begin{itemize}
+\item w~$E_3$ dany bêdzie kartezjañski uk³ad wspó³rzêdnych $(0; \; \vec{i}, \vec{j}, \vec{k})$ (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski})
+\item $P_0 \: (x_0, y_0, z_0)$
+\item $v \; = \; [v_1, v_2, v_3]$
+\item dana bêdzie \textbf{prosta} $l$
+\item $P_0 \: \in \: l$
+\item $v \; || \; l$
+\end{itemize}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ kanoniczna}
+
+\[
+l \; \colon \; \frac{x - x_0}{v_1} \; = \; \frac{y - y_0}{v_2} \; = \; \frac{z - z_0}{v_3}, \qquad \qquad v_1 \: v_2 \: v_3 \; \neq \; 0
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 5.2]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ parametryczna}
+
+\[
+l \; \colon \; P \; = \; P_0 + t \: v, \qquad t \in \mathbb{R}
+\]
+
+\smallskip
+
+\cite[Równanie 5.2.1]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Postaæ krawêdziowa}
+
+Je¿eli
+
+\begin{itemize}
+\item $\pi_1$ bêdzie p³aszczyzn± o~równaniu
+
+\[
+\pi_1 \; \colon \; A_1 \: x + B_1 \: y + C_1 \: z + D_1 \; = \; 0
+\]
+\item $\pi_2$ bêdzie p³aszczyzn± o~równaniu
+
+\[
+\pi_2 \; \colon \; A_2 \: x + B_2 \: y + C_2 \: z + D_2 \; = \; 0
+\]
+\item p³aszczyzny $\pi_1$ i~$\pi_2$ \textbf{nie s± równoleg³e}, czyli wektory
+
+\[
+\vec{n}_1 \; = \; [A_1, \: B_1, \: C_1]
+\]
+
+\medskip
+
+oraz 
+
+\[
+\vec{n}_2 \; = \; [A_2, \: B_2, \: C_2]
+\]
+
+\medskip
+
+s± \textbf{liniowo niezale¿ne} (Def. \ref{def:liniowa_niezaleznosc_wektorow}, str. \pageref{def:liniowa_niezaleznosc_wektorow})
+\end{itemize}
+
+\medskip
+
+\noindent to uk³ad równañ (Def. \ref{def:uklad_rownan}, str. \pageref{def:uklad_rownan})
+
+\[
+\left\{\begin{array}{c}
+A_1 \: x + B_1 \: y + C_1 \: z + D_1 \; = \; 0\\
+A_2 \: x + B_2 \: y + C_2 \: z + D_2 \; = \; 0
+\end{array}\right.
+\]
+
+\medskip
+
+\noindent nazywamy \textbf{\emph{postaci± krawêdziow±}}\label{def:postac_krawedziowa_prostej} prostej $l$.
+
+\smallskip
+
+\cite[Rozdzia³ 5.2]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wzajemne po³o¿enie w przestrzeni}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wzajemne po³o¿enie dwóch prostych}
+
+Niech
+
+\begin{itemize}
+\item $l_1$ bêdzie prost± o~równaniu
+
+\[
+l_1 \; \colon \; P \; = \; P_1 + t \: v_1
+\]
+\item $l_2$ bêdzie prost± o~równaniu
+
+\[
+l_2 \; \colon \; P \; = \; P_2 + t \: v_2
+\]
+\end{itemize}
+
+\medskip
+
+Proste mog± byæ w~stosunku do siebie
+
+\begin{itemize}
+\item \textbf{\emph{pokrywaj±ce}} siê
+
+Proste $l_1$ i~$l_2$ pokrywaj± siê, je¿eli wektory $v_1$, $v_2$ oraz $\overrightarrow{P_0 \: P}$ s± parami \textbf{liniowo zale¿ne} (Def. \ref{def:liniowa_zaleznosc_wektorow}, str. \pageref{def:liniowa_zaleznosc_wektorow}), czyli s± \textbf{równoleg³e}.
+
+\item \textbf{\emph{równoleg³e}} (nie maj± punkty wspólnego i~le¿± w jednej p³aszczy¼nie)
+
+Proste $l_1$ i~$l_2$ s± równoleg³e, je¿eli \textbf{nie s± pokrywaj±ce} siê, a wektory $v_1$ i~$v_2$ s± \textbf{liniowo zale¿ne} (Def. \ref{def:liniowa_zaleznosc_wektorow}, str. \pageref{def:liniowa_zaleznosc_wektorow}), czyli s± \textbf{równoleg³e}.
+
+\item \textbf{\emph{przecinaj±ce}} siê
+
+Proste $l_1$ i~$l_2$ przecinaj± siê, je¿eli uk³ad równañ (Def. \ref{def:uklad_rownan}, str. \pageref{def:uklad_rownan}) tych prostych posiada \textbf{dok³adnie jedno rozwi±zanie}.
+
+\item \textbf{\emph{sko¶ne}} (nie le¿± w jednej p³aszczy¼nie)
+
+Proste $l_1$ i~$l_2$ s± sko¶ne, je¿eli wektory $v_1$, $v_2$ oraz $\overrightarrow{P_0 \: P}$ s± parami \textbf{liniowo niezale¿ne} (Def. \ref{def:liniowa_niezaleznosc_wektorow}, str. \pageref{def:liniowa_niezaleznosc_wektorow}).
+\end{itemize}
+
+\smallskip
+
+\cite[Rozdzia³ 5.2]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wzajemne po³o¿enie dwóch p³aszczyzn}
+
+Niech
+
+\begin{itemize}
+\item $\pi_1$ bêdzie p³aszczyzn± o~równaniu
+
+\[
+\pi_1 \; \colon \; \overrightarrow{P_1 \: P} \; \circ \; \vec{n}_1 \; = \; 0
+\]
+\item $\pi_2$ bêdzie p³aszczyzn± o~równaniu
+
+\[
+\pi_2 \; \colon \; \overrightarrow{P_2 \: P} \; \circ \; \vec{n}_2 \; = \; 0
+\]
+\end{itemize}
+
+\medskip
+
+Dwie p³aszczyzny $\pi_1$ i~$\pi_2$ mog± znajdowaæ siê w~nastêpuj±cych po³o¿enia wzglêdem siebie
+
+\begin{itemize}
+\item P³aszczyzny $\pi_1$ i~$\pi_2$ \textbf{\emph{pokrywaj±}} siê
+
+Warunki
+
+\begin{itemize}
+\item wektory $\vec{n}_1$ i~$\vec{n}_2$ s± \textbf{równoleg³e}
+\item wektory $\vec{n}_1$ i~$\overrightarrow{P_1 \: P_2}$ ($\vec{n}_2$ i~$\overrightarrow{P_1 \: P_2}$) s± \textbf{prostopad³e}
+\end{itemize}
+
+\item P³aszczyzny $\pi_1$ i~$\pi_2$ s± \textbf{\emph{równoleg³e}}
+
+Warunki
+
+\begin{itemize}
+\item p³aszczyzny $\pi_1$ i~$\pi_2$ \textbf{nie pokrywaj±} siê
+\item wektory $\vec{n}_1$ i~$\vec{n}_2$ s± \textbf{równoleg³e}
+\end{itemize}
+
+\item P³aszczyzny $\pi_1$ i~$\pi_2$ s± \textbf{\emph{przecinaj±}} siê
+
+Warunek
+
+\begin{itemize}
+\item wektory $\vec{n}_1$ i~$\vec{n}_2$ s± \textbf{nie s± równoleg³e}
+\end{itemize}
+\end{itemize}
+
+\smallskip
+
+\cite[Rozdzia³ 5.2]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Wzajemne po³o¿enie prostej i p³aszczyzny}
+
+Niech
+
+\begin{itemize}
+\item $l$ bêdzie prost± o~równaniu
+
+\[
+l \; \colon \; P \; = \; P_1 + t \: v
+\]
+\item $\pi$ bêdzie p³aszczyzn± o~równaniu
+
+\[
+\pi \; \colon \; \overrightarrow{P_0 \: P} \; \circ \; \vec{n} \; = \; 0
+\]
+\end{itemize}
+
+\medskip
+
+Prosta $l$ oraz p³aszczyzna $\pi$ mog± znajdowaæ siê w~nastêpuj±cych po³o¿enia wzglêdem siebie
+
+\medskip
+
+\begin{itemize}
+\item Prosta $l$ \textbf{\emph{le¿y}} na p³aszczy¼nie $\pi$
+
+Warunki
+
+\[
+v \: \circ \: \vec{n} \; = \; 0
+\]
+
+\noindent i
+
+\[
+\overrightarrow{P_0 \: P_1} \: \circ \: \vec{n} \; = \; 0
+\]
+
+\item Prosta $l$ jest \textbf{\emph{równoleg³a}} do p³aszczyzny $\pi$
+
+Warunki
+
+\[
+v \: \circ \: \vec{n} \; = \; 0
+\]
+
+\noindent i
+
+\[
+\overrightarrow{P_0 \: P_1} \: \circ \: \vec{n} \; \neq \; 0
+\]
+
+\item Prosta $l$ \textbf{\emph{przebija}} p³aszczyznê $\pi$
+
+Warunek
+
+\[
+v \: \circ \: \vec{n} \; \neq \; 0
+\]
+
+\end{itemize}
+
+\smallskip
+
+\cite[Rozdzia³ 5.2]{furdzik}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pêk p³aszczyzn}
+
+Niech
+
+\begin{itemize}
+\item dana bêdzie prosta $l$ opisana równaniem w~postaci krawêdziowej (Def. \ref{def:postac_krawedziowa_prostej}, str. \pageref{def:postac_krawedziowa_prostej})
+
+\[
+\left\{\begin{array}{c}
+\pi_1 \; \colon \; A_1 \: x + B_1 \: y + C_1 \: z + D_1 \; = \; 0\\
+\pi_2 \; \colon \; A_2 \: x + B_2 \: y + C_2 \: z + D_2 \; = \; 0
+\end{array}\right.
+\]
+
+\item p³aszczyzny $\pi_1$ i~$\pi_2$ \textbf{nie s± równoleg³e}, czyli wektory
+
+\[
+\vec{n}_1 \; = \; [A_1, \: B_1, \: C_1]
+\]
+
+\medskip
+
+oraz 
+
+\[
+\vec{n}_2 \; = \; [A_2, \: B_2, \: C_2]
+\]
+
+\medskip
+
+s± \textbf{liniowo niezale¿ne} (Def. \ref{def:liniowa_niezaleznosc_wektorow}, str. \pageref{def:liniowa_niezaleznosc_wektorow})
+\end{itemize}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Pêkiem p³aszczyzn}} o~krawêdzi $l$ nazywamy \textbf{zbiór wszystkich} p³aszczyzn, na których le¿y prosta $l$.
+
+\smallskip
+
+\cite[Rozdzia³ 5.3]{trajdos}
+\end{definicja}
+
+\medskip
+
+Pêk p³aszczyzn tworzy rodzinê p³aszczyzn
+
+\[
+\lambda_1 \: \pi_1 \; + \; \lambda_2 \: \pi_2 \; = \; 0 \qquad \lambda_1^2 \: + \: \lambda_2^2 \: > \: 0
+\]
+
+\medskip
+
+\noindent czyli
+
+\[
+\lambda_1 \: (A_1 \: x + B_1 \: y + C_1 \: z + D_1) \; + \; \lambda_2 \: (A_2 \: x + B_2 \: y + C_2 \: z + D_2) \; = \; 0
+\]
+
+\smallskip
+
+\cite[Rozdzia³ 5.3]{trajdos}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Obszary na p³aszczy¼nie}
+
+\medskip
+
+TODO
+
+\subsection{Obszar normalny}
+
+\subsection{Obszar regularny}
+
+\subsection{Twierdzenie Fubiniego}
+
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Powierzchnie stopnia drugiego}
+
+\smallskip
+
+\cite[Rozdzia³ 5.3]{furdzik}
+
+\medskip
+
+Niech
+
+\begin{itemize}
+\item $E_3$ bêdzie trójwymiarow± (Def. \ref{def:wymiar_przestrzeni}, str. \pageref{def:wymiar_przestrzeni}) afiniczn± przestrzeni± euklidesow± (Def. \ref{def:afiniczna_przestrzen_euklidesowa}, str. \pageref{def:afiniczna_przestrzen_euklidesowa}) 
+\item $(0; \; \vec{i}, \vec{j}, \vec{k})$ bêdzie \textbf{kartezjañskim} uk³adem wspó³rzêdnych (Def. \ref{def:uklad_kartezjanski}, str. \pageref{def:uklad_kartezjanski}) w~przestrzeni $E_3$
+\end{itemize}
+
+\medskip
+
+\begin{definicja}
+\textbf{\emph{Powierzchni± stopnia drugiego}} w~$E_3$ nazywamy zbiór wszystkich punktów spe³niaj±cych równanie
+
+\[
+\left[
+\begin{array}{ccc}
+x & y & z\\
+\end{array}
+\right]
+\left[
+\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+y\\
+z
+\end{array}
+\right]
++
+\left[
+\begin{array}{ccc}
+b_{1} & b_{2} & b_{3}\\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x\\
+y\\
+z
+\end{array}
+\right]
++
+c
+=
+0
+\]
+\end{definicja}
+
+\medskip
+
+Powierzchnie drugiego stopnia mo¿na opisaæ równaniami w~postaci kanonicznej
+
+\[
+\frac{x^2}{a^2} \: + \: \frac{y^2}{b^2} \: + \: \frac{z^2}{c^2} \; = \;
+\left\{
+\begin{array}{cl}
+1  & \textnormal{elipsoida} \\
+0  & \textnormal{punkt} \\
+-1 & \textnormal{zbiór pusty}
+\end{array}
+\right.
+\]
+
+\vspace{10cm}
+
+TODO rysunek
+
+\medskip
+
+\[
+\frac{x^2}{a^2} \: + \: \frac{y^2}{b^2} \: - \: \frac{z^2}{c^2} \; = \;
+\left\{
+\begin{array}{cl}
+1  & \textnormal{hiperboloida jednopow³okowa} \\
+0  & \textnormal{sto¿ek eliptyczny} \\
+-1 & \textnormal{hiperboloida dwupow³okowa}
+\end{array}
+\right.
+\]
+
+\vspace{10cm}
+
+TODO rysunek
+
+\medskip
+
+\[
+\frac{x^2}{a^2} \: + \: \frac{y^2}{b^2} \; = \;
+\left\{
+\begin{array}{cl}
+2z & \textnormal{paraboloida eliptyczna} \\
+1  & \textnormal{walec eliptyczny} \\
+0  & \textnormal{prosta (o¶ } OZ \textnormal{)} \\
+-1 & \textnormal{zbiór pusty}
+\end{array}
+\right.
+\]
+
+\vspace{10cm}
+
+TODO rysunek
+
+\medskip
+
+\[
+\frac{x^2}{a^2} \: - \: \frac{y^2}{b^2} \; = \;
+\left\{
+\begin{array}{cl}
+2z & \textnormal{paraboloida hiperboliczna} \\
+1  & \textnormal{walec hiperboliczny} \\
+0  & \textnormal{dwie p³aszczyzny przecinaj±ce siê}
+\end{array}
+\right.
+\]
+
+\vspace{10cm}
+
+TODO rysunek
+
+\medskip
+
+\[
+y^2 \; = \;
+\left\{
+\begin{array}{cl}
+2px  & \textnormal{walec paraboliczny} \\
+a^2  & \textnormal{dwie p³aszczyzny równoleg³e} \\
+0    & \textnormal{p³aszczyzna} \\
+-a^2 & \textnormal{zbiór pusty}
+\end{array}
+\right.
+\]
+
+\vspace{10cm}
+
+TODO rysunek
+
+\medskip

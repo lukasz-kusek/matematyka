@@ -1,0 +1,145 @@
+%\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,b5paper]{book}
+\usepackage[latin2]{inputenc}
+\usepackage[polish]{babel}
+\selectlanguage{polish}
+\usepackage[OT4]{fontenc}
+\usepackage{polski}
+\usepackage{ucs}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{makeidx}
+%\usepackage{pict2e}
+
+\include{symbole}
+
+\makeindex
+
+\usepackage[pdftex]{graphicx}
+\usepackage[unicode, colorlinks, pdftex, plainpages=false, hyperindex, pdffitwindow=false, pdfusetitle=true]{hyperref}
+  \hypersetup{
+    unicode=true
+  }
+\RequirePackage{color}
+%\hypersetup{colorlinks=false}
+%\definecolor{KolorLink}{cmyk}{0,0.89,0.94,0.28}
+%\definecolor{KolorUrl}{cmyk}{1,1,0,0.5}%<--
+\definecolor{KolorLink}{cmyk}{0,0.6,1,0.2}
+\definecolor{KolorUrl}{cmyk}{1,0,1,0.28}
+\hypersetup{linkcolor=KolorLink,citecolor=KolorLink,urlcolor=KolorUrl}
+
+\newtheorem{twierdzenie}{Twierdzenie}[section]
+\newtheorem{definicja}{Definicja}[section]
+
+\author{£ukasz Kusek}
+\title{Matematyka - notatki z wyk³adu}
+%\institute{Wy¿sza Szko³a Oficerska Si³ Powietrznych w Dêblinie}
+
+
+\begin{document}
+
+\frontmatter
+
+\begingroup
+%% Pocz±tek strony tutu³owej:
+\sffamily %%<-- str. tytu³owa sans-serif
+\thispagestyle{empty}
+
+\vspace*{\stretch{1}}
+\noindent
+
+\makebox[0pt][l]{\begin{minipage}{\textwidth}
+\flushright{\Huge\bfseries 
+ Matematyka }
+\noindent\rule[-1ex]{\textwidth}{3.3pt}\\[2.5ex]
+\hfill
+ \begingroup
+    \emph{\Large notatki z wyk³adu}
+ \endgroup
+\end{minipage}}
+
+\vspace{\stretch{2}}
+\noindent\makebox[0pt][l]{\begin{minipage}{\textwidth}
+
+\flushright
+{\bfseries £ukasz Kusek}\\[25mm]
+Wy¿sza Szko³a Oficerska Si³ Powietrznych w Dêblinie\\[1.5ex]
+\bfseries Wersja robocza z dnia \today
+\end{minipage}}
+
+\vspace{\stretch{2}}
+
+
+\pagebreak
+\endgroup
+
+%\maketitle
+%\pagebreak
+
+\begingroup
+\begin{small}
+Copyright \copyright{} 2009-2010 £ukasz Kusek.
+
+Wszelkie prawa zastrze¿one.
+
+\bigskip
+
+Kontakt:
+
+tel. +48 509 955 365
+\end{small}
+\endgroup
+
+
+% Spis tre¶ci
+\tableofcontents
+
+
+% Wstêp
+\include{rozdzialy/wstep}
+
+% Poczatek tresci
+\mainmatter
+
+\include{rozdzialy/relacje}
+\include{rozdzialy/struktury_algebraiczne}
+\include{rozdzialy/przestrzen_liniowa}
+\include{rozdzialy/algebra_boolea}
+\include{rozdzialy/cialo_liczb_zespolonych}
+\include{rozdzialy/wielomiany}
+\include{rozdzialy/macierze}
+\include{rozdzialy/wyznacznik}
+\include{rozdzialy/uklady_rownan}
+\include{rozdzialy/geometria_analityczna}
+\include{rozdzialy/ciag_liczbowy}
+\include{rozdzialy/funkcje}
+\include{rozdzialy/rachunek_rozniczkowy_funkcji_jednej_zmiennej}
+\include{rozdzialy/badanie_przebiegu_zmiennosci_funkcji}
+\include{rozdzialy/rachunek_calkowy_funkcji_jednej_zmiennej}
+\include{rozdzialy/funkcje_wielu_zmiennych}
+\include{rozdzialy/rachunek_rozniczkowy_funkcji_wielu_zmiennych}
+\include{rozdzialy/badanie_przebiegu_zmiennosci_funkcji_wielu_zmiennych}
+\include{rozdzialy/rachunek_calkowy_funkcji_wielu_zmiennych}
+\include{rozdzialy/elementy_teorii_pola}
+\include{rozdzialy/funkcja_zespolona}
+\include{rozdzialy/rownania_rozniczkowe_zwyczajne}
+\include{rozdzialy/szeregi_liczbowe}
+\include{rozdzialy/szeregi_funkcyjne}
+
+% Dodatki
+\appendix
+
+\include{licencja}
+
+\backmatter
+
+% Indeks
+\printindex
+
+% Bibliografia
+\include{bibliografia}
+
+\end{document}
